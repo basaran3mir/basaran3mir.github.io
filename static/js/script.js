@@ -1,23 +1,20 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const links = document.querySelectorAll('.menu a');
-    links.forEach(link => {
+    const sidebar = document.getElementById("sidebar");
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuLinks = document.querySelectorAll(".menu a");
+
+    menuLinks.forEach(link => {
         link.addEventListener('click', function () {
-            links.forEach(item => item.classList.remove('active'));
+            menuLinks.forEach(item => item.classList.remove('active'));
             link.classList.add('active');
 
             if (window.innerWidth <= 768) {
-                sidebar.classList.add("hidden");
+                sidebar.classList.remove("open");
             }
-
         });
     });
 
-    const menuToggle = document.getElementById("menu-toggle");
-    const sidebar = document.getElementById("sidebar");
-    const content = document.querySelector(".content");
     menuToggle.addEventListener("click", function () {
-        sidebar.classList.toggle("hidden");
-        content.classList.toggle("shifted");
+        sidebar.classList.toggle("open");
     });
-
 });

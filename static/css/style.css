@@ -1,3 +1,4 @@
+/* base custom css */
 .mb-20 {
     margin-bottom: 20px;
 }
@@ -6,25 +7,31 @@
     margin-bottom: 40px;
 }
 
+.name {
+    margin: 0;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
+.header {
+    display: none;
+}
+
 .hamburger-menu {
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    position: absolute;
+    left: 20px;
     background: transparent;
     border: none;
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     cursor: pointer;
-    z-index: 1100;
-    display: none;
-    background-color: #17181B;
-    border-bottom-right-radius: 20%;
 }
 
 .sidebar {
@@ -37,10 +44,6 @@ body {
     padding: 25px 15px;
     transition: left 0.3s ease-in-out;
     z-index: 1000;
-}
-
-.hidden {
-    left: -250px;
 }
 
 .sidebar .profile {
@@ -81,34 +84,35 @@ body {
     width: 20px;
 }
 
-.nav-footer {
+.footer {
     margin-top: auto;
     color: #777;
 }
 
-.nav-footer .social {
+.footer .footer-list {
     padding: 0;
 }
 
-.nav-footer .social li {
+.footer .footer-list li {
     display: inline-block;
     font-size: 18px;
 }
 
-.nav-footer .social li a {
+.footer .footer-list li a {
     color: #777;
     transition: color .2s ease;
     margin: 0px 3px;
 }
 
-.nav-footer .social li a:hover {
+.footer .footer-list li a:hover {
     color: white;
 }
 
-.nav-footer .copy {
+.footer .footer-copy {
     font-size: 12px;
 }
 
+/* content css */
 .content {
     background-color: #242424;
     margin-left: 250px;
@@ -120,17 +124,10 @@ body {
     margin: 0px;
 }
 
-.btn-custom {
-    background-color: #2c3e50;
+.a-custom {
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    border-bottom: 2px solid white;
     text-decoration: none;
-    display: inline-block;
-}
-
-.btn-custom:hover {
-    background-color: #34495e;
 }
 
 .section {
@@ -162,7 +159,42 @@ body {
     font-size: 1rem;
 }
 
-.section .subcontent-header {
+.section ul {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.section ul>li {
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #2980b9;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.info-container {
+    width: 40%;
+}
+
+.test {
+    background: #ffffff;
+    background: #17181B;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: white;
+    width: 100%;
+}
+
+.exp-container {
+    width: 50%;
+}
+
+.section .subsection-header {
     font-size: 2rem;
     color: white;
     border-bottom: 2px dashed #777;
@@ -172,70 +204,78 @@ body {
     padding-bottom: 20px;
 }
 
-.section .subcontent-header i {
+.section .subsection-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.section .subsection-header i {
     color: #777;
 }
 
-.section ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 700px;
-    margin: 0 auto;
-}
-
-.section ul>li {
-    font-size: 1.3rem;
-    font-weight: bold;
-    color: #2980b9;
-    margin-top: 15px;
-}
-
-.section ul ul {
-    padding-left: 25px;
-}
-
-.section ul ul>li {
-    font-size: 1.1rem;
-    font-weight: normal;
-    color: #555;
-    padding: 5px 0;
-    position: relative;
-}
-
-.section ul ul>li::before {
-    content: "✔";
-    color: #2980b9;
-    font-size: 1rem;
-    font-weight: bold;
-    position: absolute;
-    left: -20px;
-    top: 4px;
-}
-
 @media (max-width: 768px) {
+
+    .header {
+        display: flex;
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 60px;
+        width: 100%;
+        background-color: #17181B;
+        padding: 10px 20px;
+        z-index: 1050;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .sidebar {
         width: 100%;
+        padding-top: 85px;
+        left: -100%;
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar .name {
+        display: none;
     }
 
     .sidebar .profile img {
         width: 50%;
     }
 
-    .hidden {
-        left: -100%;
-    }
-
-    .hamburger-menu {
-        display: block;
+    .menu a {
+        justify-content: center;
+        padding: 20px;
     }
 
     .content {
         margin-left: 0;
+        padding-top: 85px;
     }
 
-    .menu a {
-        justify-content: center;
+    .section {
         padding: 20px;
+    }
+
+    .section:hover {
+        transform: none;
+    }
+
+    .section .subsection-content {
+        flex-direction: column;
+    }
+
+    .section .subsection-content .info-container {
+        width: 100%;
+    }
+    
+    .section .subsection-content .exp-container {
+        width: 100%;
     }
 }

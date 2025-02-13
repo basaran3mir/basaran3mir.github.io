@@ -5,9 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">!-->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">!-->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>!-->
     <link rel="stylesheet" href="static/css/bootstrap.min.css">
     <link rel="stylesheet" href="static/css/all.min.css">
     <script src="static/js/bootstrap.bundle.min.js"></script>
@@ -16,65 +13,117 @@
 </head>
 
 <body>
-    <button class="hamburger-menu" id="menu-toggle">
-        <i class="fas fa-bars"></i>
-    </button>
+    <div class="header">
+        <button class="hamburger-menu" id="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <p class="name mt-2 mb-0">Emir Can Başaran</p>
+    </div>
     <div class="sidebar d-flex flex-column align-items-center" id="sidebar">
         <div class="profile text-center w-100 mb-4">
             <img src="static/images/blank_profile_picture.png" alt="Profil Fotoğrafı" class="img-fluid">
-            <p class="mt-2 mb-0">Emir Can Başaran</p>
+            <p class="name mt-2 mb-0">Emir Can Başaran</p>
         </div>
-        <nav class="nav flex-column w-100 text-center menu">
+        <nav class="menu nav flex-column w-100 text-center">
             <a class="nav-link active" href="#home" id="home-link"><i class="fas fa-home"></i> Home</a>
             <a class="nav-link" href="#about" id="about-link"><i class="fas fa-user"></i> About Me</a>
             <a class="nav-link" href="#resume" id="resume-link"><i class="fas fa-file-alt"></i> Resume</a>
             <a class="nav-link" href="#portfolio" id="portfolio-link"><i class="fas fa-briefcase"></i> Portfolio</a>
             <a class="nav-link" href="#blog" id="blog-link"><i class="fas fa-blog"></i> Blog</a>
         </nav>
-        <div class="nav-footer w-100 text-center">
-            <ul class="social">
+        <div class="footer nav-footer w-100 text-center">
+            <ul class="footer-list">
                 <li><a href="https://www.instagram.com/basaran3mir"><i class="fab fa-instagram-square"></i></a></li>
                 <li><a href="https://github.com/basaran3mir"><i class="fab fa-github-square"></i></a></li>
                 <li><a href="https://tr.linkedin.com/in/basaran3mir"><i class="fa-brands fa-linkedin"></i></a></li>
             </ul>
-            <div class="copy">
-                <p>2025 © Emir Can BaşaranAll Right Reserved.</p>
+            <div class="footer-copy">
+                <p class="mb-0">2025 © Emir Can Başaran</p>
+                <p>All Right Reserved.</p>
             </div>
         </div>
     </div>
 
     <div class="content">
         <div id="home" class="section mb-40">
-            <div class="subcontent-header mb-40">
+            <div class="subsection-header mb-40">
                 <h2 class="mb-0">Welcome</h2>
                 <i class="fa-solid fa-cat"></i>
             </div>
-            <p>Discover my projects, experience, and insights about software development.</p>
-            <img src="static/images/welcome.jpeg" class="img-fluid" alt="Welcome Image">
+            <p class="mb-40">Welcome to my digital space! Here, you'll find a showcase of my projects, experience, and insights into the ever-evolving world of software development. From innovative solutions to best practices, I share my journey in crafting efficient, scalable, and cutting-edge applications. Whether you're a fellow developer, a tech enthusiast, or someone looking for collaboration, I invite you to explore and connect!</p>
+            <img src="static/images/welcome.jpeg" class="img-fluid d-block mx-auto" alt="Welcome Image">
         </div>
 
         <div id="about" class="section mb-40">
-            <div class="subcontent-header mb-40">
+            <div class="subsection-header mb-40">
                 <h2 class="mb-0">About Me</h2>
                 <i class="fas fa-user"></i>
             </div>
             
-            <h3 class="mb-20">Software Developer</h3>
-            <p>I am Emir Can Başaran, a passionate software developer dedicated to delivering high-quality solutions through innovation and continuous improvement. With a strong technical foundation and a problem-solving mindset, I specialize in designing and developing efficient, scalable, and secure software solutions.</p>
-            <p>Driven by curiosity and a commitment to excellence, I embrace emerging technologies and best practices to stay ahead in the ever-evolving world of software development. My approach combines analytical thinking, creativity, and a keen attention to detail to build impactful and user-centric applications.</p>
-            <p class="mb-40">I believe that success lies in continuous learning and collaboration. By maintaining a high level of motivation and determination, I strive to push the boundaries of what's possible in the digital landscape.</p>
-            
-            <h3 class="mb-20">Personel Information</h3>
-            <p>Name</p>
-            <p>Surname</p>
-            <a href="static/docs/Emir-Can-Başaran-CV.pdf" class="btn-custom mt-3">Download Resume (Turkish)</a>
-            <p class="mb-40">...</p>
+            <div class="subsection-content">
+                <div class="exp-container">
+                    <h3 class="mb-20">Software Developer</h3>
+                    <p>I am Emir Can Başaran, a passionate software developer dedicated to delivering high-quality solutions through innovation and continuous improvement. With a strong technical foundation and a problem-solving mindset, I specialize in designing and developing efficient, scalable, and secure software solutions.</p>
+                    <p>Driven by curiosity and a commitment to excellence, I embrace emerging technologies and best practices to stay ahead in the ever-evolving world of software development. My approach combines analytical thinking, creativity, and a keen attention to detail to build impactful and user-centric applications.</p>
+                    <p class="mb-40">I believe that success lies in continuous learning and collaboration. By maintaining a high level of motivation and determination, I strive to push the boundaries of what's possible in the digital landscape.</p>
+                    
+                </div>
+                
+                <div class="info-container">
+                    <h3 class="mb-20">Personel Information</h3>
+                    <div class="test">
+                        <ul>
+                            <li><span class="info-label">Name:</span> <span class="info-value">Emir Can Başaran</span></li>
+                            <li><span class="info-label">Age:</span> <span class="info-value">24</span></li>
+                            <li><span class="info-label">Address:</span> <span class="info-value">Zeytinburnu, Istanbul</span></li>
+                            <li><span class="info-label">Mail:</span> <span class="info-value">ebasaran999@gmail.com</span></li>
+                            <li><span class="info-label">Phone:</span> <span class="info-value">+90 534 350 57 27</span></li>
+                            <li><span class="info-label">Freelance:</span> <span class="info-value">Available</span></li>
+                            <li><span class="info-label">Resume:</span> <a href="static/docs/Emir-Can-Başaran-CV.pdf" class="a-custom" target="_blank" rel="noopener noreferrer">Download</a></li>
+    
+                        </ul>
+                    </div>
+                </div>
+            </div>
 
             <h3 class="mb-20">Services</h3>
-            <p>Web Development</p>
-            <p>Web Design</p>
-            <p>Responsive Design</p>
-            <p class="mb-40">...</p>
+            <div class="row services mb-30">
+                <!--Service Item-->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon"><i class="lnr lnr-laptop"></i></div>
+                        <h4>Web Development</h4>
+                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                    </div>
+                </div>
+
+                <!--Service Item-->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon"><i class="lnr lnr-eye"></i></div>
+                        <h4>Web Design</h4>
+                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                    </div>
+                </div>
+
+                <!--Service Item-->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon"><i class="lnr lnr-laptop-phone"></i></div>
+                        <h4>Responsive Design</h4>
+                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                    </div>
+                </div>
+
+                <!--Service Item-->
+                <div class="col-lg-3 col-sm-6">
+                    <div class="service-item">
+                        <div class="icon"><i class="lnr lnr-camera"></i></div>
+                        <h4>Photography</h4>
+                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                    </div>
+                </div>
+            </div>
 
             <h3 class="mb-20">My Interests</h3>
             <ul>
@@ -109,10 +158,11 @@
                     <li>Java (AI Model Integration)</li>
                 </ul>
             </ul>
+            
         </div>
 
         <div id="resume" class="section mb-40">
-            <div class="subcontent-header mb-40">
+            <div class="subsection-header mb-40">
                 <h2 class="mb-0">Resume</h2>
                 <i class="fas fa-file-alt"></i>
             </div>
@@ -129,7 +179,7 @@
         </div>
 
         <div id="portfolio" class="section mb-40">
-            <div class="subcontent-header mb-40">
+            <div class="subsection-header mb-40">
                 <h2 class="mb-0">Portfolio</h2>
                 <i class="fas fa-briefcase"></i>
             </div>
@@ -149,7 +199,7 @@
         </div>
 
         <div id="blog" class="section mb-40">
-            <div class="subcontent-header mb-40">
+            <div class="subsection-header mb-40">
                 <h2 class="mb-0">Blog</h2>
                 <i class="fas fa-blog"></i>
             </div>
