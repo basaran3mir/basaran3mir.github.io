@@ -5,73 +5,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Website</title>
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="static/css/all.min.css">
-    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <!--<link rel="stylesheet" href="bootstrap-4.0.0-dist\css\bootstrap.min.css"> -->
+    <link rel="stylesheet" href="fontawesome-free-6.7.2-web\css\all.min.css">
+    <link rel="stylesheet" href="Linearicons-Free-v1.0.0\Web Font\style.css">
     <link rel="stylesheet" href="static/css/style.css">
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
     <script src="static/js/script.js"></script>
 </head>
 
 <body>
-    <div class="header">
-        <button class="hamburger-menu" id="menu-toggle">
+    <div class="sidebar mobile-sidebar">
+        <button class="hamburger-menu" id="menuToggle">
             <i class="fas fa-bars"></i>
         </button>
-        <p class="name mt-2 mb-0">Emir Can Başaran</p>
+        <p class="sidebar-name">Emir Can Başaran</p>
     </div>
-    <div class="sidebar d-flex flex-column align-items-center" id="sidebar">
-        <div class="profile text-center w-100 mb-4">
-            <img src="static/images/blank_profile_picture.png" alt="Profil Fotoğrafı" class="img-fluid">
-            <p class="name mt-2 mb-0">Emir Can Başaran</p>
+    <div class="sidebar desktop-sidebar" id="desktopSidebar">
+        <div class="sidebar-profile mb-40">
+            <img class="sidebar-photo mb-20" src="static/images/blank_profile_picture.png" alt="Profile Image">
+            <p class="sidebar-name">Emir Can Başaran</p>
         </div>
-        <nav class="menu nav flex-column w-100 text-center">
-            <a class="nav-link active" href="#home" id="home-link"><i class="fas fa-home"></i> Home</a>
-            <a class="nav-link" href="#about" id="about-link"><i class="fas fa-user"></i> About Me</a>
-            <a class="nav-link" href="#resume" id="resume-link"><i class="fas fa-file-alt"></i> Resume</a>
-            <a class="nav-link" href="#portfolio" id="portfolio-link"><i class="fas fa-briefcase"></i> Portfolio</a>
-            <a class="nav-link" href="#blog" id="blog-link"><i class="fas fa-blog"></i> Blog</a>
-        </nav>
-        <div class="footer nav-footer w-100 text-center">
-            <ul class="footer-list">
-                <li><a href="https://www.instagram.com/basaran3mir"><i class="fab fa-instagram-square"></i></a></li>
-                <li><a href="https://github.com/basaran3mir"><i class="fab fa-github-square"></i></a></li>
-                <li><a href="https://tr.linkedin.com/in/basaran3mir"><i class="fa-brands fa-linkedin"></i></a></li>
+        <div class="sidebar-menu mb-40">
+            <a class="menu-link active" href="#home"><i class="fas fa-home"></i> Home</a>
+            <a class="menu-link" href="#about"><i class="fas fa-user"></i> About Me</a>
+            <a class="menu-link" href="#resume"><i class="fas fa-file-alt"></i> Resume</a>
+            <a class="menu-link" href="#portfolio"><i class="fas fa-briefcase"></i> Portfolio</a>
+            <a class="menu-link" href="#blog"><i class="fas fa-blog"></i> Blog</a>
+        </div>
+        <div class="sidebar-footer">
+            <ul class="footer-social mb-20">
+                <li class="social-link"><a class="link-href" href="https://www.instagram.com/basaran3mir"><i class="fab fa-instagram-square"></i></a></li>
+                <li class="social-link"><a class="link-href" href="https://github.com/basaran3mir"><i class="fab fa-github-square"></i></a></li>
+                <li class="social-link"><a class="link-href" href="https://tr.linkedin.com/in/basaran3mir"><i class="fa-brands fa-linkedin"></i></a></li>
             </ul>
-            <div class="footer-copy">
-                <p class="mb-0">2025 © Emir Can Başaran</p>
+            <div class="footer-copy text-center">
+                <p>2025 © Emir Can Başaran</p>
                 <p>All Right Reserved.</p>
             </div>
         </div>
     </div>
 
     <div class="content">
-        <div id="home" class="section mb-40">
-            <div class="subsection-header mb-40">
-                <h2 class="mb-0">Welcome</h2>
-                <i class="fa-solid fa-cat"></i>
+        <div class="section mb-40" id="home">
+            <div id="home-background">
+                <div class="section-header mb-40">
+                    <h2 class="header-text">Welcome</h2>
+                    <i class="header-icon fa-solid fa-cat"></i>
+                </div>
+                <div id="home-content">
+                    <h1 class="mb-40">Emir Can Başaran</h1>
+                    <h3 class="mb-40">I am a Software Developer</h1>
+                </div>
             </div>
-            <p class="mb-40">Welcome to my digital space! Here, you'll find a showcase of my projects, experience, and insights into the ever-evolving world of software development. From innovative solutions to best practices, I share my journey in crafting efficient, scalable, and cutting-edge applications. Whether you're a fellow developer, a tech enthusiast, or someone looking for collaboration, I invite you to explore and connect!</p>
-            <img src="static/images/welcome.jpeg" class="img-fluid d-block mx-auto" alt="Welcome Image">
         </div>
 
-        <div id="about" class="section mb-40">
-            <div class="subsection-header mb-40">
+        <!-- 
+            <p class="mb-20">Welcome to my digital space! Here, you'll find a showcase of my projects, experience, and insights into the ever-evolving world of software development.</p>
+            <p class="mb-20">From innovative solutions to best practices, I share my journey in crafting efficient, scalable, and cutting-edge applications.</p>
+            <p class="mb-20">Whether you're a fellow developer, a tech enthusiast, or someone looking for collaboration, I invite you to explore and connect!</p>
+                
+        -->
+        <div class="section mb-40" id="about">
+            <div class="section-header mb-40">
                 <h2 class="mb-0">About Me</h2>
-                <i class="fas fa-user"></i>
+                <i class="header-icon fas fa-user"></i>
             </div>
             
-            <div class="subsection-content">
+            <div class="subsection-content mb-40">
                 <div class="exp-container">
                     <h3 class="mb-20">Software Developer</h3>
-                    <p>I am Emir Can Başaran, a passionate software developer dedicated to delivering high-quality solutions through innovation and continuous improvement. With a strong technical foundation and a problem-solving mindset, I specialize in designing and developing efficient, scalable, and secure software solutions.</p>
-                    <p>Driven by curiosity and a commitment to excellence, I embrace emerging technologies and best practices to stay ahead in the ever-evolving world of software development. My approach combines analytical thinking, creativity, and a keen attention to detail to build impactful and user-centric applications.</p>
+                    <p class="mb-40">I am Emir Can Başaran, a passionate software developer dedicated to delivering high-quality solutions through innovation and continuous improvement. With a strong technical foundation and a problem-solving mindset, I specialize in designing and developing efficient, scalable, and secure software solutions.</p>
+                    <p class="mb-40">Driven by curiosity and a commitment to excellence, I embrace emerging technologies and best practices to stay ahead in the ever-evolving world of software development. My approach combines analytical thinking, creativity, and a keen attention to detail to build impactful and user-centric applications.</p>
                     <p class="mb-40">I believe that success lies in continuous learning and collaboration. By maintaining a high level of motivation and determination, I strive to push the boundaries of what's possible in the digital landscape.</p>
-                    
                 </div>
                 
                 <div class="info-container">
                     <h3 class="mb-20">Personel Information</h3>
-                    <div class="test">
+                    <div class="info-container-elements">
                         <ul>
                             <li><span class="info-label">Name:</span> <span class="info-value">Emir Can Başaran</span></li>
                             <li><span class="info-label">Age:</span> <span class="info-value">24</span></li>
@@ -86,80 +97,175 @@
                 </div>
             </div>
 
-            <h3 class="mb-20">Services</h3>
-            <div class="row services mb-30">
-                <!--Service Item-->
+            <div class="row services">
+                <div class="col-md-12">
+                    <div class="subheading">
+                        <h3 class="mb-20 text-center">Services</h3>
+                    </div>
+                </div>
+
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-item">
                         <div class="icon"><i class="lnr lnr-laptop"></i></div>
-                        <h4>Web Development</h4>
-                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                        <h4 class="mb-20">Web Development</h4>
+                        <p class="mb-0">Scalable, efficient, and high-performance web solutions tailored to your needs.</p>
                     </div>
                 </div>
 
-                <!--Service Item-->
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-item">
                         <div class="icon"><i class="lnr lnr-eye"></i></div>
-                        <h4>Web Design</h4>
-                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                        <h4 class="mb-20">Web Design</h4>
+                        <p class="mb-0">Intuitive and visually appealing designs that enhance user experience.</p>
                     </div>
                 </div>
 
-                <!--Service Item-->
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-item">
                         <div class="icon"><i class="lnr lnr-laptop-phone"></i></div>
-                        <h4>Responsive Design</h4>
-                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                        <h4 class="mb-20">Responsive Design</h4>
+                        <p class="mb-0">Seamless adaptability across all devices for a flawless user experience.</p>
                     </div>
                 </div>
 
-                <!--Service Item-->
                 <div class="col-lg-3 col-sm-6">
                     <div class="service-item">
                         <div class="icon"><i class="lnr lnr-camera"></i></div>
-                        <h4>Photography</h4>
-                        <p>Amet aspernatur delectus maxime ducimus similique Ratione asperiores corporis provident aut libero.</p>
+                        <h4 class="mb-20">Brand Identity</h4>
+                        <p class="mb-0">Strong visual presence that reflects your brand’s uniqueness.</p>
                     </div>
                 </div>
             </div>
 
-            <h3 class="mb-20">My Interests</h3>
-            <ul>
-                <li>Full-Stack Web Development</li>
-                <ul>
-                    <li>Front-end Development</li>
-                    <ul>
-                        <li>Angular Framework</li>
-                        <li>Html, Css and Bootstrap</li>
-                        <li>Javascript & Typescript</li>
-                    </ul>
-                </ul>
-                <ul>
-                    <li>Back-end</li>
-                    <ul>
-                        <li>.Net Core & C#</li>
-                        <li>Entity Framework (ORM)</li>
-                        <li>Layered Architecture (N-Tier Architecture)</li>
-                        <li>Distributed Caching with Redis</li>
-                        <li>Logging & Monitoring Systems</li>
-                    </ul>
-                </ul>
-                
-                <li>Mobile Application Development</li>
-                <ul>
-                    <li>Android Development (Android Studio & Java)</li>
-                </ul>
-                
-                <li>Artifical Intelligence</li>
-                <ul>
-                    <li>Python (Deep Learning & Computer Vision)</li>
-                    <li>Java (AI Model Integration)</li>
-                </ul>
-            </ul>
-            
         </div>
+<!--
+        <div class="section">
+            <div class="row mb-20">
+
+                Experience Column Start
+                <div class="col-lg-6">
+                    <div class="subheading">
+                        <h3>Experience</h3>
+                    </div>
+                    <ul class="experience">
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>Lead UI Designer</h4>
+                                <h5>Big Design Company, NY, USA</h5>
+                                <p class="info">
+                                    Sit cupiditate praesentium ex esse nulla Facere fuga perspiciatis eveniet provident neque Ea ratione non minus temporibus ipsum Sunt minima
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2018</span>
+                                <span class="from">2016</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>Web Designer</h4>
+                                <h5>Design Company, London, UK</h5>
+                                <p class="info">
+                                    Dolor id atque accusantium ut impedit odit provident soluta voluptatem Veritatis ipsam neque mollitia vero suscipit a laborum doloremque. Ipsa!
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2016</span>
+                                <span class="from">2015</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>Web Developer</h4>
+                                <h5>Exis Development, London, UK</h5>
+                                <p class="info">
+                                    Consectetur pariatur fugiat ipsam aperiam maiores. Nisi in dignissimos debitis expedita asperiores delectus vitae corporis.
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2015</span>
+                                <span class="from">2014</span>
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="subheading">
+                        <h3>Education</h3>
+                    </div>
+
+                    <ul class="education">
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>MA Graphics</h4>
+                                <h5>Royal College of Art, London, UK</h5>
+                                <p class="info">
+                                    Consectetur mollitia amet inventore nisi sed. Provident veritatis exercitationem eum doloremque itaque expedita? Ex voluptatem nostrum numquam illum.
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2014</span>
+                                <span class="from">2013</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>BA(HONS) Graphics</h4>
+                                <h5>Central Saint Martins, London, UK</h5>
+                                <p class="info">
+                                    Elit voluptatibus quas necessitatibus ullam tenetur provident voluptatibus. Ratione delectus lorem minus ipsa architecto. Saepe officiis sint adipisci.
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2013</span>
+                                <span class="from">2012</span>
+                            </span>
+                        </li>
+
+                        <li>
+                            <span class="line-left"></span>
+                            <div class="content">
+                                <h4>Web &amp; Graphics Diploma</h4>
+                                <h5>Tech Arts Institute, CA, USA</h5>
+                                <p class="info">
+                                Ipsum ex exercitationem est aliquid eos saepe. Dolorum aperiam cupiditate labore vero deleniti Aut unde deserunt neque voluptas.
+                                </p>
+                            </div>
+                            <span class="year">
+                                <span class="to">2012</span>
+                                <span class="from">2011</span>
+                            </span>
+                        </li>
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div id="resume" class="section mb-40">
             <div class="subsection-header mb-40">
@@ -218,6 +324,41 @@
             </div>
         </div>
     </div>
+
+    <h3 class="mb-20">My Interests</h3>
+    <ul>
+        <li>Full-Stack Web Development</li>
+        <ul>
+            <li>Front-end Development</li>
+            <ul>
+                <li>Angular Framework</li>
+                <li>Html, Css and Bootstrap</li>
+                <li>Javascript & Typescript</li>
+            </ul>
+        </ul>
+        <ul>
+            <li>Back-end</li>
+            <ul>
+                <li>.Net Core & C#</li>
+                <li>Entity Framework (ORM)</li>
+                <li>Layered Architecture (N-Tier Architecture)</li>
+                <li>Distributed Caching with Redis</li>
+                <li>Logging & Monitoring Systems</li>
+            </ul>
+        </ul>
+        
+        <li>Mobile Application Development</li>
+        <ul>
+            <li>Android Development (Android Studio & Java)</li>
+        </ul>
+        
+        <li>Artifical Intelligence</li>
+        <ul>
+            <li>Python (Deep Learning & Computer Vision)</li>
+            <li>Java (AI Model Integration)</li>
+        </ul>
+    </ul>
+-->
 
 </body>
 
