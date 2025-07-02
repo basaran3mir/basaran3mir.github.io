@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const sidebar = document.getElementById("desktop-sidebar");
     const menuLinks = document.querySelectorAll(".menu-link");
 
     menuLinks.forEach(link => {
