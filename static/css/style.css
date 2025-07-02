@@ -3,15 +3,8 @@
 }
 
 html, body {
-    height: 100%;
-    width: 100%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    display: flex;
-    flex-direction: row;
 }
 
 ul {
@@ -21,8 +14,9 @@ ul {
 }
 
 .sidebar {
+    font-family: 'Roboto', sans-serif;
     background-color: #17181B;
-    color: white;
+    color: #777;
     position: fixed;
     transition: margin 0.3s ease;
 }
@@ -55,6 +49,7 @@ ul {
 }
 
 .desktop-sidebar-content .photo .full-name {
+    color: white;
     width: 100%;
     position: absolute;
     background-color: rgba(23, 24, 27, 0.5);
@@ -65,11 +60,12 @@ ul {
     font-size: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .desktop-sidebar-content .menu {
     width: 100%;
-    height: 100%;
+    margin-top: 10px;
 }
 
 .desktop-sidebar-content .menu li {
@@ -79,6 +75,7 @@ ul {
     align-items: center;
     border-bottom: 1px solid #202226;
     text-transform: uppercase;
+    transition: background-color 0.3s ease;
 }
 
 .desktop-sidebar-content .menu li:hover {
@@ -95,23 +92,60 @@ ul {
     text-decoration: none;
     padding: 0px 25px;
     align-items: center;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     letter-spacing: 2px;
+    transition: color 0.3s ease;
 }
 
 .menu-link.active{
     color: white !important;
 }
 
-.desktop-sidebar-content .menu li .menu-link .nav-menu-icon{
-    margin-right: 15px;
+.desktop-sidebar-content .menu li .menu-link .menu-icon{
+    margin-right: 10px;
     font-size: 25px;
     font-weight: bold;
 }
 
+.desktop-sidebar-content .footer {
+    position: absolute;
+    bottom: 0;
+    color: #777;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.desktop-sidebar-content .footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktop-sidebar-content .footer ul a {
+    color: #777;
+    font-size: 25px;
+    margin: 0px 8px;
+    transition: color 0.3s ease;
+}
+
+.desktop-sidebar-content .footer ul a:hover {
+    color: white;
+}
+
+.copy p {
+    line-height: 1.65;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
 .content {
-    flex: 1;
+    position: absolute;
+    top: 0;
+    left: 250px;
+    padding: 20px;
+    transition: left 0.3s ease, top 0.3s ease;
 }
 
 @media screen and (max-width: 768px) {
@@ -125,7 +159,8 @@ ul {
     }
 
     .content {
-        padding-top: 50px;
+        top: 50px;
+        left: 0px;
     }
 
 }
