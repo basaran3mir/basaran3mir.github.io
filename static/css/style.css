@@ -1,8 +1,11 @@
-*, *::before, *::after {
-  box-sizing: border-box;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
     margin: 0;
     padding: 0;
 }
@@ -21,15 +24,10 @@ ul {
     transition: margin 0.3s ease;
 }
 
+/* desktop sidebar*/
 .desktop-sidebar {
     width: 250px;
     height: 100%;
-}
-
-.mobile-sidebar {
-    margin-top: -50px;
-    width: 100%;
-    height: 50px;
 }
 
 .desktop-sidebar-content {
@@ -84,7 +82,7 @@ ul {
     color: white;
 }
 
-.desktop-sidebar-content .menu li .menu-link{
+.desktop-sidebar-content .menu li .menu-link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -97,11 +95,11 @@ ul {
     transition: color 0.3s ease;
 }
 
-.menu-link.active{
+.desktop-sidebar-content .menu li .menu-link.active {
     color: white !important;
 }
 
-.desktop-sidebar-content .menu li .menu-link .menu-icon{
+.desktop-sidebar-content .menu li .menu-link .menu-icon {
     margin-right: 10px;
     font-size: 25px;
     font-weight: bold;
@@ -140,12 +138,162 @@ ul {
     margin-bottom: 20px;
 }
 
+/* mobile sidebar */
+.mobile-sidebar {
+    margin-top: -80px;
+    width: 100%;
+    height: 80px;
+    color: white;
+}
+
+.mobile-sidebar-content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+}
+
+.mobile-sidebar-content .photo {
+    height: 80px;
+    width: fit-content;
+    padding: 10px;
+}
+
+.mobile-sidebar-content .photo img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.mobile-sidebar-content .full-name {
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: auto;
+}
+
+.mobile-sidebar-content .toggle-button {
+    cursor: pointer;
+    border-radius: 20%;
+    margin-right: 0;
+}
+
+.mobile-sidebar-content .toggle-button i {
+    font-size: 35px;
+}
+
+.mobile-sidebar .menu {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    background-color: #17181B;
+    transition: height 0.3s ease;
+    z-index: 1000;
+}
+
+.mobile-sidebar .menu.open {
+    height: 100%;
+}
+
+.mobile-sidebar .menu .menu-links li {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #202226;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.mobile-sidebar .menu .menu-links li:hover {
+    cursor: pointer;
+    background-color: #34495e;
+    color: white;
+}
+
+.mobile-sidebar .menu .menu-links li .menu-link {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    color: #777;
+    text-decoration: none;
+    padding: 0px 40px;
+    align-items: center;
+    font-size: 13px;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.mobile-sidebar .menu .menu-links li .menu-link p {
+    margin: auto;
+}
+
+.mobile-sidebar .menu .menu-links li .menu-link.active {
+    color: white !important;
+}
+
+.mobile-sidebar .menu .menu-links li .menu-link .menu-icon {
+    margin-right: 10px;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.mobile-sidebar .footer {
+    position: absolute;
+    bottom: 0;
+    color: #777;
+    width: 100%;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mobile-sidebar-content .footer ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-sidebar .footer ul a {
+    color: #777;
+    font-size: 25px;
+    margin: 0px 8px;
+    transition: color 0.3s ease;
+}
+
+.mobile-sidebar .footer ul a:hover {
+    color: white;
+}
+
+.copy p {
+    line-height: 1.65;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+/* content */
 .content {
+    color: white;
     position: absolute;
     top: 0;
     left: 250px;
     padding: 20px;
     transition: left 0.3s ease, top 0.3s ease;
+    z-index: 0;
 }
 
 @media screen and (max-width: 768px) {
@@ -159,8 +307,16 @@ ul {
     }
 
     .content {
-        top: 50px;
+        top: 80px;
         left: 0px;
+    }
+
+}
+
+@media screen and (min-width: 768px) {
+
+    .mobile-sidebar .menu.open {
+        height: 0;
     }
 
 }

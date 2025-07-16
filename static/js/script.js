@@ -7,4 +7,21 @@ document.addEventListener('DOMContentLoaded', function () {
             link.classList.add('active');
         });
     });
+
+    const toggleBtn = document.querySelector('.toggle-button');
+    const menu = document.querySelector('.mobile-sidebar .menu');
+
+    toggleBtn.addEventListener('click', function () {
+        menu.classList.toggle('open');
+    });
+
+    const mobileMenuLinks = document.querySelectorAll(".mobile-sidebar .menu-link");
+    console.log(mobileMenuLinks)
+
+    mobileMenuLinks.forEach(link => {
+        link.addEventListener('click', function () {
+            menu.classList.toggle('open');
+        });
+    });
+
 });
