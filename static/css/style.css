@@ -1,12 +1,12 @@
 :root {
-  --background: #ffffff;
-  --primary: #000000;
-  --text: #222222;
+    --background: #ffffff;
+    --primary: #000000;
+    --text: #222222;
 }
 
 .usage {
-  background-color: var(--background);
-  color: var(--text);
+    background-color: var(--background);
+    color: var(--text);
 }
 
 *,
@@ -32,13 +32,19 @@ ul {
     background-color: #17181B;
     color: #777;
     position: fixed;
-    transition: margin 0.3s ease;
+    top: 0;
+    left: 0;
+    background: #17181B;
+    transition: transform 0.3s ease;
+    z-index: 10;
 }
 
 /* desktop sidebar*/
 .desktop-sidebar {
-    width: 250px;
     height: 100%;
+    width: 250px;
+    transform: translateX(0);
+    ;
 }
 
 .desktop-sidebar-content {
@@ -152,10 +158,11 @@ ul {
 
 /* mobile sidebar */
 .mobile-sidebar {
-    margin-top: -80px;
-    width: 100%;
-    height: 80px;
     color: white;
+    height: 80px;
+    width: 100%;
+    transform: translateY(-100%);
+    transition: height 0.3s ease;
 }
 
 .mobile-sidebar-content {
@@ -166,27 +173,27 @@ ul {
     align-items: center;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header {
+.mobile-sidebar-content .mobile-sidebar-content-header {
     display: flex;
     flex-direction: row;
     align-items: center;
     width: 100%;
-    z-index: 1001;
+    z-index: 12;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header .photo {
+.mobile-sidebar-content .mobile-sidebar-content-header .photo {
     height: 80px;
     width: fit-content;
     padding: 10px;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header .photo img {
+.mobile-sidebar-content .mobile-sidebar-content-header .photo img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header .full-name {
+.mobile-sidebar-content .mobile-sidebar-content-header .full-name {
     margin-left: 10px;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
@@ -197,35 +204,34 @@ ul {
     padding: 10px;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header .toggle-button {
+.mobile-sidebar-content .mobile-sidebar-content-header .toggle-button {
     cursor: pointer;
     border-radius: 20%;
     margin-right: 0;
     padding: 10px;
 }
 
-.mobile-sidebar-content .mobile-sidebar-header .toggle-button i {
+.mobile-sidebar-content .mobile-sidebar-content-header .toggle-button i {
     font-size: 35px;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu {
-    position: fixed;
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu {
     width: 100%;
     height: 0;
     overflow: hidden;
     background-color: #17181B;
     transition: height 0.3s ease;
-    z-index: 1000;
-    padding-top: 80px;
+    z-index: 11;
     display: flex;
     flex-direction: column;
+    flex: 1;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu.open {
+.mobile-sidebar.open {
     height: 100%;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li {
     width: 100%;
     height: 60px;
     display: flex;
@@ -235,40 +241,40 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li:hover {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li:hover {
     cursor: pointer;
     background-color: #34495e;
     color: white;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li .menu-link {
     display: flex;
     width: 100%;
     height: 100%;
     color: #777;
     text-decoration: none;
-    padding: 0px 40px;
+    padding: 0px 30px;
     align-items: center;
     font-size: 13px;
     letter-spacing: 2px;
     transition: color 0.3s ease;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link p {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li .menu-link p {
     margin: auto;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link.active {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li .menu-link.active {
     color: white !important;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link .menu-icon {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .menu-links li .menu-link .menu-icon {
     margin-right: 10px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .footer {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .footer {
     color: #777;
     width: 100%;
     font-size: 14px;
@@ -276,21 +282,21 @@ ul {
     margin-top: auto;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .footer ul {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .footer ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .footer ul a {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .footer ul a {
     color: #777;
     font-size: 25px;
     margin: 0px 8px;
     transition: color 0.3s ease;
 }
 
-.mobile-sidebar .mobile-sidebar-content .menu .footer ul a:hover {
+.mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu .footer ul a:hover {
     color: white;
 }
 
@@ -300,47 +306,40 @@ ul {
     margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
 /* content */
 .content {
     background-color: #2C2D2F;
     color: white;
-    position: absolute;
-    top: 0;
-    left: 250px;
+    z-index: 1;
+    padding-top: 0;
+    padding-left: 250px;
+    transition: none;
+}
+
+.sub-content {
     padding: 20px;
-    transition: left 0.3s ease, top 0.3s ease;
-    z-index: 0;
-    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
 
     .desktop-sidebar {
-        margin-left: -250px;
+        transform: translateX(-250px);
     }
 
     .mobile-sidebar {
-        margin-top: 0px;
+        transform: translateY(0);
     }
 
     .content {
-        top: 80px;
-        left: 0px;
+        padding-left: 0;
+        padding-top: 80px;
     }
 
 }
 
 @media screen and (min-width: 768px) {
 
-    .mobile-sidebar .mobile-sidebar-content .menu.open {
+    .mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu.open {
         height: 0;
     }
 

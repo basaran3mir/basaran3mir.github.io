@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const toggleBtn = document.querySelector('.toggle-button');
-    const menu = document.querySelector('.mobile-sidebar .menu');
+    const menu = document.querySelector('.mobile-sidebar');
 
     toggleBtn.addEventListener('click', function () {
         menu.classList.toggle('open');

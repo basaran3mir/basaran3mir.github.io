@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <!-- Static files -->
+    <script src="static/js/script.js"></script>
+
+    <title>fullname | Personal Website</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .desktop-sidebar,
+        .mobile-sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: #17181B;
+            transition: transform 0.3s ease;
+            z-index: 10;
+        }
+
+        /* desktop */
+        .desktop-sidebar {
+            height: 100%;
+            width: 250px;
+            transform: translateX(0);
+        }
+
+        .mobile-sidebar {
+            height: 80px;
+            width: 100%;
+            transform: translateY(-100%);
+            /* gizli durumda yukarıda */
+        }
+
+        /* content hep padding ile ayarlanıyor */
+        .content {
+            padding: 20px;
+            padding-top: 0;
+            /* mobilde üst boşluk ekleyeceğiz */
+            padding-left: 250px;
+            /* desktop’da yandan boşluk */
+            transition: none;
+            background: aquamarine;
+            color: white;
+        }
+
+        /* responsive */
+        @media (max-width: 768px) {
+            .desktop-sidebar {
+                transform: translateX(-250px);
+            }
+
+            .mobile-sidebar {
+                transform: translateY(0);
+            }
+
+            .content {
+                padding-left: 0;
+                padding-top: 80px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="desktop-sidebar"></div>
+    <div class="mobile-sidebar"></div>
+    <div class="content"></div>
+</body>
+
+</html>
