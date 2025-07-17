@@ -1,3 +1,14 @@
+:root {
+  --background: #ffffff;
+  --primary: #000000;
+  --text: #222222;
+}
+
+.usage {
+  background-color: var(--background);
+  color: var(--text);
+}
+
 *,
 *::before,
 *::after {
@@ -33,6 +44,8 @@ ul {
 .desktop-sidebar-content {
     height: 100%;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .desktop-sidebar-content .photo {
@@ -106,12 +119,11 @@ ul {
 }
 
 .desktop-sidebar-content .footer {
-    position: absolute;
-    bottom: 0;
     color: #777;
     width: 100%;
     font-size: 14px;
     text-align: center;
+    margin-top: auto;
 }
 
 .desktop-sidebar-content .footer ul {
@@ -150,24 +162,31 @@ ul {
     height: 100%;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
 }
 
-.mobile-sidebar-content .photo {
+.mobile-sidebar-content .mobile-sidebar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    z-index: 1001;
+}
+
+.mobile-sidebar-content .mobile-sidebar-header .photo {
     height: 80px;
     width: fit-content;
     padding: 10px;
 }
 
-.mobile-sidebar-content .photo img {
+.mobile-sidebar-content .mobile-sidebar-header .photo img {
     height: 100%;
     width: 100%;
     border-radius: 50%;
 }
 
-.mobile-sidebar-content .full-name {
+.mobile-sidebar-content .mobile-sidebar-header .full-name {
     margin-left: 10px;
     font-size: 20px;
     font-family: 'Playfair Display', serif;
@@ -175,19 +194,21 @@ ul {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin: auto;
+    padding: 10px;
 }
 
-.mobile-sidebar-content .toggle-button {
+.mobile-sidebar-content .mobile-sidebar-header .toggle-button {
     cursor: pointer;
     border-radius: 20%;
     margin-right: 0;
+    padding: 10px;
 }
 
-.mobile-sidebar-content .toggle-button i {
+.mobile-sidebar-content .mobile-sidebar-header .toggle-button i {
     font-size: 35px;
 }
 
-.mobile-sidebar .menu {
+.mobile-sidebar .mobile-sidebar-content .menu {
     position: fixed;
     width: 100%;
     height: 0;
@@ -195,13 +216,16 @@ ul {
     background-color: #17181B;
     transition: height 0.3s ease;
     z-index: 1000;
+    padding-top: 80px;
+    display: flex;
+    flex-direction: column;
 }
 
-.mobile-sidebar .menu.open {
+.mobile-sidebar .mobile-sidebar-content .menu.open {
     height: 100%;
 }
 
-.mobile-sidebar .menu .menu-links li {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li {
     width: 100%;
     height: 60px;
     display: flex;
@@ -211,13 +235,13 @@ ul {
     transition: background-color 0.3s ease;
 }
 
-.mobile-sidebar .menu .menu-links li:hover {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li:hover {
     cursor: pointer;
     background-color: #34495e;
     color: white;
 }
 
-.mobile-sidebar .menu .menu-links li .menu-link {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link {
     display: flex;
     width: 100%;
     height: 100%;
@@ -230,44 +254,43 @@ ul {
     transition: color 0.3s ease;
 }
 
-.mobile-sidebar .menu .menu-links li .menu-link p {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link p {
     margin: auto;
 }
 
-.mobile-sidebar .menu .menu-links li .menu-link.active {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link.active {
     color: white !important;
 }
 
-.mobile-sidebar .menu .menu-links li .menu-link .menu-icon {
+.mobile-sidebar .mobile-sidebar-content .menu .menu-links li .menu-link .menu-icon {
     margin-right: 10px;
     font-size: 25px;
     font-weight: bold;
 }
 
-.mobile-sidebar .footer {
-    position: absolute;
-    bottom: 0;
+.mobile-sidebar .mobile-sidebar-content .menu .footer {
     color: #777;
     width: 100%;
     font-size: 14px;
     text-align: center;
+    margin-top: auto;
 }
 
-.mobile-sidebar-content .footer ul {
+.mobile-sidebar .mobile-sidebar-content .menu .footer ul {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
 }
 
-.mobile-sidebar .footer ul a {
+.mobile-sidebar .mobile-sidebar-content .menu .footer ul a {
     color: #777;
     font-size: 25px;
     margin: 0px 8px;
     transition: color 0.3s ease;
 }
 
-.mobile-sidebar .footer ul a:hover {
+.mobile-sidebar .mobile-sidebar-content .menu .footer ul a:hover {
     color: white;
 }
 
@@ -287,6 +310,7 @@ ul {
 
 /* content */
 .content {
+    background-color: #2C2D2F;
     color: white;
     position: absolute;
     top: 0;
@@ -294,6 +318,7 @@ ul {
     padding: 20px;
     transition: left 0.3s ease, top 0.3s ease;
     z-index: 0;
+    width: 100%;
 }
 
 @media screen and (max-width: 768px) {
@@ -315,7 +340,7 @@ ul {
 
 @media screen and (min-width: 768px) {
 
-    .mobile-sidebar .menu.open {
+    .mobile-sidebar .mobile-sidebar-content .menu.open {
         height: 0;
     }
 

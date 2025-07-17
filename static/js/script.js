@@ -16,7 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     const mobileMenuLinks = document.querySelectorAll(".mobile-sidebar .menu-link");
-    console.log(mobileMenuLinks)
 
     mobileMenuLinks.forEach(link => {
         link.addEventListener('click', function () {
