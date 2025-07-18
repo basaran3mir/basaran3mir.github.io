@@ -19,6 +19,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Roboto', sans-serif;
 }
 
 ul {
@@ -32,8 +33,11 @@ p {
     padding: 0;
 }
 
+.pd-v-20 {
+    padding: 20px 0px;
+}
+
 .sidebar {
-    font-family: 'Roboto', sans-serif;
     background-color: #17181B;
     color: #777;
     position: fixed;
@@ -210,7 +214,6 @@ p {
 
 .mobile-sidebar-content .mobile-sidebar-content-header .toggle-button {
     cursor: pointer;
-    border-radius: 20%;
     margin-right: 0;
     padding: 10px;
 }
@@ -324,9 +327,8 @@ p {
 }
 
 .content .sub-content {
-    background-color: #2C2D2F;
     height: 100%;
-    width: 100%;
+    background-color: #2C2D2F;
     padding: 20px 40px;
     border-radius: 25px;
     display: flex;
@@ -336,7 +338,6 @@ p {
 .content .sub-content-header {
     display: flex;
     flex-direction: row;
-    font-family: 'Roboto', sans-serif;
     font-size: 18px;
     color: white;
     padding-bottom: 20px;
@@ -345,6 +346,7 @@ p {
     text-transform: uppercase;
     justify-content: center;
     align-items: end;
+    font-weight: bold;
 }
 
 .content .sub-content-border .sub-content .sub-content-header .sub-content-header-name,
@@ -365,23 +367,25 @@ p {
 }
 
 /* home */
-#HomeSubContent {
+#home {
+    height: 800px;
+}
+
+#HomeContent {
     position: relative;
     overflow: hidden;
     z-index: 0
 }
 
-#HomeSubContent::before {
+#HomeContent::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-
-    /* Arka plan resmi + karartma bir arada */
     background:
-        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)),
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
         url("../images/welcome.jpeg");
 
     background-repeat: no-repeat;
@@ -410,7 +414,7 @@ p {
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-name .surname {
-    color: #0060d6;
+    color: #2980b9;
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-job {
@@ -420,13 +424,69 @@ p {
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-job .jobname {
-    border-bottom: 2px solid #0060d6;
+    border-bottom: 2px solid #2980b9;
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-job .jobname::after {
     content: '|';
     animation: blink 0.7s steps(1) infinite;
     margin-left: 2px;
+}
+
+/* aboutme */
+.content .sub-content-border .sub-content .sub-content-about {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-summary {
+    padding-right: 20px;
+    width: 50%;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-summary p {
+    margin-bottom: 20px;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-summary p:last-child {
+    margin-bottom: 0px;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-table {
+    background-color: #17181B;
+    border-radius: 25px;
+    min-width: 378px;
+    max-height: 378px;
+    width: 50%;
+    padding: 20px;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-table ul {
+    font-size: 1rem;
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-table ul>li {
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 2px solid #2980b9;
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-table ul>li:last-child {
+    border: none;
+}
+
+.content .sub-content-border .sub-content .sub-content-about .info-table .download-link {
+    color: white;
+    border-bottom: 2px solid white;
+    text-decoration: none;
 }
 
 @keyframes blink {
@@ -437,7 +497,7 @@ p {
 
 /* about */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
 
     .desktop-sidebar {
         transform: translateX(-250px);
@@ -456,9 +516,23 @@ p {
         scroll-margin-top: 80px;
     }
 
+    .content .sub-content-border .sub-content .sub-content-about {
+        flex-direction: column;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-about .info-summary {
+        padding-right: 0px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-about .info-table {
+        width: 100%;
+    }
+
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
 
     .mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu.open {
         height: 0;

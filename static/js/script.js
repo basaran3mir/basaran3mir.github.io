@@ -47,4 +47,9 @@ document.addEventListener('DOMContentLoaded', function () {
         typewriterEffect(surnameElement, "Software developer", 150);
     }
 
+    const birthYear = 2001;
+    const currentYear = new Date().getFullYear();
+    const age = currentYear - birthYear;
+    document.getElementById("age-value").textContent = age;
+
 });
