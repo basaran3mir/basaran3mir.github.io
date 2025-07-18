@@ -23,4 +23,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
+    function typewriterEffect(element, text, typewriterSpeed) {
+        element.innerHTML = '';
+        let index = 0;
+        const interval = setInterval(() => {
+            if (index < text.length) {
+                element.innerHTML += text.charAt(index++);
+            } else {
+                clearInterval(interval);
+                completeTyping()
+            }
+        }, typewriterSpeed);
+
+        function completeTyping() {
+            setTimeout(() => {
+                typewriterEffect(surnameElement, "Software developer", 150);
+            }, 3000);
+        }
+    }
+
+    const surnameElement = document.querySelector(".jobname");
+    if (surnameElement) {
+        typewriterEffect(surnameElement, "Software developer", 150);
+    }
+
 });
