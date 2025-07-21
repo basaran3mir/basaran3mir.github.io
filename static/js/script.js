@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         function completeTyping() {
             setTimeout(() => {
                 typewriterEffect(surnameElement, "Software developer", 150);
-            }, 3000);
+            }, 2000);
         }
     }
 

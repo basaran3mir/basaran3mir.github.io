@@ -445,14 +445,6 @@ p {
     width: 50%;
 }
 
-.content .sub-content-border .sub-content .sub-content-about .info-summary p {
-    margin-bottom: 20px;
-}
-
-.content .sub-content-border .sub-content .sub-content-about .info-summary p:last-child {
-    margin-bottom: 0px;
-}
-
 .content .sub-content-border .sub-content .sub-content-about .info-table {
     background-color: #17181B;
     border-radius: 25px;
@@ -487,6 +479,120 @@ p {
     color: white;
     border-bottom: 2px solid white;
     text-decoration: none;
+}
+
+/* resume */
+.content .sub-content-border .sub-content .sub-content-resume {
+    display: flex;
+    flex-direction: row;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part {
+    width: 50%;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part.educations {
+    padding-right: 20px
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences {
+    padding-left: 20px
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part .resume-part-header {
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.resume-part-header span {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2980b9;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .education, .experience {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: row;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume 
+.experience-list > .experience:last-child,
+.content .sub-content-border .sub-content .sub-content-resume 
+.education-list > .education:last-child {
+    margin-bottom: 0px;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .education-years, .experience-years {
+    display: flex;
+    flex-direction: column;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .start-year {
+    font-weight: bold;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .end-year {
+    font-weight: bold;
+    margin-top: auto;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .education-line, .experience-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 20px 0px 10px;
+    color: #00A3E1;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .line-circle {
+    width: 14px;
+    height: 14px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    border-color: #00A3E1;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .line-bar {
+    width: 2px;
+    background-color: white;
+    height: calc(100% - 28px);
+    margin: 0;
+    padding: 0;
+    background: #00A3E1;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .education-explanation, .experience-explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .explanation-title {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .explanation-company {
+    font-weight: bold;
+    font-size: 12px;
+    color: #00A3E1;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .explanation-summary {
+    font-size: 16px;
 }
 
 @keyframes blink {
@@ -528,6 +634,19 @@ p {
 
     .content .sub-content-border .sub-content .sub-content-about .info-table {
         width: 100%;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume {
+        flex-direction: column;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume .resume-part {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences .resume-part-header {
+        margin-top: 80px;
     }
 
 }

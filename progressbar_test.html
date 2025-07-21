@@ -33,26 +33,34 @@
             justify-content: center;
         }
 
-        .base {
+        .experience {
             display: flex;
             flex-direction: row;
+            max-width: 400px;
         }
 
-        .part1 {
+        .experience-years {
             display: flex;
             flex-direction: column;
         }
 
-        .part2 {
+        .start-year {
+            font-weight: bold;
+        }
+
+        .end-year {
+            font-weight: bold;
+            margin-top: auto;
+        }
+
+        .experience-line {
             display: flex;
             flex-direction: column;
             align-items: center;
             margin: 0px 10px;
-            padding: 5px;
         }
 
-        .part2-1,
-        .part2-3 {
+        .line-circle {
             width: 14px;
             height: 14px;
             border: 2px solid white;
@@ -62,31 +70,60 @@
             margin: 0;
         }
 
-        .part2-2 {
+        .line-bar {
             width: 2px;
             background-color: white;
-            height: 50px;
+            height: calc(100% - 28px);
+            height: 200px;
             margin: 0;
             padding: 0;
         }
+
+        .experience-explanation {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .explanation-title {
+            font-weight: bold;
+            font-size: 18px;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .explanation-company {
+            font-weight: bold;
+            font-size: 12px;
+            color: #00A3E1;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .explanation-summary {
+            font-size: 16px;
+        }
+
     </style>
 </head>
 
 <body>
     <div class="content">
-        <div class="base">
-            <div class="part1">
-                <div class="part1-1">2024</div>
-                <div class="part1-2">2025</div>
+        <div class="experience">
+            <div class="experience-years">
+                <div class="start-year">2024</div>
+                <div class="end-year">2025</div>
             </div>
-            <div class="part2">
-                <div class="part2-1"></div>
-                <div class="part2-2"></div>
-                <div class="part2-3"></div>
+            <div class="experience-line">
+                <div class="line-circle"></div>
+                <div class="line-bar"></div>
+                <div class="line-circle"></div>
             </div>
-            <div class="part3">
-                <div class="part3-1">2024</div>
-                <div class="part3-2">2025</div>
+            <div class="experience-explanation">
+                <div class="explanation-title">Lead UI Designer</div>
+                <div class="explanation-company">Big Design Company, NY, USA</div>
+                <div class="explanation-summary">Sit cupiditate praesentium ex esse nulla Facere fuga perspiciatis eveniet provident
+                    neque Ea ratione non minus temporibus ipsum Sunt minima</div>
             </div>
         </div>
     </div>
