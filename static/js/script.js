@@ -1,27 +1,37 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const menuLinks = document.querySelectorAll(".menu-link");
 
-    menuLinks.forEach(link => {
-        link.addEventListener('click', function () {
-            menuLinks.forEach(item => item.classList.remove('active'));
-            link.classList.add('active');
+    function setActiveMenuLink() {
+        const allMenuLinks = document.querySelectorAll(".menu-link");
+
+        allMenuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                const href = link.getAttribute('href');
+                allMenuLinks.forEach(item => item.classList.remove('active'));
+                const matchingLinks = Array.from(allMenuLinks).filter(item => item.getAttribute('href') === href);
+                matchingLinks.forEach(matchedLink => matchedLink.classList.add('active'));
+            });
         });
-    });
+    }
 
-    const toggleBtn = document.querySelector('.toggle-button');
-    const menu = document.querySelector('.mobile-sidebar');
+    function setMobileSidebarToggleButtonAction() {
+        const toggleBtn = document.querySelector('.toggle-button');
+        const menu = document.querySelector('.mobile-sidebar');
 
-    toggleBtn.addEventListener('click', function () {
-        menu.classList.toggle('open');
-    });
-
-    const mobileMenuLinks = document.querySelectorAll(".mobile-sidebar .menu-link");
-
-    mobileMenuLinks.forEach(link => {
-        link.addEventListener('click', function () {
+        toggleBtn.addEventListener('click', function () {
             menu.classList.toggle('open');
         });
-    });
+    }
+
+    function turnOffMobilSidebarOnPartClick() {
+        const menu = document.querySelector('.mobile-sidebar');
+        const mobileMenuLinks = document.querySelectorAll(".mobile-sidebar .menu-link");
+
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                menu.classList.toggle('open');
+            });
+        });
+    }
 
     function typewriterEffect(element, text, typewriterSpeed) {
         element.innerHTML = '';
@@ -37,19 +47,29 @@ document.addEventListener('DOMContentLoaded', function () {
 
         function completeTyping() {
             setTimeout(() => {
-                typewriterEffect(surnameElement, "Software developer", 150);
+                typewriterEffect(element, "Software developer", 150);
             }, 2000);
         }
     }
 
-    const surnameElement = document.querySelector(".jobname");
-    if (surnameElement) {
-        typewriterEffect(surnameElement, "Software developer", 150);
+    function jobnametypewriterEffect() {
+        const jobnameElement = document.querySelector(".jobname");
+        if (jobnameElement) {
+            typewriterEffect(jobnameElement, "Software developer", 150);
+        }
     }
 
-    const birthYear = 2001;
-    const currentYear = new Date().getFullYear();
-    const age = currentYear - birthYear;
-    document.getElementById("age-value").textContent = age;
+    function calculateAge() {
+        const birthYear = 2001;
+        const currentYear = new Date().getFullYear();
+        const age = currentYear - birthYear;
+        document.getElementById("age-value").textContent = age;
+    }
+
+    setActiveMenuLink()
+    setMobileSidebarToggleButtonAction()
+    turnOffMobilSidebarOnPartClick()
+    jobnametypewriterEffect()
+    calculateAge()
 
 });
