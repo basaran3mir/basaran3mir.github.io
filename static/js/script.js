@@ -1,3 +1,16 @@
+function toggleTheme(element) {
+    const root = document.documentElement;
+    const currentTheme = root.getAttribute('data-theme');
+
+    if (currentTheme === 'light') {
+        root.removeAttribute('data-theme');
+    } else {
+        root.setAttribute('data-theme', 'light');
+    }
+
+    element.classList.toggle("rotate-180")
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
     function setActiveMenuLink() {

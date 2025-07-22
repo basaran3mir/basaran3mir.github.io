@@ -1,16 +1,78 @@
 :root {
-    --background-primary:       #232323;
-    --background-secondary:     #2C2D2F;
-    --background-tertiary:      #17181B;
-    --background-overlay:       #17181b80;
-    --background-gradient:      #00000099;
+    --background-primary: #232323;
+    --background-secondary: #2C2D2F;
+    --background-tertiary: #17181B;
+    --background-overlay: #17181b80;
+    --background-gradient: #00000099;
 
-    --text-primary:             #ffffff;
-    --text-secondary:           #777777;
-    --text-accent:              #2980b9;
+    --text-primary: #ffffff;
+    --text-secondary: #777777;
+    --text-accent: #2980b9;
 
-    --border-default:           #202226;
-    --hover-primary:            #34495e;
+    --border-default: #202226;
+    --hover-primary: #34495e;
+}
+
+:root[data-theme="light"] {
+    --background-primary: #ffffff;
+    --background-secondary: #f4f4f4;
+    --background-tertiary: #eaeaea;
+    --background-overlay: #ffffffcc;
+    --background-gradient: #ffffff33;
+
+    --text-primary: #111111;
+    --text-secondary: #555555;
+    --text-accent: #1a73e8;
+
+    --border-default: #dddddd;
+    --hover-primary: #cce0ff;
+}
+
+.theme-settings {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    z-index: 9;
+    height: 35px;
+    width: 35px;
+    transition: all 0.3s ease;
+    transform: translateX(-25px);
+}
+
+.theme-settings:hover {
+    transform: translateX(0px);
+}
+
+.theme-settings .theme-icons {
+    position: relative;
+    height: 35px;
+    width: 75px;
+    border-radius: 20px;
+    top: 0;
+    left: -40px;
+    background-color: var(--text-accent);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.theme-settings .theme-icons .lnr-moon {
+    transform: rotate(180deg);
+    margin-right: auto;
+}
+
+.theme-settings .theme-icons .lnr-sun {
+    margin-left: auto;
+}
+
+.rotate-180 {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
 }
 
 *,
@@ -655,6 +717,39 @@ p {
 
     .content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences .resume-part-header {
         margin-top: 80px;
+    }
+
+    .theme-settings {
+        top: 80px;
+        left: unset;
+        right: 10px;
+        transform: translateY(-25px);
+        transition: all 0.3s ease;
+    }
+
+    .theme-settings:hover {
+        transform: translateY(0px);
+    }
+
+    .theme-settings .theme-icons {
+        flex-direction: column;
+        height: 75px;
+        width: 35px;
+        left: unset;
+        top: -40px;
+        padding: 10px 0px;
+    }
+
+    .theme-settings .theme-icons .lnr-moon {
+        margin-bottom: auto;
+        margin-right: unset;
+
+    }
+
+    .theme-settings .theme-icons .lnr-sun {
+        margin-top: auto;
+        margin-left: unset;
+
     }
 
 }
