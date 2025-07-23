@@ -69,7 +69,7 @@ p {
     z-index: 10;
 }
 
-/* desktop sidebar*/
+/* desktop sidebar */
 .desktop-sidebar {
     height: 100%;
     width: 250px;
@@ -356,7 +356,7 @@ p {
     margin-bottom: 20px;
 }
 
-/* content - common */
+/* content */
 .content {
     background-color: var(--background-primary);
     color: var(--text-primary);
@@ -689,6 +689,25 @@ p {
 .content .sub-content-border .sub-content .sub-content-resume .explanation-summary {
     font-size: 16px;
 }
+
+/* portfolio */
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list {
+    border-radius: 20px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 50px;
+    background-color: var(--background-overlay);
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio{
+    height: 200px;
+    width: 200px;
+    border-radius: 20px;
+    border: 2px solid var(--text-accent);
+    background-color: var(--background-overlay);
+}
+
 
 @keyframes blink {
     50% {
