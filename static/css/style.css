@@ -28,57 +28,13 @@
     --hover-primary: #cce0ff;
 }
 
-.theme-settings {
-    position: fixed;
-    top: 0px;
-    left: 250px;
-    z-index: 9;
-    height: 35px;
-    width: 35px;
-    transition: all 0.3s ease;
-    transform: translateX(-25px);
-}
-
-.theme-settings:hover {
-    transform: translateX(0px);
-}
-
-.theme-settings .theme-icons {
-    position: relative;
-    height: 35px;
-    width: 75px;
-    border-radius: 20px;
-    top: 0;
-    left: -40px;
-    background-color: var(--text-accent);
-    transition: all 0.5s ease;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0px 10px;
-    cursor: pointer;
-}
-
-.theme-settings .theme-icons .lnr-moon {
-    transform: rotate(180deg);
-    margin-right: auto;
-}
-
-.theme-settings .theme-icons .lnr-sun {
-    margin-left: auto;
-}
-
-.rotate-180 {
-    transform: rotate(-180deg);
-    transition: transform 0.3s ease;
-}
-
 *,
 *::before,
 *::after {
     box-sizing: border-box;
+    transition: background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
 
 html {
@@ -278,13 +234,36 @@ p {
 }
 
 .mobile-sidebar-content .mobile-sidebar-content-header .toggle-button {
+    position: relative;
+    right: 10px;
+    width: 35px;
+    height: 35px;
     cursor: pointer;
     margin-right: 0;
-    padding: 10px;
 }
 
 .mobile-sidebar-content .mobile-sidebar-content-header .toggle-button i {
+    position: absolute;
+    top: 0;
+    left: 0;
     font-size: 35px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-sidebar-content .mobile-sidebar-content-header .toggle-button .icon-menu {
+    opacity: 1;
+}
+
+.mobile-sidebar-content .mobile-sidebar-content-header .toggle-button .icon-cross {
+    opacity: 0;
+}
+
+.mobile-sidebar.open .mobile-sidebar-content .mobile-sidebar-content-header .toggle-button .icon-menu {
+    opacity: 0;
+}
+
+.mobile-sidebar.open .mobile-sidebar-content .mobile-sidebar-content-header .toggle-button .icon-cross {
+    opacity: 1;
 }
 
 .mobile-sidebar .mobile-sidebar-content .mobile-sidebar-content-menu {
@@ -385,6 +364,52 @@ p {
     padding-top: 0;
     padding-left: 250px;
     transition: none;
+}
+
+.content .theme-settings {
+    position: fixed;
+    top: 0px;
+    left: 250px;
+    z-index: 9;
+    height: 35px;
+    width: 35px;
+    transition: all 0.3s ease;
+    transform: translateX(-25px);
+}
+
+.content .theme-settings:hover {
+    transform: translateX(0px);
+}
+
+.content .theme-settings .theme-icons {
+    position: relative;
+    height: 35px;
+    width: 75px;
+    top: 0;
+    left: -40px;
+    background-color: var(--text-accent);
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 10px;
+    cursor: pointer;
+}
+
+.content .theme-settings .theme-icons .lnr-moon {
+    transform: rotate(180deg);
+    margin-right: auto;
+}
+
+.content .theme-settings .theme-icons .lnr-sun {
+    margin-left: auto;
+}
+
+.rotate-180 {
+    transform: rotate(-180deg);
+    transition: transform 0.3s ease;
 }
 
 .content .sub-content-border {
@@ -688,6 +713,39 @@ p {
         padding-top: 80px;
     }
 
+    .content .theme-settings {
+        top: 80px;
+        left: unset;
+        right: 10px;
+        transform: translateY(-25px);
+        transition: all 0.3s ease;
+    }
+
+    .content .theme-settings:hover {
+        transform: translateY(0px);
+    }
+
+    .content .theme-settings .theme-icons {
+        flex-direction: column;
+        height: 75px;
+        width: 35px;
+        left: unset;
+        top: -40px;
+        padding: 10px 0px;
+    }
+
+    .content .theme-settings .theme-icons .lnr-moon {
+        margin-bottom: auto;
+        margin-right: unset;
+
+    }
+
+    .content .theme-settings .theme-icons .lnr-sun {
+        margin-top: auto;
+        margin-left: unset;
+
+    }
+
     .sub-content-border {
         scroll-margin-top: 80px;
     }
@@ -719,38 +777,7 @@ p {
         margin-top: 80px;
     }
 
-    .theme-settings {
-        top: 80px;
-        left: unset;
-        right: 10px;
-        transform: translateY(-25px);
-        transition: all 0.3s ease;
-    }
 
-    .theme-settings:hover {
-        transform: translateY(0px);
-    }
-
-    .theme-settings .theme-icons {
-        flex-direction: column;
-        height: 75px;
-        width: 35px;
-        left: unset;
-        top: -40px;
-        padding: 10px 0px;
-    }
-
-    .theme-settings .theme-icons .lnr-moon {
-        margin-bottom: auto;
-        margin-right: unset;
-
-    }
-
-    .theme-settings .theme-icons .lnr-sun {
-        margin-top: auto;
-        margin-left: unset;
-
-    }
 
 }
 
