@@ -11,6 +11,20 @@ function toggleTheme(element) {
     element.classList.toggle("rotate-180")
 }
 
+function getGithubRepos() {
+    fetch("https://api.github.com/users/basaran3mir/repos")
+        .then(res => res.json())
+        .then(data => {
+            data.forEach(repo => {
+                console.log(repo.html_url);
+            });
+        });
+}
+
+function showGithubRepos() {
+    
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 
     function setActiveMenuLink() {
