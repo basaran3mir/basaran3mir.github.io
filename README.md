@@ -1,13 +1,20 @@
-# Proje Adı
+# Personal Portfolio Website
 
-Bu proje sadece portföy amacıyla paylaşılmıştır. Herhangi bir bireysel ya da ticari kullanımına **izin verilmemektedir**.
+This repository contains the source code of my personal portfolio website. It is shared **solely for portfolio and demonstration purposes**.
 
-## Açıklama
+## 📌 Disclaimer
 
-Projenin amacı, [örnek: belirli bir işlevi yerine getiren bir yazılım] geliştirmektir. 
+The project is **not** intended for personal or commercial use by others.  
+All content, design, and source code are the intellectual property of the author and are provided **strictly for review and inspiration only**.
 
-Kodlar yalnızca inceleme amacıyla paylaşılmıştır. İzinsiz kopyalanamaz, çoğaltılamaz ya da dağıtılamaz.
+Unauthorized use, reproduction, or distribution of any part of this project is **strictly prohibited**.
 
-## Lisans
+## 📝 Description
 
-Bu projede herhangi bir açık kaynak lisans kullanılmamaktadır. Tüm hakları saklıdır.
+The goal of this project is to showcase my skills, experience, and selected works as a software developer.  
+It serves as a digital resume and personal branding platform, built with clean, scalable, and modern web development practices.
+
+## 🚫 License
+
+This project is **not open source**.  
+All rights reserved © Emir Can Başaran.
