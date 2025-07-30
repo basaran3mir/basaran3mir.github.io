@@ -401,11 +401,13 @@ p {
 }
 
 .content .theme-settings .theme-icons .lnr-moon {
+    color: black;
     transform: rotate(180deg);
     margin-right: auto;
 }
 
 .content .theme-settings .theme-icons .lnr-sun {
+    color: white;
     margin-left: auto;
 }
 
@@ -437,7 +439,7 @@ p {
     letter-spacing: 2px;
     text-transform: uppercase;
     justify-content: center;
-    align-items: end;
+    align-items: center;
     font-weight: bold;
 }
 
@@ -692,22 +694,46 @@ p {
 
 /* portfolio */
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list {
-    border-radius: 20px;
-    width: 100%;
     display: grid;
-    grid-template-columns: auto auto auto;
-    gap: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
     background-color: var(--background-overlay);
+    border-radius: 20px;
 }
 
-.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio{
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio {
     height: 200px;
-    width: 200px;
+    width: 100%;
+    margin: auto;
     border-radius: 20px;
     border: 2px solid var(--text-accent);
     background-color: var(--background-overlay);
 }
 
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content .portfolio-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content .portfolio-info {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
 
 @keyframes blink {
     50% {
@@ -756,13 +782,11 @@ p {
     .content .theme-settings .theme-icons .lnr-moon {
         margin-bottom: auto;
         margin-right: unset;
-
     }
 
     .content .theme-settings .theme-icons .lnr-sun {
         margin-top: auto;
         margin-left: unset;
-
     }
 
     .content .sub-content-border {

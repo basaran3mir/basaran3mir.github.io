@@ -11,20 +11,6 @@ function toggleTheme(element) {
     element.classList.toggle("rotate-180")
 }
 
-function getGithubRepos() {
-    fetch("https://api.github.com/users/basaran3mir/repos")
-        .then(res => res.json())
-        .then(data => {
-            data.forEach(repo => {
-                console.log(repo.html_url);
-            });
-        });
-}
-
-function showGithubRepos() {
-    
-}
-
 document.addEventListener('DOMContentLoaded', function () {
 
     function setActiveMenuLink() {
@@ -93,10 +79,79 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("age-value").textContent = age;
     }
 
+    async function getGithubRepos(username = "basaran3mir") {
+        try {
+            const response = await fetch(`https://api.github.com/users/${username}/repos`);
+            const data = await response.json();
+            return data;
+        } catch (error) {
+            console.error("Failed to retrieve GitHub data:", error);
+            return [
+                {
+                    html_url: "https://github.com/basaran3mir?tab=repositories",
+                    name: "github-repositories",
+                    description: "An issue occurred with the GitHub API. You can still view my portfolio on my GitHub profile.",
+                }
+            ];
+        }
+    }
+
+    async function showGithubRepos() {
+        const list = document.getElementById("githubRepoList");
+        list.innerHTML = "";
+
+        const repos = await getGithubRepos();
+        const filtered_repos = repos.filter(repo => !repo.name.toLowerCase().includes("basaran3mir")); //removed 'readme' and 'personal web site' github repo
+
+        filtered_repos.forEach(repo => {
+            const li = document.createElement("li");
+            li.className = "portfolio";
+
+            li.innerHTML = `
+                <a class="portfolio-link" href="${repo.html_url}" target="_blank">
+                    <div class="portfolio-content">
+                        <h3 class="portfolio-name">${formatGithubRepoName(repo.name)}</h3>
+                        <p class="portfolio-info">
+                            ${formatGithubRepoDescription(repo.description)}
+                        </p>
+                    </div>
+                </a>
+            `;
+
+            list.appendChild(li);
+        });
+
+        function formatGithubRepoName(repo_name) {
+            if (!repo_name) {
+                return "No information available.";
+            }
+
+            const formatted = repo_name
+                .split("-")
+                .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+                .join(" ");
+
+            return formatted;
+        }
+
+        function formatGithubRepoDescription(repo_description) {
+            if (!repo_description) {
+                return "No information available.";
+            }
+
+            if (repo_description.length > 100) {
+                return repo_description.slice(0, 100) + " ...";
+            }
+
+            return repo_description;
+        }
+    }
+
     setActiveMenuLink()
     setMobileSidebarToggleButtonAction()
     turnOffMobilSidebarOnPartClick()
     jobnametypewriterEffect()
     calculateAge()
+    showGithubRepos()
 
 });
