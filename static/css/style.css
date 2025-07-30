@@ -32,9 +32,11 @@
 *::before,
 *::after {
     box-sizing: border-box;
+    /*
     transition: background-color 0.3s ease,
         color 0.3s ease,
         border-color 0.3s ease;
+    */
 }
 
 html {
@@ -541,8 +543,6 @@ p {
 .content .sub-content-border .sub-content .sub-content-about .info-table {
     background-color: var(--background-tertiary);
     border-radius: 25px;
-    min-width: 378px;
-    max-height: 378px;
     width: 50%;
     padding: 20px;
 }
@@ -765,8 +765,12 @@ p {
 
     }
 
-    .sub-content-border {
+    .content .sub-content-border {
         scroll-margin-top: 80px;
+    }
+
+    .content .sub-content-border .sub-content {
+        padding: 10px 20px;
     }
 
     .content .sub-content-border .sub-content .sub-content-about {
@@ -795,8 +799,6 @@ p {
     .content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences .resume-part-header {
         margin-top: 80px;
     }
-
-
 
 }
 
