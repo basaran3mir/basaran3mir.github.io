@@ -79,16 +79,18 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById("age-value").textContent = age;
     }
 
-    async function getGithubRepos(username = "basaran3mir") {
+    async function getGithubRepos() {
         try {
-            const response = await fetch(`https://api.github.com/users/${username}/repos`);
+            const response = await fetch(`https://api.github.com/users/basaran3mir/repos`);
             const data = await response.json();
+            console.log(data)
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
             return [
                 {
                     html_url: "https://github.com/basaran3mir?tab=repositories",
+                    has_pages: false,
                     name: "github-repositories",
                     description: "An issue occurred with the GitHub API. You can still view my portfolio on my GitHub profile.",
                 }
@@ -108,14 +110,22 @@ document.addEventListener('DOMContentLoaded', function () {
             li.className = "portfolio";
 
             li.innerHTML = `
-                <a class="portfolio-link" href="${repo.html_url}" target="_blank">
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-name">${formatGithubRepoName(repo.name)}</h3>
-                        <p class="portfolio-info">
-                            ${formatGithubRepoDescription(repo.description)}
-                        </p>
+                <div class="portfolio-content">
+                    <div class="portfolio-links">
+                        <a class="portfolio-link" href="${repo.html_url}" target="_blank">
+                            <i class="fa-solid fa-code"></i> 
+                        </a>
+                        ${repo.has_pages ? `
+                            <a class="portfolio-link" href="${formatGithubRepoPage(repo.name)}" target="_blank">
+                                <i class="fa-solid fa-globe"></i> 
+                            </a>
+                        ` : ''}
                     </div>
-                </a>
+                    <h3 class="portfolio-name">${formatGithubRepoName(repo.name)}</h3>
+                    <p class="portfolio-info">
+                        ${formatGithubRepoDescription(repo.description)}
+                    </p>
+                </div>
             `;
 
             list.appendChild(li);
@@ -145,7 +155,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             return repo_description;
         }
+
+        function formatGithubRepoPage(repo_name) {
+            return ("https://basaran3mir.github.io/" + repo_name);
+        }
+
     }
+
+
 
     setActiveMenuLink()
     setMobileSidebarToggleButtonAction()

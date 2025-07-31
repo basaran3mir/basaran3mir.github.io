@@ -712,28 +712,45 @@ p {
     border-radius: 20px;
 }
 
-.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link {
-    text-decoration: none;
-    color: inherit;
-}
-
-.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content {
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content {
     padding: 10px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     height: 100%;
 }
 
-.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content .portfolio-name {
-    font-size: 18px;
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-links {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-links .portfolio-link {
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--text-accent);
+    border-radius: 50%;
+    padding: 5px;
     margin-bottom: 10px;
 }
 
-.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link .portfolio-content .portfolio-info {
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-links .portfolio-link:hover {
+    color: var(--hover-primary);
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-name {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-info {
     font-size: 14px;
     color: var(--text-secondary);
 }
+
 
 @keyframes blink {
     50% {
