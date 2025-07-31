@@ -699,7 +699,6 @@ p {
     gap: 20px;
     padding: 20px;
     width: 100%;
-    background-color: var(--background-overlay);
     border-radius: 20px;
 }
 
@@ -709,7 +708,8 @@ p {
     margin: auto;
     border-radius: 20px;
     border: 2px solid var(--text-accent);
-    background-color: var(--background-overlay);
+    background-color: var(--background-tertiary);
+    border-radius: 20px;
 }
 
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-link {
