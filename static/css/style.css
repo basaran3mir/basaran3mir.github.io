@@ -579,19 +579,11 @@ p {
 /* resume */
 .content .sub-content-border .sub-content .sub-content-resume {
     display: flex;
-    flex-direction: row;
+    flex-direction: column; /*row*/
 }
 
 .content .sub-content-border .sub-content .sub-content-resume .resume-part {
-    width: 50%;
-}
-
-.content .sub-content-border .sub-content .sub-content-resume .resume-part.educations {
-    padding-right: 20px
-}
-
-.content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences {
-    padding-left: 20px
+    width: 100%; /*50%*/
 }
 
 .content .sub-content-border .sub-content .sub-content-resume .resume-part .resume-part-header {
@@ -758,8 +750,6 @@ p {
     }
 }
 
-/* about */
-
 @media screen and (max-width: 992px) {
 
     .desktop-sidebar {
@@ -826,19 +816,6 @@ p {
 
     .content .sub-content-border .sub-content .sub-content-about .info-table {
         width: 100%;
-    }
-
-    .content .sub-content-border .sub-content .sub-content-resume {
-        flex-direction: column;
-    }
-
-    .content .sub-content-border .sub-content .sub-content-resume .resume-part {
-        width: 100%;
-        padding: 0 !important;
-    }
-
-    .content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences .resume-part-header {
-        margin-top: 80px;
     }
 
 }
