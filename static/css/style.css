@@ -1,4 +1,35 @@
 :root {
+    --background-primary: #1F1F1F;
+    --background-secondary: #2F3033;
+    --background-tertiary: #18191C;
+    --background-overlay: #18191bCC;
+    --background-gradient: #00000099;
+
+    --text-primary: #FFFFFF;
+    --text-secondary: #AAAAAA;
+    --text-accent: #3399FF;
+
+    --border-default: #282A2D;
+    --hover-primary: #3B5C7A;
+}
+
+:root[data-theme="light"] {
+    --background-primary: #FFFFFF;
+    --background-secondary: #F0F0F0;
+    --background-tertiary: #E0E0E0;
+    --background-overlay: #FFFFFFCC;
+    --background-gradient: #FFFFFF33;
+
+    --text-primary: #111111;
+    --text-secondary: #333333;
+    --text-accent: #1A73E8;
+
+    --border-default: #CCCCCC;
+    --hover-primary: #B3D1FF;
+}
+
+/*
+:root {
     --background-primary: #232323;
     --background-secondary: #2C2D2F;
     --background-tertiary: #17181B;
@@ -27,7 +58,7 @@
     --border-default: #dddddd;
     --hover-primary: #cce0ff;
 }
-
+*/
 *,
 *::before,
 *::after {
