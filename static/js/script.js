@@ -173,15 +173,12 @@ document.addEventListener('DOMContentLoaded', function () {
     pdfjsLib.GlobalWorkerOptions.workerSrc =
         "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
     let pdfDoc = null;
-    let currentPage = 1;
 
     async function loadPdf() {
-        // PDF'yi yükle
         pdfDoc = await pdfjsLib.getDocument(url).promise;
 
         let fullText = "";
 
-        // Tüm sayfalardaki metni sırayla oku
         for (let i = 1; i <= pdfDoc.numPages; i++) {
             const page = await pdfDoc.getPage(i);
             const content = await page.getTextContent();
@@ -189,23 +186,23 @@ document.addEventListener('DOMContentLoaded', function () {
             fullText += pageText + "\n";
         }
 
-        // 🔍 Belirli bir kelime veya bölüm bul
-        const keyword = "EDUCATION"; // örnek: PDF içinde geçen başlık
-        const startIndex = fullText.indexOf(keyword);
+        const startKeyword = "Computer Engineer";
+        const startIndex = fullText.indexOf(startKeyword);
+
+        endKeyword = "VAKIFBANK"
+        const endIndex = fullText.indexOf(endKeyword);
+
 
         let extractedText;
         if (startIndex !== -1) {
-            // 400 karakter kadar al (örnek)
-            extractedText = fullText.substring(startIndex, startIndex + 400);
+            extractedText = fullText.substring(startIndex, endIndex);
         } else {
             extractedText = "Belirtilen ifade PDF içinde bulunamadı.";
         }
 
-        // İçeriği HTML'e yazdır
         document.getElementById("output").textContent = extractedText;
     }
 
-    // Fonksiyonu çağır
     loadPdf();
 
 });
