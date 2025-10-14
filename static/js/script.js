@@ -112,11 +112,11 @@ document.addEventListener('DOMContentLoaded', function () {
             li.innerHTML = `
                 <div class="portfolio-content">
                     <div class="portfolio-links">
-                        <a class="portfolio-link" href="${repo.html_url}" target="_blank">
+                        <a class="portfolio-link" href="${repo.html_url}" aria-label="Portfolio link" target="_blank">
                             <i class="fa-solid fa-code"></i> 
                         </a>
                         ${repo.has_pages ? `
-                            <a class="portfolio-link" href="${formatGithubRepoPage(repo.name)}" target="_blank">
+                            <a class="portfolio-link" href="${formatGithubRepoPage(repo.name)}" aria-label="Portfolio website" target="_blank">
                                 <i class="fa-solid fa-globe"></i> 
                             </a>
                         ` : ''}
