@@ -169,40 +169,4 @@ document.addEventListener('DOMContentLoaded', function () {
     calculateAge()
     showGithubRepos()
 
-    const url = "static/docs/cv.pdf";
-    pdfjsLib.GlobalWorkerOptions.workerSrc =
-        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
-    let pdfDoc = null;
-
-    async function loadPdf() {
-        pdfDoc = await pdfjsLib.getDocument(url).promise;
-
-        let fullText = "";
-
-        for (let i = 1; i <= pdfDoc.numPages; i++) {
-            const page = await pdfDoc.getPage(i);
-            const content = await page.getTextContent();
-            const pageText = content.items.map(item => item.str).join(" ");
-            fullText += pageText + "\n";
-        }
-
-        const startKeyword = "Computer Engineer";
-        const startIndex = fullText.indexOf(startKeyword);
-
-        endKeyword = "VAKIFBANK"
-        const endIndex = fullText.indexOf(endKeyword);
-
-
-        let extractedText;
-        if (startIndex !== -1) {
-            extractedText = fullText.substring(startIndex, endIndex);
-        } else {
-            extractedText = "Belirtilen ifade PDF içinde bulunamadı.";
-        }
-
-        document.getElementById("output").textContent = extractedText;
-    }
-
-    loadPdf();
-
 });
