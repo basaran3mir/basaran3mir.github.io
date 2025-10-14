@@ -170,46 +170,42 @@ document.addEventListener('DOMContentLoaded', function () {
     showGithubRepos()
 
     const url = "static/docs/cv.pdf";
-
-    // Worker ayarı
     pdfjsLib.GlobalWorkerOptions.workerSrc =
         "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
-
     let pdfDoc = null;
     let currentPage = 1;
 
-    (async function loadPdf() {
+    async function loadPdf() {
+        // PDF'yi yükle
         pdfDoc = await pdfjsLib.getDocument(url).promise;
-        renderPage(currentPage);
-    })();
 
-    async function renderPage(pageNumber) {
-        const page = await pdfDoc.getPage(pageNumber);
-        const viewport = page.getViewport({ scale: 1.5 });
-        const canvas = document.getElementById("canvas");
-        const context = canvas.getContext("2d");
+        let fullText = "";
 
-        canvas.height = viewport.height;
-        canvas.width = viewport.width;
+        // Tüm sayfalardaki metni sırayla oku
+        for (let i = 1; i <= pdfDoc.numPages; i++) {
+            const page = await pdfDoc.getPage(i);
+            const content = await page.getTextContent();
+            const pageText = content.items.map(item => item.str).join(" ");
+            fullText += pageText + "\n";
+        }
 
-        await page.render({ canvasContext: context, viewport }).promise;
+        // 🔍 Belirli bir kelime veya bölüm bul
+        const keyword = "EDUCATION"; // örnek: PDF içinde geçen başlık
+        const startIndex = fullText.indexOf(keyword);
 
-        document.getElementById("output").innerText = `Sayfa ${pageNumber} / ${pdfDoc.numPages}`;
+        let extractedText;
+        if (startIndex !== -1) {
+            // 400 karakter kadar al (örnek)
+            extractedText = fullText.substring(startIndex, startIndex + 400);
+        } else {
+            extractedText = "Belirtilen ifade PDF içinde bulunamadı.";
+        }
 
-        document.getElementById("previous").disabled = (pageNumber <= 1);
-        document.getElementById("next").disabled = (pageNumber >= pdfDoc.numPages);
+        // İçeriği HTML'e yazdır
+        document.getElementById("output").textContent = extractedText;
     }
 
-    document.getElementById("previous").addEventListener("click", () => {
-        if (currentPage <= 1) return;
-        currentPage--;
-        renderPage(currentPage);
-    });
-
-    document.getElementById("next").addEventListener("click", () => {
-        if (currentPage >= pdfDoc.numPages) return;
-        currentPage++;
-        renderPage(currentPage);
-    });
+    // Fonksiyonu çağır
+    loadPdf();
 
 });
