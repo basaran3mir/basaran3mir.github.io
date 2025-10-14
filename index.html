@@ -1,10 +1,15 @@
 <!-- will edit eng cv for page number-->
- <!-- will edit education and experience part in website, this must be matched with the part in cv-->
+<!-- will edit education and experience part in website, this must be matched with the part in cv-->
 
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <!-- pdf.js -->
+    <script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js"></script>
+
     <!-- Static files -->
     <link rel="stylesheet" href="static/css/style.css">
     <script src="static/js/script.js"></script>
@@ -15,7 +20,7 @@
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
-    <!-- Google Fonts-->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -231,76 +236,9 @@
                     <span class="sub-content-header-icon"><i class="lnr lnr-license"></i></span>
                 </div>
                 <div class="sub-content-resume">
-                    <div class="resume-part educations">
-                        <div class="resume-part-header"><span>Education</span></div>
-                        <li class="education">
-                            <div class="education-years">
-                                <div class="start-year">09/2019</div>
-                                <div class="end-year">11/2023</div>
-                            </div>
-                            <div class="education-line">
-                                <div class="line-circle"></div>
-                                <div class="line-bar"></div>
-                                <div class="line-circle"></div>
-                            </div>
-                            <div class="education-explanation">
-                                <div class="explanation-title">Computer Engineering</div>
-                                <div class="explanation-company">Kocaeli University, Kocaeli, Turkey</div>
-                                <div class="explanation-summary">
-                                    Gained a solid foundation in core areas of Computer
-                                    Engineering through academic training. Acquired hands-on experience in C and
-                                    Java programming, with a particular focus on object-oriented programming (OOP)
-                                    using Java. Developed both web and mobile-based applications as part of project
-                                    work. Additionally, built practical knowledge in artificial intelligence by
-                                    working on related coursework and projects.
-                                    <br><br>
-                                    <br><br>
-                                    As part of my graduation project, I developed a machine learning-based mobile
-                                    application that enables individuals with posture disorders to analyze their own
-                                    posture and detect abnormalities.
-                                    <br><br>
-                                    I developed the application using Java. For database management, I utilized the
-                                    Authentication and Firestore Database services on the Google Firebase platform. To
-                                    detect posture, I integrated and used the Google ML Kit Pose Detection API,
-                                    providing users with manual adjustment options. I also developed the necessary
-                                    numerical calculation algorithms for detecting posture disorders, enabling users to
-                                    perform posture analysis. Additionally, I created a page that offers personalized
-                                    exercise recommendations based on the user's posture analysis results.
-                                </div>
-                            </div>
-                        </li>
-                        </ul>
-                    </div>
                     <div class="resume-part experiences">
                         <div class="resume-part-header"><span>Experience</span></div>
                         <ul class="experience-list">
-                            <li class="experience">
-                                <div class="experience-years">
-                                    <div class="start-year">07/2023</div>
-                                    <div class="end-year">08/2023</div>
-                                </div>
-                                <div class="experience-line">
-                                    <div class="line-circle"></div>
-                                    <div class="line-bar"></div>
-                                    <div class="line-circle"></div>
-                                </div>
-                                <div class="experience-explanation">
-                                    <div class="explanation-title">Computer Engineering Intern</div>
-                                    <div class="explanation-company">VakıfBank, Ümraniye/Istanbul, Turkey</div>
-                                    <div class="explanation-summary">
-                                        During my internship, I developed a web application that allows users to
-                                        calculate their monthly payment amount and payment schedule based on loan amount
-                                        and term.
-                                        <br><br>
-                                        I developed the back-end of the application using ASP.NET Core Web API and the
-                                        front-end using Angular. For database management, I applied the Code First
-                                        approach using Microsoft SQL Server and Entity Framework. Within the API, I
-                                        structured the data access, business logic, and presentation layers according to
-                                        the principles of a multi-layered architecture. Additionally, I implemented
-                                        caching strategies through Redis integration to optimize API performance.
-                                    </div>
-                                </div>
-                            </li>
                             <li class="experience">
                                 <div class="experience-years">
                                     <div class="start-year">06/2024</div>
@@ -330,6 +268,77 @@
                                     </div>
                                 </div>
                             </li>
+                            <li class="experience">
+                                <div class="experience-years">
+                                    <div class="start-year">07/2023</div>
+                                    <div class="end-year">08/2023</div>
+                                </div>
+                                <div class="experience-line">
+                                    <div class="line-circle"></div>
+                                    <div class="line-bar"></div>
+                                    <div class="line-circle"></div>
+                                </div>
+                                <div class="experience-explanation">
+                                    <div class="explanation-title">Computer Engineering Intern</div>
+                                    <div class="explanation-company">VakıfBank, Ümraniye/Istanbul, Turkey</div>
+                                    <div class="explanation-summary">
+                                        During my internship, I developed a web application that allows users to
+                                        calculate their monthly payment amount and payment schedule based on loan amount
+                                        and term.
+                                        <br><br>
+                                        I developed the back-end of the application using ASP.NET Core Web API and the
+                                        front-end using Angular. For database management, I applied the Code First
+                                        approach using Microsoft SQL Server and Entity Framework. Within the API, I
+                                        structured the data access, business logic, and presentation layers according to
+                                        the principles of a multi-layered architecture. Additionally, I implemented
+                                        caching strategies through Redis integration to optimize API performance.
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume-part educations">
+                        <div class="resume-part-header"><span>Education</span></div>
+                        <ul class="education-list">
+                            <li class="education">
+                                <div class="education-years">
+                                    <div class="start-year">09/2019</div>
+                                    <div class="end-year">11/2023</div>
+                                </div>
+                                <div class="education-line">
+                                    <div class="line-circle"></div>
+                                    <div class="line-bar"></div>
+                                    <div class="line-circle"></div>
+                                </div>
+                                <div class="education-explanation">
+                                    <div class="explanation-title">Computer Engineering</div>
+                                    <div class="explanation-company">Kocaeli University, Kocaeli, Turkey</div>
+                                    <div class="explanation-summary">
+                                        Gained a solid foundation in core areas of Computer
+                                        Engineering through academic training. Acquired hands-on experience in C and
+                                        Java programming, with a particular focus on object-oriented programming (OOP)
+                                        using Java. Developed both web and mobile-based applications as part of project
+                                        work. Additionally, built practical knowledge in artificial intelligence by
+                                        working on related coursework and projects.
+                                        <br><br>
+                                        <br><br>
+                                        As part of my graduation project, I developed a machine learning-based mobile
+                                        application that enables individuals with posture disorders to analyze their own
+                                        posture and detect abnormalities.
+                                        <br><br>
+                                        I developed the application using Java. For database management, I utilized the
+                                        Authentication and Firestore Database services on the Google Firebase platform.
+                                        To
+                                        detect posture, I integrated and used the Google ML Kit Pose Detection API,
+                                        providing users with manual adjustment options. I also developed the necessary
+                                        numerical calculation algorithms for detecting posture disorders, enabling users
+                                        to
+                                        perform posture analysis. Additionally, I created a page that offers
+                                        personalized
+                                        exercise recommendations based on the user's posture analysis results.
+                                    </div>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -353,7 +362,7 @@
                     <span class="sub-content-header-name">Blog</span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-book"></i></span>
                 </div>
-                <div class="sub-content-blog">Coming soon...</div>
+                <div class="sub-content-blog" id="output">Coming soon...</div>
             </div>
         </div>
         <div class="sub-content-border" id="contact">

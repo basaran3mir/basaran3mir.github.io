@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const response = await fetch(`https://api.github.com/users/basaran3mir/repos`);
             const data = await response.json();
-            console.log(data)
+            //console.log(data)
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
@@ -162,13 +162,54 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
-
-
     setActiveMenuLink()
     setMobileSidebarToggleButtonAction()
     turnOffMobilSidebarOnPartClick()
     jobnametypewriterEffect()
     calculateAge()
     showGithubRepos()
+
+    const url = "static/docs/cv.pdf";
+
+    // Worker ayarı
+    pdfjsLib.GlobalWorkerOptions.workerSrc =
+        "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+
+    let pdfDoc = null;
+    let currentPage = 1;
+
+    (async function loadPdf() {
+        pdfDoc = await pdfjsLib.getDocument(url).promise;
+        renderPage(currentPage);
+    })();
+
+    async function renderPage(pageNumber) {
+        const page = await pdfDoc.getPage(pageNumber);
+        const viewport = page.getViewport({ scale: 1.5 });
+        const canvas = document.getElementById("canvas");
+        const context = canvas.getContext("2d");
+
+        canvas.height = viewport.height;
+        canvas.width = viewport.width;
+
+        await page.render({ canvasContext: context, viewport }).promise;
+
+        document.getElementById("output").innerText = `Sayfa ${pageNumber} / ${pdfDoc.numPages}`;
+
+        document.getElementById("previous").disabled = (pageNumber <= 1);
+        document.getElementById("next").disabled = (pageNumber >= pdfDoc.numPages);
+    }
+
+    document.getElementById("previous").addEventListener("click", () => {
+        if (currentPage <= 1) return;
+        currentPage--;
+        renderPage(currentPage);
+    });
+
+    document.getElementById("next").addEventListener("click", () => {
+        if (currentPage >= pdfDoc.numPages) return;
+        currentPage++;
+        renderPage(currentPage);
+    });
 
 });
