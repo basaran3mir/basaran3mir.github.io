@@ -162,11 +162,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
     }
 
+    async function getMediumBlogs() {
+        try {
+            const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ebasaranwrk`);
+            const data = await response.json();
+            console.log(data.items)
+            return data.items;
+        } catch (error) {
+            console.error("Failed to retrieve Medium data:", error);
+            return [
+                {
+                    link: "https://medium.com/@ebasaranwrk",
+                    title: "Medium Blogs",
+                    description: "An issue occurred while fetching Medium posts. You can still view them on my Medium profile.",
+                }
+            ];
+        }
+    }
+
+    async function showMediumBlogs() {
+        const list = document.getElementById("mediumBlogList");
+        list.innerHTML = "";
+
+        let blogs = await getMediumBlogs();
+
+        blogs.forEach(blog => {
+            const li = document.createElement("li");
+            li.className = "blog";
+
+            li.innerHTML = `
+                <div class="blog-content">
+                    <div class="blog-links">
+                        <a class="blog-link" href="${blog.link}" aria-label="Blog link" target="_blank">
+                            <i class="fa-solid fa-newspaper"></i> 
+                        </a>
+                    </div>
+                    <h3 class="blog-name">${blog.title}</h3>
+                    <div class="blog-info">
+                        ${formatMediumBlogDescription(blog.description)}
+                    </div>
+                </div>
+            `;
+
+            list.appendChild(li);
+        });
+
+        function formatMediumBlogDescription(blog_description) {
+            if (!blog_description) {
+                return "No information available.";
+            }
+
+            if (blog_description.length > 100) {
+                return blog_description.slice(0, 100) + " ...";
+            }
+
+            return blog_description;
+        }
+    }
+
     setActiveMenuLink()
     setMobileSidebarToggleButtonAction()
     turnOffMobilSidebarOnPartClick()
     jobnametypewriterEffect()
     calculateAge()
     showGithubRepos()
+    showMediumBlogs()
 
 });
