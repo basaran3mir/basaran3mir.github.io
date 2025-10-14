@@ -484,7 +484,7 @@ p {
     bottom: 0;
     background:
         linear-gradient(var(--background-gradient), var(--background-gradient)),
-        url("../images/welcome.jpeg");
+        url("../images/welcome.webp");
 
     background-repeat: no-repeat;
     background-size: cover;
