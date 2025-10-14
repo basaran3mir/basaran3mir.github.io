@@ -579,11 +579,19 @@ p {
 /* resume */
 .content .sub-content-border .sub-content .sub-content-resume {
     display: flex;
-    flex-direction: column; /*row*/
+    flex-direction: row;
 }
 
 .content .sub-content-border .sub-content .sub-content-resume .resume-part {
-    width: 100%; /*50%*/
+    width: 50%;
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part.experiences {
+    padding-right: 20px
+}
+
+.content .sub-content-border .sub-content .sub-content-resume .resume-part.educations {
+    padding-left: 20px
 }
 
 .content .sub-content-border .sub-content .sub-content-resume .resume-part .resume-part-header {
@@ -816,6 +824,19 @@ p {
 
     .content .sub-content-border .sub-content .sub-content-about .info-table {
         width: 100%;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume {
+        flex-direction: column;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume .resume-part {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-resume .resume-part.educations {
+        margin-top: 20px;
     }
 
 }
