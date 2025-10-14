@@ -2,56 +2,28 @@
 <html lang="en">
 
 <head>
+    <title>Emir Can Başaran | Personal Website</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This website is Emir Can Başaran's personal website.">
-    <title>Emir Can Başaran | Personal Website</title>
 
-    <!-- 1) Critical CSS: above-the-fold için gereken en küçük stil bloğunu buraya koy -->
-    <style>
-        /* ÖRNEK: sadece üst kısım için gerekli çok küçük kritik kurallar.
-       Gerçek site için PurgeCSS/critical tool ile çıkarılmış minimal stiller konmalı. */
-    </style>
+    <!-- Static files -->
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
 
-    <!-- 2) Main stylesheet — preload + onload pattern (render-blocking olmasın) -->
-    <link rel="preload" href="static/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="static/css/style.css">
-    </noscript>
+    <!-- Linear Icons -->
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
-    <!-- 3) Google Fonts: preconnect + load async + display=swap -->
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet" media="print" onload="this.media='all'">
-    <noscript>
-        <link
-            href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-            rel="stylesheet">
-    </noscript>
-
-    <!-- 4) Linear Icons: preload + onload (veya daha iyi: sadece kullanılan ikonları SVG ile değiştir) -->
-    <link rel="preload" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
-    </noscript>
-
-    <!-- 5) Font Awesome: tercihen Kit (sadece kullanılan ikonlar) veya preload+onload fallback -->
-    <!-- Eğer bir Font Awesome Kit kullanıyorsan (en iyi): -->
-    <!-- <script src="https://kit.fontawesome.com/YOUR_KIT_ID.js" crossorigin="anonymous" defer></script> -->
-    <!-- Eğer CDN CSS kullanacaksan (geçici çözüm): preload + onload -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    </noscript>
-
-    <!-- 6) JS: defer ile yükle (zaten eklemişsin) -->
-    <script src="static/js/script.js" defer></script>
+        rel="stylesheet">
 </head>
-
 
 
 <body>
