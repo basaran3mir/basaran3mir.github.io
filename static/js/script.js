@@ -80,21 +80,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function getGithubRepos() {
+        const fallbackRepo = [{
+            html_url: "https://github.com/basaran3mir?tab=repositories",
+            has_pages: false,
+            name: "github-repositories",
+            description: "An issue occurred with the GitHub API. You can still view my portfolio on my GitHub profile.",
+        }];
+
         try {
             const response = await fetch(`https://api.github.com/users/basaran3mir/repos`);
             const data = await response.json();
-            //console.log(data)
+            if (!data || data.length === 0) {
+                return fallbackRepo;
+            }
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
-            return [
-                {
-                    html_url: "https://github.com/basaran3mir?tab=repositories",
-                    has_pages: false,
-                    name: "github-repositories",
-                    description: "An issue occurred with the GitHub API. You can still view my portfolio on my GitHub profile.",
-                }
-            ];
+            return fallbackRepo;
         }
     }
 
@@ -163,20 +165,21 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function getMediumBlogs() {
+        const fallbackBlog = [{
+            link: "https://medium.com/@basaran3mir",
+            title: "Medium Blogs",
+            description: "An issue occurred while fetching Medium posts. You can still view them on my Medium profile.",
+        }];
         try {
-            const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@ebasaranwrk`);
+            const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://basaran3mir.medium.com/feed`);
             const data = await response.json();
-            console.log(data.items)
-            return data.items;
+            if (!data.items || data.items.length === 0) {
+                return fallbackBlog;
+            }
+            return data.items
         } catch (error) {
             console.error("Failed to retrieve Medium data:", error);
-            return [
-                {
-                    link: "https://medium.com/@ebasaranwrk",
-                    title: "Medium Blogs",
-                    description: "An issue occurred while fetching Medium posts. You can still view them on my Medium profile.",
-                }
-            ];
+            return fallbackBlog;
         }
     }
 
