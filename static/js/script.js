@@ -113,22 +113,26 @@ document.addEventListener('DOMContentLoaded', function () {
 
             li.innerHTML = `
                 <div class="portfolio-content">
-                    <div class="portfolio-links">
-                        <a class="portfolio-link" href="${repo.html_url}" aria-label="Portfolio link" target="_blank">
-                            <i class="fa-solid fa-code"></i> 
-                        </a>
-                        ${repo.has_pages ? `
-                            <a class="portfolio-link" href="${formatGithubRepoPage(repo.name)}" aria-label="Portfolio website" target="_blank">
-                                <i class="fa-solid fa-globe"></i> 
-                            </a>
-                        ` : ''}
-                    </div>
                     <h3 class="portfolio-name">${formatGithubRepoName(repo.name)}</h3>
                     <p class="portfolio-info">
                         ${formatGithubRepoDescription(repo.description)}
                     </p>
+                    ${repo.has_pages ? `
+                        <div class="portfolio-links">
+                            <a class="portfolio-link" href="${formatGithubRepoPage(repo.name)}" aria-label="Portfolio website" target="_blank">
+                                <i class="fa-solid fa-globe"></i> 
+                            </a>
+                        </div>
+                    ` : ''}
                 </div>
             `;
+
+            li.addEventListener('click', (event) => {
+                if (event.target.closest('a')) {
+                    return;
+                }
+                window.open(repo.html_url, '_blank');
+            });
 
             list.appendChild(li);
         });
@@ -195,14 +199,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
             li.innerHTML = `
                 <div class="blog-content">
+                    <h3 class="blog-name">${blog.title}</h3>
+                    <div class="blog-info">
+                        ${formatMediumBlogDescription(blog.description)}
+                    </div>
                     <div class="blog-links">
                         <a class="blog-link" href="${blog.link}" aria-label="Blog link" target="_blank">
                             <i class="fa-solid fa-newspaper"></i> 
                         </a>
-                    </div>
-                    <h3 class="blog-name">${blog.title}</h3>
-                    <div class="blog-info">
-                        ${formatMediumBlogDescription(blog.description)}
                     </div>
                 </div>
             `;

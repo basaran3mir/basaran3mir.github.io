@@ -695,7 +695,7 @@ p {
 /* portfolio */
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -703,17 +703,18 @@ p {
 }
 
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio {
-    height: 200px;
+    height: 220px;
     width: 100%;
     margin: auto;
     border-radius: 20px;
     border: 2px solid var(--text-accent);
     background-color: var(--background-tertiary);
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -726,6 +727,7 @@ p {
     position: relative;
     top: 0;
     right: 0;
+    margin-top: auto;
 }
 
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-links .portfolio-link {
@@ -733,8 +735,12 @@ p {
     color: inherit;
     background-color: var(--text-accent);
     border-radius: 50%;
-    padding: 5px;
-    margin-bottom: 10px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content .portfolio-links .portfolio-link:hover {
@@ -754,7 +760,7 @@ p {
 /* blog */
 .content .sub-content-border .sub-content .sub-content-blog .blog-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -762,17 +768,18 @@ p {
 }
 
 .content .sub-content-border .sub-content .sub-content-blog .blog-list .blog {
-    height: 200px;
+    height: 220px;
     width: 100%;
     margin: auto;
     border-radius: 20px;
     border: 2px solid var(--text-accent);
     background-color: var(--background-tertiary);
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .content .sub-content-border .sub-content .sub-content-blog .blog-list .blog .blog-content {
-    padding: 10px;
+    padding: 15px;
     display: flex;
     flex-direction: column;
     height: 100%;
@@ -785,6 +792,7 @@ p {
     position: relative;
     top: 0;
     right: 0;
+    margin-top: auto;
 }
 
 .content .sub-content-border .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-links .blog-link {
@@ -792,8 +800,12 @@ p {
     color: inherit;
     background-color: var(--text-accent);
     border-radius: 50%;
-    padding: 5px;
-    margin-bottom: 10px;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content .sub-content-border .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-links .blog-link:hover {
