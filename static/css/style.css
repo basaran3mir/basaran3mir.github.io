@@ -699,7 +699,7 @@ p {
 /* portfolio */
 .content .sub-content-border .sub-content .sub-content-portfolio .portfolio-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
@@ -764,7 +764,7 @@ p {
 /* blog */
 .content .sub-content-border .sub-content .sub-content-blog .blog-list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
     padding: 20px;
     width: 100%;
