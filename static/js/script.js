@@ -203,13 +203,15 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="blog-info">
                         ${formatMediumBlogDescription(blog.description)}
                     </div>
-                    <div class="blog-links">
-                        <a class="blog-link" href="${blog.link}" aria-label="Blog link" target="_blank">
-                            <i class="fa-solid fa-newspaper"></i> 
-                        </a>
-                    </div>
                 </div>
             `;
+
+            li.addEventListener('click', (event) => {
+                if (event.target.closest('a')) {
+                    return;
+                }
+                window.open(blog.link, '_blank');
+            });
 
             list.appendChild(li);
         });
