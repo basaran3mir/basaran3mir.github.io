@@ -521,13 +521,17 @@ p {
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-job .jobname {
+    position: relative;
     border-bottom: 2px solid var(--text-accent);
 }
 
 .content .sub-content-border .sub-content .sub-content-home .sub-content-home-job .jobname::after {
+    position: absolute;
+    top: 0;
+    right: -6px;
     content: '|';
     animation: blink 0.7s steps(1) infinite;
-    margin-left: 2px;
+
 }
 
 /* aboutme */
