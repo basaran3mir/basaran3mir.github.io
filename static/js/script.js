@@ -11,13 +11,6 @@ function toggleTheme(element) {
     element.classList.toggle("rotate-180")
 }
 
-let githubCache = {
-    data: null,
-    lastFetched: 0
-};
-
-const CACHE_DURATION = 1000 * 60 * 10;
-
 document.addEventListener('DOMContentLoaded', function () {
 
     function setActiveMenuLink() {
@@ -94,20 +87,12 @@ document.addEventListener('DOMContentLoaded', function () {
             description: "An issue occurred with the GitHub API. You can still view my portfolio on my GitHub profile.",
         }];
 
-        const now = Date.now();
-        if (githubCache.data && now - githubCache.lastFetched < CACHE_DURATION) {
-            console.log("github verileri cacheden geldi")
-            return githubCache.data;
-        }
-
         try {
             const response = await fetch(`https://api.github.com/users/basaran3mir/repos`);
             const data = await response.json();
-            githubCache = { data, lastFetched: now };
             if (!data || data.length === 0) {
                 return fallbackRepo;
             }
-            console.log("github verileri apiden geldi")
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
