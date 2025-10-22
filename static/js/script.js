@@ -13,6 +13,26 @@ function toggleTheme(element) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    function checkInputFields() {
+        const fields = document.querySelectorAll('.input-field');
+
+        const toggleLabel = (el) => {
+            const formGroup = el.closest('.form-group');
+            if (el.value.trim() !== '') {
+                formGroup.classList.add('input-filled');
+            } else {
+                formGroup.classList.remove('input-filled');
+            }
+        };
+
+        fields.forEach((field) => {
+            toggleLabel(field);
+            field.addEventListener('input', () => toggleLabel(field));
+            field.addEventListener('blur', () => toggleLabel(field));
+        });
+
+    }
+
     function setActiveMenuLink() {
         const allMenuLinks = document.querySelectorAll(".menu-link");
 
@@ -236,5 +256,6 @@ document.addEventListener('DOMContentLoaded', function () {
     calculateAge()
     showGithubRepos()
     showMediumBlogs()
+    checkInputFields()
 
 });
