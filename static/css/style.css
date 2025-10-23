@@ -930,6 +930,33 @@ textarea {
     letter-spacing: 1px;
 }
 
+.content .sub-content-border .sub-content .sub-content-contact .contact-form-additional {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 40px 20px;
+}
+
+.content .sub-content-border .sub-content .sub-content-contact .contact-form-additional .additional-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.content .sub-content-border .sub-content .sub-content-contact .contact-form-additional .additional-item .icon {
+    color: var(--text-accent);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.content .sub-content-border .sub-content .sub-content-contact .contact-form-additional .additional-item .info a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
 /* responsive */
 @keyframes blink {
     50% {
@@ -1021,6 +1048,10 @@ textarea {
     .content .sub-content-border .sub-content .sub-content-contact .contact-form-content .form-part.personal-info {
         flex-direction: column;
         gap: 0px;
+    }
+
+    .content .sub-content-border .sub-content .sub-content-contact .contact-form-additional {
+        flex-direction: column;
     }
 
 }
