@@ -13,6 +13,17 @@ function toggleTheme(element) {
 
 document.addEventListener('DOMContentLoaded', function () {
 
+    function init() {
+        setActiveMenuLink()
+        setMobileSidebarToggleButtonAction()
+        turnOffMobilSidebarOnPartClick()
+        jobnametypewriterEffect()
+        calculateAge()
+        showGithubRepos()
+        showMediumBlogs()
+        checkInputFields()
+    }
+
     function checkInputFields() {
         const fields = document.querySelectorAll('.input-field');
 
@@ -249,13 +260,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    setActiveMenuLink()
-    setMobileSidebarToggleButtonAction()
-    turnOffMobilSidebarOnPartClick()
-    jobnametypewriterEffect()
-    calculateAge()
-    showGithubRepos()
-    showMediumBlogs()
-    checkInputFields()
+    init()
 
 });
