@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function setMobileSidebarToggleButtonAction() {
         const toggleBtn = document.querySelector('.toggle-button');
-        const menu = document.querySelector('.mobile-sidebar');
+        const menu = document.querySelector('.sidebar');
 
         toggleBtn.addEventListener('click', function () {
             menu.classList.toggle('open');
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function turnOffMobilSidebarOnPartClick() {
-        const menu = document.querySelector('.mobile-sidebar');
-        const mobileMenuLinks = document.querySelectorAll(".mobile-sidebar .menu-link");
+        const menu = document.querySelector('.sidebar');
+        const mobileMenuLinks = document.querySelectorAll(".sidebar .menu-link");
 
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', function () {
