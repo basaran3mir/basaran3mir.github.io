@@ -99,7 +99,6 @@ textarea {
 .sidebar .sidebar-header .sidebar-photo {
     height: 250px;
     width: 250px;
-    padding: 0px;
 }
 
 .sidebar .sidebar-header .sidebar-photo img {
@@ -868,7 +867,9 @@ textarea {
     .sidebar .sidebar-header .sidebar-photo {
         height: 80px;
         width: 80px;
-        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .sidebar .sidebar-header .sidebar-photo img {
