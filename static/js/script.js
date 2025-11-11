@@ -63,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         toggleBtn.addEventListener('click', function () {
             menu.classList.toggle('open');
+
+            const icon = toggleBtn.querySelector('i');
+
+            if (menu.classList.contains('open')) {
+                icon.className = 'lnr lnr-cross icon-menu';
+            } else {
+                icon.className = 'lnr lnr-menu icon-menu';
+            }
+
         });
     }
 
