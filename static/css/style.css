@@ -103,8 +103,8 @@ textarea {
 }
 
 .sidebar .sidebar-header .sidebar-photo img {
-    height: auto;
-    width: auto;
+    height: 250px;
+    width: 250px;
 }
 
 .sidebar .sidebar-header .sidebar-fullname {
@@ -872,8 +872,8 @@ textarea {
     }
 
     .sidebar .sidebar-header .sidebar-photo img {
-        height: auto;
-        width: auto;
+        height: 60px;
+        width: 60px;
         border-radius: 50%;
     }
 
