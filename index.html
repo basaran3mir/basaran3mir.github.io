@@ -6,44 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This website is Emir Can Başaran's personal website.">
     <title>Emir Can Başaran | Personal Website</title>
-
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-
-    <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        html,
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Roboto', sans-serif;
-        }
-
-        ul {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
-
-        p {
-            margin: 0;
-            padding: 0;
-        }
-
-        textarea {
-            resize: none;
-        }
-    </style>
-
-    <link rel="stylesheet" href="static/css/style.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/vendor/linear-icons/icon-font.min.css" media="print"
         onload="this.media='all'">
     <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css" media="print" onload="this.media='all'">
@@ -54,7 +18,6 @@
         <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css">
         <link rel="stylesheet" href="static/fonts/google/google-fonts.css">
     </noscript>
-
     <script src="static/js/script.js" defer></script>
 </head>
 
@@ -376,17 +339,20 @@
                         <form id="contactForm" method="post" action="#" novalidate>
                             <div class="form-part personal-info">
                                 <div class="form-group">
-                                    <input class="input-field" type="text" id="nameInput" name="name" required>
+                                    <input class="input-field" type="text" id="nameInput" name="name" required
+                                        autocomplete="name">
                                     <label class="input-label" for="nameInput">Name</label>
                                 </div>
                                 <div class="form-group">
-                                    <input class="input-field" type="email" id="emailInput" name="email" required>
+                                    <input class="input-field" type="email" id="emailInput" name="email" required
+                                        autocomplete="email">
                                     <label class="input-label" for="emailInput">Email</label>
                                 </div>
                             </div>
                             <div class="form-part">
                                 <div class="form-group">
-                                    <textarea class="input-field" rows="5" id="messageInput" name="message"></textarea>
+                                    <textarea class="input-field" rows="5" id="messageInput" name="message"
+                                        autocomplete="off"></textarea>
                                     <label class="input-label" for="messageInput">How can I help you?</label>
                                 </div>
                             </div>
