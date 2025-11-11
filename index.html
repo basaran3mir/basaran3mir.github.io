@@ -9,46 +9,39 @@
 
     <!-- Static files -->
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
-    <link rel="preload" href="static/css/style.css" as="style" onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="static/css/style.css">
-    </noscript>
-    <script src="static/js/script.js" defer></script>
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="static/js/script.js"></script>
 
     <!-- Linear Icons -->
     <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
 
     <!-- Font Awesome -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" as="style"
-        onload="this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    </noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.rel='stylesheet'">
-
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
     <aside class="sidebar">
-        <div class="sidebar-content-header">
-            <div class="photo">
+        <header class="sidebar-header">
+            <div class="sidebar-photo">
                 <img src="static/images/pp.webp" alt="Profile photo of Emir Can Başaran">
             </div>
-            <div class="full-name">
+            <div class="sidebar-fullname">
                 Emir Can Başaran
             </div>
-            <div class="toggle-button">
+            <div class="sidebar-togglebutton">
                 <i class="lnr lnr-menu icon-menu"></i>
                 <i class="lnr lnr-cross icon-cross"></i>
             </div>
-        </div>
-        <div class="sidebar-content-menu">
-            <div class="menu">
+        </header>
+        <div class="sidebar-content">
+            <nav class="menu">
                 <ul class="menu-links">
                     <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
                                     class="lnr lnr-home"></i></span>
@@ -73,8 +66,8 @@
                             <p>Contact</p>
                         </a></li>
                 </ul>
-            </div>
-            <div class="footer">
+            </nav>
+            <footer class="footer">
                 <ul class="social">
                     <li>
                         <a href="mailto:ebasaran999@gmail.com" aria-label="Mail address">
@@ -100,7 +93,7 @@
                 <div class="copy">
                     <p>2025 © Emir Can Başaran<br>All Right Reserved.</p>
                 </div>
-            </div>
+            </footer>
         </div>
     </aside>
 
@@ -111,8 +104,8 @@
                 <i class="lnr lnr-sun"></i>
             </div>
         </div>
-        <div class="sub-content-border" id="Home">
-            <div class="sub-content" id="HomeContent">
+        <div class="sub-content-border" id="home">
+            <div class="sub-content" id="homeContent">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Home</span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-home"></i></span>
@@ -153,7 +146,7 @@
                             </li>
                             <li>
                                 <span class="info-table-label">Age:</span>
-                                <span class="info-table-value" id="age-value">24</span>
+                                <span class="info-table-value" id="ageValue">24</span>
                             </li>
                             <li>
                                 <span class="info-table-label">Address:</span>
@@ -341,21 +334,21 @@
                 <div class="sub-content-contact">
                     <div class="contact-form-header"><span>Let's Talk</span></div>
                     <div class="contact-form-content">
-                        <form id="contact-form" method="post" action="#" novalidate>
+                        <form id="contactForm" method="post" action="#" novalidate>
                             <div class="form-part personal-info">
                                 <div class="form-group">
-                                    <input class="input-field" type="text" id="i-name" name="name" required>
-                                    <label class="input-label" for="i-name">Name</label>
+                                    <input class="input-field" type="text" id="nameInput" name="name" required>
+                                    <label class="input-label" for="nameInput">Name</label>
                                 </div>
                                 <div class="form-group">
-                                    <input class="input-field" type="email" id="i-email" name="email" required>
-                                    <label class="input-label" for="i-email">Email</label>
+                                    <input class="input-field" type="email" id="emailInput" name="email" required>
+                                    <label class="input-label" for="emailInput">Email</label>
                                 </div>
                             </div>
                             <div class="form-part">
                                 <div class="form-group">
-                                    <textarea class="input-field" rows="5" id="i-message" name="message"></textarea>
-                                    <label class="input-label" for="i-message">How can I help you?</label>
+                                    <textarea class="input-field" rows="5" id="messageInput" name="message"></textarea>
+                                    <label class="input-label" for="messageInput">How can I help you?</label>
                                 </div>
                             </div>
                             <div class="form-part">

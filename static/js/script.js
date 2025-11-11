@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setMobileSidebarToggleButtonAction() {
-        const toggleBtn = document.querySelector('.toggle-button');
+        const toggleBtn = document.querySelector('.sidebar-togglebutton');
         const menu = document.querySelector('.sidebar');
 
         toggleBtn.addEventListener('click', function () {
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const birthYear = 2001;
         const currentYear = new Date().getFullYear();
         const age = currentYear - birthYear;
-        document.getElementById("age-value").textContent = age;
+        document.getElementById("ageValue").textContent = age;
     }
 
     async function getGithubRepos() {
