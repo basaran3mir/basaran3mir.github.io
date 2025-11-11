@@ -124,6 +124,9 @@ textarea {
     text-align: center;
 }
 
+.sidebar .sidebar-header .sidebar-fullname h4 {
+    margin: 0;
+}
 
 .sidebar .sidebar-header .sidebar-togglebutton {
     position: relative;
