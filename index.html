@@ -27,63 +27,9 @@
 </head>
 
 <body>
-    <div class="sidebar desktop-sidebar">
-        <div class="desktop-sidebar-content">
-            <div class="photo">
-                <img src="static\images\pp.webp" alt="">
-                <div class="full-name">
-                    Emir Can Başaran
-                </div>
-            </div>
-            <div class="menu">
-                <ul>
-                    <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
-                                    class="lnr lnr-home"></i></span>Home</a> </li>
-                    <li><a href="#about" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-user"></i></span>About Me</a></li>
-                    <li><a href="#resume" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-license"></i></span>Resume</a></li>
-                    <li><a href="#portfolio" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-briefcase"></i></span>Portfolio</a></li>
-                    <li><a href="#blog" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-book"></i></span>Blog</a></li>
-                    <li><a href="#contact" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-envelope"></i></span>Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer">
-                <ul class="social">
-                    <li>
-                        <a href="mailto:ebasaran999@gmail.com" aria-label="Mail address">
-                            <i class="fa-solid fa-square-envelope"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://tr.linkedin.com/in/basaran3mir" aria-label="Linkedin profile">
-                            <i class="fa-brands fa-linkedin"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/basaran3mir" aria-label="Github profile">
-                            <i class="fa-brands fa-square-github"></i>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://basaran3mir.medium.com" aria-label="Medium profile">
-                            <i class="fa-solid fa-square-pen"></i>
-                        </a>
-                    </li>
-                </ul>
-                <div class="copy">
-                    <p>2025 © Emir Can Başaran<br>All Right Reserved.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="sidebar mobile-sidebar">
-        <div class="mobile-sidebar-content">
-            <div class="mobile-sidebar-content-header">
+    <div class="sidebar">
+        <div class="sidebar-content">
+            <div class="sidebar-content-header">
                 <div class="photo">
                     <img src="static/images/pp.webp" alt="">
                 </div>
@@ -95,31 +41,35 @@
                     <i class="lnr lnr-cross icon-cross"></i>
                 </div>
             </div>
-            <div class="mobile-sidebar-content-menu">
-                <ul class="menu-links">
-                    <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
-                                    class="lnr lnr-home"></i></span>
-                            <p>Home</p>
-                        </a> </li>
-                    <li><a href="#about" class="menu-link"><span class="menu-icon"><i class="lnr lnr-user"></i></span>
-                            <p>About</p>
-                        </a></li>
-                    <li><a href="#resume" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-license"></i></span>
-                            <p>Resume</p>
-                        </a></li>
-                    <li><a href="#portfolio" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-briefcase"></i></span>
-                            <p>Portfolio</p>
-                        </a></li>
-                    <li><a href="#blog" class="menu-link"><span class="menu-icon"><i class="lnr lnr-book"></i></span>
-                            <p>Blog</p>
-                        </a></li>
-                    <li><a href="#contact" class="menu-link"><span class="menu-icon"><i
-                                    class="lnr lnr-envelope"></i></span>
-                            <p>Contact</p>
-                        </a></li>
-                </ul>
+            <div class="sidebar-content-menu">
+                <div class="menu">
+                    <ul class="menu-links">
+                        <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
+                                        class="lnr lnr-home"></i></span>
+                                <p>Home</p>
+                            </a> </li>
+                        <li><a href="#about" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-user"></i></span>
+                                <p>About Me</p>
+                            </a></li>
+                        <li><a href="#resume" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-license"></i></span>
+                                <p>Resume</p>
+                            </a></li>
+                        <li><a href="#portfolio" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-briefcase"></i></span>
+                                <p>Portfolio</p>
+                            </a></li>
+                        <li><a href="#blog" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-book"></i></span>
+                                <p>Blog</p>
+                            </a></li>
+                        <li><a href="#contact" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-envelope"></i></span>
+                                <p>Contact</p>
+                            </a></li>
+                    </ul>
+                </div>
                 <div class="footer">
                     <ul class="social">
                         <li>
@@ -158,7 +108,7 @@
                 <i class="lnr lnr-sun"></i>
             </div>
         </div>
-        <div class="sub-content-border" id="home">
+        <div class="sub-content-border" id="Home">
             <div class="sub-content" id="HomeContent">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Home</span>
@@ -382,8 +332,7 @@
                             </div>
                             <div class="form-part">
                                 <div class="form-group">
-                                    <textarea class="input-field" rows="5" id="i-message"
-                                        name="message"></textarea>
+                                    <textarea class="input-field" rows="5" id="i-message" name="message"></textarea>
                                     <label class="input-label" for="i-message">How can I help you?</label>
                                 </div>
                             </div>
