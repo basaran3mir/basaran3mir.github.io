@@ -13,10 +13,10 @@
     <script src="static/js/script.js"></script>
 
     <!-- Linear Icons -->
-    <link rel="stylesheet" href="static/css/linear-icons/1.0.0/css/icon-font.min.css">
+    <link rel="stylesheet" href="static/css/vendor/linear-icons/icon-font.min.css">
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="static/css/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,9 +29,11 @@
 <body>
     <aside class="sidebar">
         <header class="sidebar-header">
-            <div class="sidebar-photo">
-                <img src="static/images/pp.webp" alt="Profile photo of Emir Can Başaran">
-            </div>
+            <picture class="sidebar-photo">
+                <source type="image/webp" srcset="static/images/pp.webp">
+                <source type="image/jpeg" srcset="static/images/pp.jpg">
+                <img src="static/images/pp.webp" loading="lazy" alt="Profile photo of Emir Can Başaran.">
+            </picture>
             <div class="sidebar-fullname">
                 <h4>Emir Can Başaran</h4>
             </div>

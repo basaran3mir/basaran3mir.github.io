@@ -6,10 +6,11 @@ License: https://linearicons.com/free/license
 */
 @font-face {
     font-family: Linearicons-Free;
-    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
-    src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot?#iefix) format('embedded-opentype'), url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff2) format('woff2'), url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.ttf) format('truetype'), url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff) format('woff'), url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.svg#Linearicons-Free) format('svg');
+    src: url(../../../fonts/linearicons/Linearicons-Free.eot);
+    src: url(../../../fonts/linearicons/Linearicons-Free.eot?#iefix) format('embedded-opentype'), url(../../../fonts/linearicons/Linearicons-Free.woff2) format('woff2'), url(../../../fonts/linearicons/Linearicons-Free.ttf) format('truetype'), url(../../../fonts/linearicons/Linearicons-Free.woff) format('woff'), url(../../../fonts/linearicons/Linearicons-Free.svg#Linearicons-Free) format('svg');
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
+    font-display: swap; /*added manually*/
 }
 
 .lnr {
