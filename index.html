@@ -19,11 +19,8 @@
     <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css">
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="static\fonts\google\google-fonts.css">
+
 </head>
 
 <body>
@@ -106,8 +103,13 @@
                 <i class="lnr lnr-sun"></i>
             </div>
         </div>
-        <div class="sub-content-border" id="home">
+        <section class="sub-content-border" id="home">
             <div class="sub-content" id="homeContent">
+                <div class="sub-content-background">
+                    <img src="static/images/welcome.webp" alt="Welcome image" class="home-background-image"
+                        fetchpriority="high">
+                    <div class="overlay"></div>
+                </div>
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Home</span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-home"></i></span>
@@ -117,8 +119,8 @@
                     <p class="sub-content-home-job">I am a <span class="jobname"></span></p>
                 </div>
             </div>
-        </div>
-        <div class="sub-content-border" id="about">
+        </section>
+        <section class="sub-content-border" id="about">
             <div class="sub-content">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">About Me</span>
@@ -172,8 +174,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="sub-content-border" id="resume">
+        </section>
+        <section class="sub-content-border" id="resume">
             <div class="sub-content">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Resume</span>
@@ -302,8 +304,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="sub-content-border" id="portfolio">
+        </section>
+        <section class="sub-content-border" id="portfolio">
             <div class="sub-content">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Portfolio</span>
@@ -314,8 +316,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="sub-content-border" id="blog">
+        </section>
+        <section class="sub-content-border" id="blog">
             <div class="sub-content">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Blog</span>
@@ -326,8 +328,8 @@
                     </ul>
                 </div>
             </div>
-        </div>
-        <div class="sub-content-border" id="contact">
+        </section>
+        <section class="sub-content-border" id="contact">
             <div class="sub-content">
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Contact</span>
@@ -386,7 +388,7 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 </body>
 
