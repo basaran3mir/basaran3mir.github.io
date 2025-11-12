@@ -111,8 +111,15 @@
                     <span class="sub-content-header-icon"><i class="lnr lnr-home"></i></span>
                 </div>
                 <div class="sub-content-home">
-                    <p class="sub-content-home-name">Emir Can <span class="surname">Başaran</span></p>
-                    <p class="sub-content-home-job">I am a <span class="jobname"></span></p>
+                    <div class="home-personal-info">
+                        <p class="sub-content-home-name">Emir Can <span class="surname">Başaran</span></p>
+                        <p class="sub-content-home-job">I am a <span class="jobname"></span></p>
+                    </div>
+                    <div class="home-website-info">
+                        <a href="https://pagespeed.web.dev/report?url=https://basaran3mir.github.io" target="_blank">
+                            About This Website
+                        </a>
+                    </div>
                 </div>
             </section>
             <section class="sub-content" id="aboutMe">
@@ -317,7 +324,6 @@
                 </div>
             </section>
             <section class="sub-content" id="contact">
-
                 <div class="sub-content-header">
                     <span class="sub-content-header-name">Contact</span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-envelope"></i></span>
@@ -326,26 +332,24 @@
                     <div class="contact-form-header"><span>Let's Talk</span></div>
                     <div class="contact-form-content">
                         <form id="contactForm" method="post" action="#" novalidate>
-                            <div class="form-part personal-info">
-                                <div class="form-group">
+                            <div class="personal-info">
+                                <div class="form-part">
                                     <input class="input-field" type="text" id="nameInput" name="name" required
                                         autocomplete="name">
                                     <label class="input-label" for="nameInput">Name</label>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-part">
                                     <input class="input-field" type="email" id="emailInput" name="email" required
                                         autocomplete="email">
                                     <label class="input-label" for="emailInput">Email</label>
                                 </div>
                             </div>
                             <div class="form-part">
-                                <div class="form-group">
-                                    <textarea class="input-field" rows="5" id="messageInput" name="message"
-                                        autocomplete="off"></textarea>
-                                    <label class="input-label" for="messageInput">How can I help you?</label>
-                                </div>
+                                <textarea class="input-field" rows="5" id="messageInput" name="message"
+                                    autocomplete="off"></textarea>
+                                <label class="input-label" for="messageInput">How can I help you?</label>
                             </div>
-                            <div class="form-part">
+                            <div class="form-submit">
                                 <button type="submit" class="submit-form-button" disabled>Coming Soon...</button>
                             </div>
                         </form>
@@ -379,12 +383,6 @@
                     </div>
                 </div>
 
-            </section>
-            <section class="website-info">
-                <a href="https://pagespeed.web.dev/report?url=https://basaran3mir.github.io" target="_blank">
-                    About This Website
-                </a>
-                <span class="sub-content-header-icon"><i class="lnr lnr-chart-bars"></i></span>
             </section>
         </main>
     </div>

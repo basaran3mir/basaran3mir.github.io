@@ -11,6 +11,7 @@ function toggleTheme(element) {
     element.classList.toggle("rotate-180")
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 
     function init() {
@@ -28,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const fields = document.querySelectorAll('.input-field');
 
         const toggleLabel = (el) => {
-            const formGroup = el.closest('.form-group');
+            const formGroup = el.closest('.form-part');
             if (el.value.trim() !== '') {
                 formGroup.classList.add('input-filled');
             } else {
@@ -45,16 +46,37 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function setActiveMenuLink() {
-        const allMenuLinks = document.querySelectorAll(".menu-link");
+        const sections = document.querySelectorAll('.sub-content');
+        const navLinks = document.querySelectorAll('.menu-link');
 
-        allMenuLinks.forEach(link => {
+        navLinks.forEach(link => {
             link.addEventListener('click', function () {
                 const href = link.getAttribute('href');
-                allMenuLinks.forEach(item => item.classList.remove('active'));
-                const matchingLinks = Array.from(allMenuLinks).filter(item => item.getAttribute('href') === href);
+                navLinks.forEach(item => item.classList.remove('active'));
+                const matchingLinks = Array.from(navLinks).filter(item => item.getAttribute('href') === href);
                 matchingLinks.forEach(matchedLink => matchedLink.classList.add('active'));
             });
         });
+
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    const id = entry.target.getAttribute('id');
+                    const link = document.querySelector(`.menu-link[href="#${id}"]`);
+
+                    if (entry.isIntersecting) {
+                        navLinks.forEach((l) => l.classList.remove('active'));
+                        link.classList.add('active');
+                    }
+                });
+            },
+            {
+                root: null,
+                threshold: 0.4,
+            }
+        );
+
+        sections.forEach((section) => observer.observe(section));
     }
 
     function setMobileSidebarToggleButtonAction() {

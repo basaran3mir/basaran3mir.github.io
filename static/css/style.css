@@ -175,7 +175,7 @@ textarea {
     text-decoration: none;
     padding: 0px 25px;
     align-items: center;
-    font-size: 13px;
+    font-size: 14px;
     letter-spacing: 2px;
     transition: color 0.3s ease;
 }
@@ -285,16 +285,21 @@ textarea {
 }
 
 .content {
-    padding: 20px;
+    padding: 40px;
 }
 
 .content .sub-content {
     background-color: var(--background-secondary);
-    padding: 20px 40px;
+    padding: 40px;
     margin-bottom: 40px;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
+    scroll-margin-top: 40px;
+}
+
+.content .sub-content:last-child {
+    margin-bottom: 0;
 }
 
 .content .sub-content-header {
@@ -303,16 +308,13 @@ textarea {
     font-size: 18px;
     color: var(--text-primary);
     padding-bottom: 20px;
+    margin-bottom: 40px;
     border-bottom: 2px dashed var(--text-primary);
     letter-spacing: 2px;
     text-transform: uppercase;
     justify-content: center;
     align-items: center;
     font-weight: bold;
-}
-
-.sub-content>div:last-child {
-    padding: 20px 0px;
 }
 
 .content .sub-content .sub-content-header .sub-content-header-name,
@@ -323,12 +325,7 @@ textarea {
 }
 
 .content .sub-content .sub-content-header .sub-content-header-icon {
-    font-size: 36px;
-    margin-left: auto;
-}
-
-.content .sub-content .sub-content-header .sub-content-header-icon {
-    font-size: 36px;
+    font-size: 32px;
     margin-left: auto;
 }
 
@@ -370,7 +367,7 @@ textarea {
     text-align: center;
 }
 
-.content .sub-content .sub-content-home .sub-content-home-name {
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-name {
     font-family: 'Playfair Display', serif;
     font-weight: bold;
     font-size: 48px;
@@ -378,39 +375,58 @@ textarea {
     margin-bottom: 20px;
 }
 
-.content .sub-content .sub-content-home .sub-content-home-name .surname {
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-name .surname {
     color: var(--text-accent);
 }
 
-.content .sub-content .sub-content-home .sub-content-home-job {
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job {
     font-size: 24px;
     letter-spacing: 1px;
     margin-bottom: 20px;
 }
 
-.content .sub-content .sub-content-home .sub-content-home-job .jobname {
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job .jobname {
     position: relative;
     border-bottom: 2px solid var(--text-accent);
 }
 
-.content .sub-content .sub-content-home .sub-content-home-job .jobname::after {
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job .jobname::after {
     position: absolute;
     top: 0;
     right: -6px;
     content: '|';
     animation: blink 0.7s steps(1) infinite;
+}
 
+.content .sub-content .sub-content-home .home-website-info {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 14px;
+}
+
+.content .sub-content .sub-content-home .home-website-info a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.content .sub-content .sub-content-home .home-website-info a:hover {
+    color: var(--text-accent);
 }
 
 /* aboutme */
 .content .sub-content .sub-content-aboutme {
     display: flex;
     flex-direction: row;
+    gap: 40px;
     height: 100%;
 }
 
 .content .sub-content .sub-content-aboutme .info-summary {
-    padding-right: 20px;
     width: 50%;
 }
 
@@ -446,30 +462,30 @@ textarea {
     color: var(--text-primary);
     border-bottom: 2px solid var(--text-primary);
     text-decoration: none;
+    transition: color 0.3s ease, border-color 0.3s ease;
 }
+
+.content .sub-content .sub-content-aboutme .info-table .download-link:hover {
+    color: var(--text-accent);
+    border-bottom: 2px solid var(--text-accent);
+}
+
 
 /* resume */
 .content .sub-content .sub-content-resume {
     display: flex;
     flex-direction: row;
+    gap: 40px;
 }
 
 .content .sub-content .sub-content-resume .resume-part {
     width: 50%;
 }
 
-.content .sub-content .sub-content-resume .resume-part.experiences {
-    padding-right: 20px
-}
-
-.content .sub-content .sub-content-resume .resume-part.educations {
-    padding-left: 20px
-}
-
 .content .sub-content .sub-content-resume .resume-part .resume-part-header {
     width: 100%;
     text-align: center;
-    margin: 20px 0px 40px 0px;
+    margin-bottom: 40px;
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -569,7 +585,6 @@ textarea {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
     width: 100%;
     border-radius: 20px;
 }
@@ -583,6 +598,11 @@ textarea {
     background-color: var(--background-tertiary);
     border-radius: 20px;
     cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.content .sub-content .sub-content-portfolio .portfolio-list .portfolio:hover {
+    border: 2px solid var(--text-primary);
 }
 
 .content .sub-content .sub-content-portfolio .portfolio-list .portfolio .portfolio-content {
@@ -634,7 +654,6 @@ textarea {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
     gap: 20px;
-    padding: 20px;
     width: 100%;
     border-radius: 20px;
 }
@@ -647,6 +666,11 @@ textarea {
     border: 2px solid var(--text-accent);
     background-color: var(--background-tertiary);
     cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog:hover {
+    border: 2px solid var(--text-primary);
 }
 
 .content .sub-content .sub-content-blog .blog-list .blog .blog-content {
@@ -697,7 +721,7 @@ textarea {
 .content .sub-content .sub-content-contact .contact-form-header {
     width: 100%;
     text-align: center;
-    margin: 20px 0px 40px 0px;
+    margin-bottom: 20px;
     font-size: 16px;
     letter-spacing: 2px;
     font-weight: bold;
@@ -713,7 +737,8 @@ textarea {
     max-width: 1000px;
     margin: 0 auto;
     color: var(--text-primary);
-    padding: 40px 20px;
+    padding-top: 20px;
+    margin-bottom: 80px;
     border-radius: 20px;
 }
 
@@ -721,21 +746,17 @@ textarea {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-bottom: 40px;
+    position: relative;
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part.personal-info {
+.content .sub-content .sub-content-contact .contact-form-content .personal-info {
     display: flex;
     flex-direction: row;
     gap: 40px;
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group {
-    position: relative;
-    margin-bottom: 40px;
-    width: 100%;
-}
-
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-field {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field {
     font-size: 16px;
     width: 100%;
     color: var(--text-primary);
@@ -746,11 +767,11 @@ textarea {
     padding: 10px;
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-field:focus {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus {
     border-color: #0af;
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-label {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-label {
     font-size: 16px;
     padding: 10px;
     position: absolute;
@@ -761,26 +782,32 @@ textarea {
     transition: all 0.3s ease;
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-field:focus+.input-label {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label {
     top: -30px;
     left: -10px;
     font-size: 14px;
     color: var(--text-accent);
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-field:focus+.input-label,
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group.input-filled .input-label {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label,
+.content .sub-content .sub-content-contact .contact-form-content .form-part.input-filled .input-label {
     top: -30px;
     left: -10px;
     font-size: 14px;
     color: var(--text-secondary);
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .form-group .input-field:focus+.input-label {
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label {
     color: var(--text-accent);
 }
 
-.content .sub-content .sub-content-contact .contact-form-content .form-part .submit-form-button {
+.content .sub-content .sub-content-contact .contact-form-content .form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-submit .submit-form-button {
     color: var(--text-primary);
     border: 2px solid var(--text-accent);
     padding: 10px 20px;
@@ -794,7 +821,7 @@ textarea {
     display: flex;
     flex-direction: row;
     gap: 40px;
-    padding: 40px 20px;
+    padding: 0px 40px;
 }
 
 .content .sub-content .sub-content-contact .contact-form-additional .additional-item {
@@ -812,9 +839,17 @@ textarea {
     margin-bottom: 20px;
 }
 
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info {
+    text-align: center;
+}
+
 .content .sub-content .sub-content-contact .contact-form-additional .additional-item .info a {
     color: var(--text-primary);
     text-decoration: none;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info a:hover {
+    text-decoration: underline;
 }
 
 .content .sub-content .sub-content-contact .contact-form-additional .additional-item .info #phoneNum {
@@ -897,6 +932,7 @@ textarea {
     }
 
     .content {
+        padding: 20px;
         grid-row: 2;
     }
 
@@ -931,12 +967,10 @@ textarea {
         margin-left: unset;
     }
 
-    .content {
-        scroll-margin-top: 80px;
-    }
-
     .content .sub-content {
-        padding: 10px 20px;
+        padding: 20px;
+        margin-bottom: 20px;
+        scroll-margin-top: 100px;
     }
 
     .content .sub-content .sub-content-aboutme {
@@ -944,8 +978,6 @@ textarea {
     }
 
     .content .sub-content .sub-content-aboutme .info-summary {
-        padding-right: 0px;
-        padding-bottom: 20px;
         width: 100%;
     }
 
@@ -966,7 +998,7 @@ textarea {
         margin-top: 20px;
     }
 
-    .content .sub-content .sub-content-contact .contact-form-content .form-part.personal-info {
+    .content .sub-content .sub-content-contact .contact-form-content .personal-info {
         flex-direction: column;
         gap: 0px;
     }
