@@ -306,6 +306,22 @@ textarea {
     max-height: 500px;
 }
 
+.content .settings .settings-content .test {
+    position: relative;
+}
+
+.content .settings .settings-content .test::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
 .content .settings .settings-content .setting {
     border: none;
     height: 34px;
@@ -318,6 +334,7 @@ textarea {
     align-items: center;
     cursor: pointer;
     margin-bottom: 10px;
+    z-index: 0;
 }
 
 .content .settings .settings-content .setting:hover {
