@@ -241,20 +241,20 @@ textarea {
     position: fixed;
     bottom: 6px;
     right: 3px;
-    height: 34px;
+    max-height: 34px;
     width: 34px;
     background-color: var(--background-tertiary);
     color: var(--text-primary);
     z-index: 10;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
-    transition: height 0.3s ease, width 0.3s ease;
+    transition: max-height 0.3s ease, width 0.3s ease;
     background-color: transparent;
 }
 
 .content .settings.open {
-    height: 200px;
+    max-height: 150px;
 }
 
 .content .settings i {
@@ -283,10 +283,13 @@ textarea {
     cursor: pointer;
     position: relative;
     z-index: 0;
+    transition: transform 0.6s ease;
 }
 
-
-
+.content .settings .settings-toggler .toggle-setting:hover {
+    border: 1px solid white;
+    transform: rotate(180deg);
+}
 
 .content .settings .settings-content {
     width: 100%;
@@ -296,10 +299,7 @@ textarea {
     display: flex;
     flex-direction: column;
     flex: 1;
-}
-
-.content .settings .settings-content .setting:last-child {
-    margin-bottom: 40px;
+    margin-bottom: -20px;
 }
 
 .content .settings .settings-content.open {
@@ -317,12 +317,26 @@ textarea {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.content .settings .settings-content .setting:hover {
+    border: 1px solid white;
+}
+
+.content .settings .settings-content .setting:last-child {
+    margin-bottom: 40px;
 }
 
 .content .settings .settings-content .setting.language-setting {
     cursor: not-allowed;
 }
 
+.content .settings .settings-content .setting.language-setting:hover {
+    border: none;
+}
+
+/* sub content */
 .content .sub-content {
     background-color: var(--background-secondary);
     padding: 40px;
