@@ -1,0 +1,177 @@
+{
+    "en": {
+        "head": {
+            "title": "Emir Can Başaran | Personal Website"
+        },
+        "navbar": {
+            "fullname": "Emir Can Başaran",
+            "home": "Home",
+            "aboutMe": "About Me",
+            "resume": "Resume",
+            "portfolio": "Portfolio",
+            "blog": "Blog",
+            "contact": "Contact",
+            "footer": {
+                "top": " © Emir Can Başaran",
+                "bottom": "All Right Reserved."
+            }
+        },
+        "settings": {
+            "otherLang": "TR"
+        },
+        "home": {
+            "header": "Home",
+            "name": "Emir Can",
+            "surname": "Başaran",
+            "jobIntro": "I am a",
+            "websiteInfo": "About This Website"
+        },
+        "about": {
+            "header": "About Me",
+            "summaryPart1": "I am a software developer committed to continuous learning and self-improvement in the rapidly evolving technology landscape. I prioritize clean code principles and sustainable solutions. With a disciplined work ethic and strong attention to detail, I aim to transform complex problems into efficient and scalable solutions. I am a team player with excellent communication skills and a strong sense of responsibility.",
+            "summaryPart2": "I have experience in developing web and mobile applications, and I have worked on projects involving artificial intelligence technologies. Additionally, I am familiar with cloud platforms and have hands-on experience across various operating systems.",
+            "table": {
+                "label": {
+                    "name": "Name:",
+                    "age": "Age:",
+                    "address": "Address:",
+                    "mail": "Mail:",
+                    "freelance": "Freelance:",
+                    "resume": "Resume:"
+                },
+                "value": {
+                    "name": "Emir Can Başaran",
+                    "address": "Istanbul, Turkey",
+                    "mail": "ebasaran999@gmail.com",
+                    "freelance": "Available",
+                    "resume": "Download"
+                }
+            }
+        },
+        "resume": {
+            "header": "Resume",
+            "experienceHeader": "Experience",
+            "educationHeader": "Education",
+            "exp1": {
+                "startYear": "06/2024",
+                "endYear": "Present",
+                "title": "Computer Engineer",
+                "company": "Hometech, Beşyol/Istanbul, Turkey",
+                "summaryPart1": "I work as a software developer and team leader on projects conducted within the R&D center. Prior to this, I managed the development, maintenance, and technical support processes of corporate websites. Additionally, I actively participated in software and hardware testing of new computer models.",
+                "summaryPart2": "In the projects I have been involved in, I developed AI-based systems using Python. I created RESTful APIs with Flask to integrate these systems with various platforms. I also developed mobile applications using Java. I gained experience working on the Google Cloud Platform and had opportunities to work with Linux-based systems. Furthermore, I developed AI-supported chatbots and promotional pages for corporate and OpenCart-based websites, integrating them responsively into the sites."
+            },
+            "exp2": {
+                "startYear": "07/2023",
+                "endYear": "08/2023",
+                "title": "Computer Engineering Intern",
+                "company": "VakıfBank, Ümraniye/Istanbul, Turkey",
+                "summaryPart1": "During my internship, I developed a web application that allows users to calculate their monthly payment amount and payment schedule based on loan amount and term.",
+                "summaryPart2": "I developed the back-end of the application using ASP.NET Core Web API and the front-end using Angular. For database management, I applied the Code First approach using Microsoft SQL Server and Entity Framework. Within the API, I structured the data access, business logic, and presentation layers according to the principles of a multi-layered architecture. Additionally, I implemented caching strategies through Redis integration to optimize API performance."
+            },
+            "edu1": {
+                "startYear": "09/2019",
+                "endYear": "11/2023",
+                "title": "Computer Engineering",
+                "company": "Kocaeli University, Kocaeli, Turkey",
+                "summaryPart1": "Gained a solid foundation in core areas of Computer Engineering through academic training. Acquired hands-on experience in C and Java programming, with a particular focus on object-oriented programming (OOP) using Java. Developed both web and mobile-based applications as part of project work. Additionally, built practical knowledge in artificial intelligence by working on related coursework and projects.",
+                "summaryPart2": "As part of my graduation project, I developed a machine learning-based mobile application that enables individuals with posture disorders to analyze their own posture and detect abnormalities.",
+                "summaryPart3": "I developed the application using Java. For database management, I utilized the Authentication and Firestore Database services on the Google Firebase platform. To detect posture, I integrated and used the Google ML Kit Pose Detection API, providing users with manual adjustment options. I also developed the necessary numerical calculation algorithms for detecting posture disorders, enabling users to perform posture analysis. Additionally, I created a page that offers personalized exercise recommendations based on the user's posture analysis results."
+            }
+        },
+        "portfolio": {
+            "header": "Portfolio"
+        },
+        "blog": {
+            "header": "Blog"
+        },
+        "contact": {
+            "header": "Contact",
+            "form": {
+                "title": "Let's Talk",
+                "name": "Name",
+                "email": "Email",
+                "message": "How can I help you?",
+                "submit": "Coming Soon..."
+            },
+            "info": {
+                "email": "Email",
+                "location": "Istanbul, Turkey",
+                "phone": "Not available"
+            }
+        }
+    },
+
+    "tr": {
+        "navbar": {
+            "home": "Ana Sayfa",
+            "aboutMe": "Hakkımda",
+            "resume": "Özgeçmiş",
+            "portfolio": "Portföy",
+            "blog": "Blog",
+            "contact": "İletişim"
+        },
+        "home": {
+            "header": "Ana Sayfa",
+            "jobIntro": "Ben bir",
+            "websiteInfo": "Bu Web Sitesi Hakkında"
+        },
+        "about": {
+            "header": "Hakkımda",
+            "summary": "Hızla gelişen teknoloji dünyasında sürekli öğrenmeye ve kendini geliştirmeye önem veren bir yazılım geliştiricisiyim. Temiz kod ilkelerine ve sürdürülebilir çözümlere öncelik veririm. Disiplinli çalışma anlayışım ve detaylara verdiğim önem sayesinde karmaşık problemleri verimli ve ölçeklenebilir çözümlere dönüştürmeyi hedeflerim. Takım çalışmasına yatkın, iletişimi güçlü ve sorumluluk bilinci yüksek biriyim.\n\nWeb ve mobil uygulama geliştirme alanında deneyim sahibiyim. Yapay zeka teknolojilerinin kullanıldığı projelerde yer aldım. Ayrıca bulut platformlarına hâkimim ve çeşitli işletim sistemlerinde uygulamalı deneyime sahibim.",
+            "info": {
+                "name": "İsim:",
+                "age": "Yaş:",
+                "address": "Adres:",
+                "mail": "E-posta:",
+                "freelance": "Serbest Çalışma:",
+                "resume": "Özgeçmiş:",
+                "download": "İndir",
+                "available": "Müsait"
+            }
+        },
+        "resume": {
+            "header": "Özgeçmiş",
+            "experienceHeader": "Deneyim",
+            "educationHeader": "Eğitim",
+            "exp1": {
+                "title": "Bilgisayar Mühendisi",
+                "company": "Hometech, Beşyol/İstanbul, Türkiye",
+                "summary": "Ar-Ge merkezinde yürütülen projelerde yazılım geliştirici ve ekip lideri olarak çalışıyorum. Daha önce kurumsal web sitelerinin geliştirme, bakım ve teknik destek süreçlerini yönettim. Ayrıca yeni bilgisayar modellerinin yazılım ve donanım test süreçlerine aktif olarak katıldım.\n\nYer aldığım projelerde Python kullanarak yapay zeka tabanlı sistemler geliştirdim. Bu sistemleri farklı platformlarla entegre etmek için Flask ile RESTful API’ler oluşturdum. Java kullanarak mobil uygulamalar geliştirdim. Google Cloud Platform üzerinde deneyim kazandım ve Linux tabanlı sistemlerle çalıştım. Ayrıca kurumsal ve OpenCart tabanlı web siteleri için yapay zekâ destekli sohbet botları ve tanıtım sayfaları geliştirip sitelere entegre ettim."
+            },
+            "exp2": {
+                "title": "Bilgisayar Mühendisliği Stajyeri",
+                "company": "VakıfBank, Ümraniye/İstanbul, Türkiye",
+                "summary": "Staj sürecimde kullanıcıların kredi tutarı ve vadesine göre aylık ödeme miktarını ve ödeme planını hesaplamasına olanak sağlayan bir web uygulaması geliştirdim.\n\nUygulamanın arka ucunu ASP.NET Core Web API, ön yüzünü ise Angular kullanarak geliştirdim. Veritabanı yönetimi için Microsoft SQL Server ve Entity Framework ile Code First yaklaşımını uyguladım. API içinde veri erişim, iş mantığı ve sunum katmanlarını çok katmanlı mimari prensiplerine uygun şekilde yapılandırdım. Ek olarak, Redis entegrasyonu ile önbellekleme stratejileri uygulayarak API performansını optimize ettim."
+            },
+            "edu1": {
+                "title": "Bilgisayar Mühendisliği",
+                "company": "Kocaeli Üniversitesi, Kocaeli, Türkiye",
+                "summary": "Bilgisayar Mühendisliği’nin temel alanlarında sağlam bir altyapı kazandım. C ve Java programlama dillerinde uygulamalı deneyim edindim ve özellikle Java ile nesne yönelimli programlama (OOP) üzerine yoğunlaştım. Proje çalışmaları kapsamında hem web hem de mobil tabanlı uygulamalar geliştirdim. Ayrıca, yapay zeka alanında dersler ve projeler aracılığıyla pratik bilgi birikimi elde ettim.\n\nBitirme projem kapsamında, duruş bozuklukları yaşayan bireylerin kendi duruşlarını analiz edip anormallikleri tespit edebileceği makine öğrenmesi tabanlı bir mobil uygulama geliştirdim.\n\nUygulamayı Java kullanarak geliştirdim. Veritabanı yönetimi için Google Firebase platformundaki Authentication ve Firestore Database servislerini kullandım. Duruş tespiti için Google ML Kit Pose Detection API’yi entegre ettim ve kullanıcıya manuel ayar yapma seçenekleri sundum. Ayrıca duruş bozukluklarını tespit etmek için gerekli sayısal hesaplama algoritmalarını geliştirip kullanıcıların analiz yapmasını sağladım. Kullanıcıların analiz sonuçlarına göre kişisel egzersiz önerileri sunan bir sayfa da oluşturdum."
+            }
+        },
+        "portfolio": {
+            "header": "Portföy"
+        },
+        "blog": {
+            "header": "Blog"
+        },
+        "contact": {
+            "header": "İletişim",
+            "form": {
+                "title": "Hadi Konuşalım",
+                "name": "İsim",
+                "email": "E-posta",
+                "message": "Size nasıl yardımcı olabilirim?",
+                "submit": "Yakında..."
+            },
+            "info": {
+                "email": "E-posta",
+                "location": "İstanbul, Türkiye",
+                "phone": "Mevcut değil"
+            }
+        },
+        "footer": {
+            "rights": "Tüm hakları saklıdır."
+        }
+    }
+}

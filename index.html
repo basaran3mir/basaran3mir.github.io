@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="This website is Emir Can Başaran's personal website.">
-    <title>Emir Can Başaran | Personal Website</title>
+    <title data-key="head.title"></title>
     <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
     <link rel="stylesheet" href="static/css/style.css">
     <link rel="stylesheet" href="static/css/vendor/linear-icons/icon-font.min.css" media="print"
@@ -23,44 +23,44 @@
 
 <body>
     <div class="layout">
-        <aside class="sidebar">
-            <header class="sidebar-header">
-                <picture class="sidebar-photo">
+        <aside class="navbar">
+            <header class="navbar-header">
+                <picture class="navbar-photo">
                     <img src="static/images/pp-250.webp" loading="lazy" alt="Profile photo of Emir Can Başaran">
                 </picture>
-                <div class="sidebar-fullname">
-                    <h4>Emir Can Başaran</h4>
+                <div class="navbar-fullname">
+                    <h4 data-key="navbar.fullname"></h4>
                 </div>
-                <div class="sidebar-togglebutton">
+                <div class="navbar-togglebutton">
                     <i class="lnr lnr-menu icon-menu"></i>
                 </div>
             </header>
-            <div class="sidebar-content">
+            <div class="navbar-content">
                 <nav class="menu">
                     <ul class="menu-links">
                         <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
                                         class="lnr lnr-home"></i></span>
-                                <p>Home</p>
+                                <p data-key="navbar.home"></p>
                             </a> </li>
                         <li><a href="#aboutMe" class="menu-link"><span class="menu-icon"><i
                                         class="lnr lnr-user"></i></span>
-                                <p>About Me</p>
+                                <p data-key="navbar.aboutMe"></p>
                             </a></li>
                         <li><a href="#resume" class="menu-link"><span class="menu-icon"><i
                                         class="lnr lnr-license"></i></span>
-                                <p>Resume</p>
+                                <p data-key="navbar.resume"></p>
                             </a></li>
                         <li><a href="#portfolio" class="menu-link"><span class="menu-icon"><i
                                         class="lnr lnr-briefcase"></i></span>
-                                <p>Portfolio</p>
+                                <p data-key="navbar.portfolio"></p>
                             </a></li>
                         <li><a href="#blog" class="menu-link"><span class="menu-icon"><i
                                         class="lnr lnr-book"></i></span>
-                                <p>Blog</p>
+                                <p data-key="navbar.blog"></p>
                             </a></li>
                         <li><a href="#contact" class="menu-link"><span class="menu-icon"><i
                                         class="lnr lnr-envelope"></i></span>
-                                <p>Contact</p>
+                                <p data-key="navbar.contact"></p>
                             </a></li>
                     </ul>
                 </nav>
@@ -88,7 +88,12 @@
                         </li>
                     </ul>
                     <div class="copy">
-                        <p>2025 © Emir Can Başaran<br>All Right Reserved.</p>
+                        <p>
+                            <span id="year"></span>
+                            <span data-key="navbar.footer.top"></span>
+                            <br>
+                            <span data-key="navbar.footer.bottom"></span>
+                        </p>
                     </div>
                 </footer>
             </div>
@@ -105,8 +110,9 @@
                         <button class="setting theme-setting" onclick="toggleTheme(this)" aria-label="Change Theme">
                             <i class="lnr lnr-sun"></i>
                         </button>
-                        <button class="setting language-setting" onclick="toggleLanguage(this)" disabled aria-label="Change Language">
-                            <p>TR</p>
+                        <button class="setting language-setting" onclick="toggleLanguage(this)" disabled
+                            aria-label="Change Language">
+                            <p data-key="settings.otherLang"></p>
                         </button>
                     </div>
 
@@ -119,69 +125,65 @@
                     <div class="overlay"></div>
                 </div>
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">Home</span>
+                    <span class="sub-content-header-name" data-key="home.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-home"></i></span>
                 </div>
                 <div class="sub-content-home">
                     <div class="home-personal-info">
-                        <p class="sub-content-home-name">Emir Can <span class="surname">Başaran</span></p>
-                        <p class="sub-content-home-job">I am a <span class="jobname"></span></p>
+                        <p class="sub-content-home-name">
+                            <span class="name" data-key="home.name"></span>
+                            <span class="surname" data-key="home.surname"></span>
+                        </p>
+                        <p class="sub-content-home-job">
+                            <span data-key="home.jobIntro"></span> 
+                            <span class="jobname"></span>
+                        </p>
                     </div>
                     <div class="home-website-info">
-                        <a href="https://pagespeed.web.dev/report?url=https://basaran3mir.github.io" target="_blank">
-                            About This Website
-                        </a>
+                        <a href="https://pagespeed.web.dev/report?url=https://basaran3mir.github.io" target="_blank"
+                            data-key="home.websiteInfo"></a>
                     </div>
                 </div>
             </section>
             <section class="sub-content" id="aboutMe">
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">About Me</span>
+                    <span class="sub-content-header-name" data-key="about.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-user"></i></span>
                 </div>
                 <div class="sub-content-aboutme">
                     <div class="info-summary">
-                        I am a software developer committed to continuous learning and self-improvement in the
-                        rapidly
-                        evolving technology landscape. I prioritize clean code principles and sustainable solutions.
-                        With a disciplined work ethic and strong attention to detail, I aim to transform complex
-                        problems into efficient and scalable solutions. I am a team player with excellent
-                        communication
-                        skills and a strong sense of responsibility.
+                        <span data-key="about.summaryPart1"></span>
                         <br><br>
-                        I have experience in developing web and mobile applications, and I have worked on projects
-                        involving artificial intelligence technologies. Additionally, I am familiar with cloud
-                        platforms
-                        and have hands-on experience across various operating systems.
+                        <span data-key="about.summaryPart2"></span>
                         <br><br>
                     </div>
                     <div class="info-table">
                         <ul>
                             <li>
-                                <span class="info-table-label">Name:</span>
-                                <span class="info-table-value">Emir Can Başaran</span>
+                                <span class="info-table-label" data-key="about.table.label.name"></span>
+                                <span class="info-table-value" data-key="about.table.value.name"></span>
                             </li>
                             <li>
-                                <span class="info-table-label">Age:</span>
-                                <span class="info-table-value" id="ageValue">24</span>
+                                <span class="info-table-label" data-key="about.table.label.age"></span>
+                                <span class="info-table-value" id="ageValue" data-key="about.table.value.age"></span>
                             </li>
                             <li>
-                                <span class="info-table-label">Address:</span>
-                                <span class="info-table-value">Istanbul, Turkey</span>
+                                <span class="info-table-label" data-key="about.table.label.address"></span>
+                                <span class="info-table-value" data-key="about.table.value.address"></span>
                             </li>
                             <li>
-                                <span class="info-table-label">Mail:</span>
-                                <span class="info-table-value">ebasaran999@gmail.com</span>
+                                <span class="info-table-label" data-key="about.table.label.mail"></span>
+                                <span class="info-table-value" data-key="about.table.value.mail"></span>
                             </li>
                             </li>
                             <li>
-                                <span class="info-table-label">Freelance:</span>
-                                <span class="info-table-value">Available</span>
+                                <span class="info-table-label" data-key="about.table.label.freelance"></span>
+                                <span class="info-table-value" data-key="about.table.value.freelance"></span>
                             </li>
                             <li>
-                                <span class="info-table-label">Resume:</span>
+                                <span class="info-table-label" data-key="about.table.label.resume"></span>
                                 <a href="static/docs/emir-can-basaran-cv-eng-alt.pdf" class="download-link"
-                                    target="_blank" rel="noopener noreferrer">Download</a>
+                                    target="_blank" rel="noopener noreferrer" data-key="about.table.value.resume"></a>
                             </li>
                         </ul>
                     </div>
@@ -189,17 +191,17 @@
             </section>
             <section class="sub-content" id="resume">
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">Resume</span>
+                    <span class="sub-content-header-name" data-key="resume.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-license"></i></span>
                 </div>
                 <div class="sub-content-resume">
                     <div class="resume-part experiences">
-                        <div class="resume-part-header"><span>Experience</span></div>
+                        <div class="resume-part-header"><span data-key="resume.experienceHeader"></span></div>
                         <ul class="experience-list">
                             <li class="experience">
                                 <div class="experience-years">
-                                    <div class="start-year">06/2024</div>
-                                    <div class="end-year">Present</div>
+                                    <div class="start-year"><span data-key="resume.exp1.startYear"></span></div>
+                                    <div class="end-year"><span  data-key="resume.exp1.endYear"></span></div>
                                 </div>
                                 <div class="experience-line">
                                     <div class="line-circle"></div>
@@ -207,33 +209,19 @@
                                     <div class="line-circle"></div>
                                 </div>
                                 <div class="experience-explanation">
-                                    <div class="explanation-title">Computer Engineer</div>
-                                    <div class="explanation-company">Hometech, Beşyol/Istanbul, Turkey</div>
+                                    <div class="explanation-title"><span data-key="resume.exp1.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.exp1.company"></span></div>
                                     <div class="explanation-summary">
-                                        I work as a software developer and team leader on projects conducted within
-                                        the
-                                        R&D center. Prior to this, I managed the development, maintenance, and
-                                        technical
-                                        support processes of corporate websites. Additionally, I actively
-                                        participated
-                                        in software and hardware testing of new computer models.
+                                        <span data-key="resume.exp1.summaryPart1"></span>
                                         <br><br>
-                                        In the projects I have been involved in, I developed AI-based systems using
-                                        Python. I created RESTful APIs with Flask to integrate these systems with
-                                        various platforms. I also developed mobile applications using Java. I gained
-                                        experience working on the Google Cloud Platform and had opportunities to
-                                        work
-                                        with Linux-based systems. Furthermore, I developed AI-supported chatbots and
-                                        promotional pages for corporate and OpenCart-based websites, integrating
-                                        them
-                                        responsively into the sites.
+                                        <span data-key="resume.exp1.summaryPart2"></span>
                                     </div>
                                 </div>
                             </li>
                             <li class="experience">
                                 <div class="experience-years">
-                                    <div class="start-year">07/2023</div>
-                                    <div class="end-year">08/2023</div>
+                                    <div class="start-year"><span data-key="resume.exp2.startYear"></span></div>
+                                    <div class="end-year"><span data-key="resume.exp2.endYear"></span></div>
                                 </div>
                                 <div class="experience-line">
                                     <div class="line-circle"></div>
@@ -241,34 +229,24 @@
                                     <div class="line-circle"></div>
                                 </div>
                                 <div class="experience-explanation">
-                                    <div class="explanation-title">Computer Engineering Intern</div>
-                                    <div class="explanation-company">VakıfBank, Ümraniye/Istanbul, Turkey</div>
+                                    <div class="explanation-title"><span data-key="resume.exp2.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.exp2.company"></span></div>
                                     <div class="explanation-summary">
-                                        During my internship, I developed a web application that allows users to
-                                        calculate their monthly payment amount and payment schedule based on loan
-                                        amount
-                                        and term.
+                                        <span data-key="resume.exp2.summaryPart1"></span>
                                         <br><br>
-                                        I developed the back-end of the application using ASP.NET Core Web API and
-                                        the
-                                        front-end using Angular. For database management, I applied the Code First
-                                        approach using Microsoft SQL Server and Entity Framework. Within the API, I
-                                        structured the data access, business logic, and presentation layers
-                                        according to
-                                        the principles of a multi-layered architecture. Additionally, I implemented
-                                        caching strategies through Redis integration to optimize API performance.
+                                        <span data-key="resume.exp2.summaryPart2"></span>
                                     </div>
                                 </div>
                             </li>
                         </ul>
                     </div>
                     <div class="resume-part educations">
-                        <div class="resume-part-header"><span>Education</span></div>
+                        <div class="resume-part-header"><span data-key="resume.educationHeader"></span></div>
                         <ul class="education-list">
                             <li class="education">
                                 <div class="education-years">
-                                    <div class="start-year">09/2019</div>
-                                    <div class="end-year">11/2023</div>
+                                    <div class="start-year"><span data-key="resume.edu1.startYear"></span></div>
+                                    <div class="end-year"><span data-key="resume.edu2.endYear"></span></div>
                                 </div>
                                 <div class="education-line">
                                     <div class="line-circle"></div>
@@ -276,38 +254,14 @@
                                     <div class="line-circle"></div>
                                 </div>
                                 <div class="education-explanation">
-                                    <div class="explanation-title">Computer Engineering</div>
-                                    <div class="explanation-company">Kocaeli University, Kocaeli, Turkey</div>
+                                    <div class="explanation-title"><span data-key="resume.edu1.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.edu1.company"></span></div>
                                     <div class="explanation-summary">
-                                        Gained a solid foundation in core areas of Computer
-                                        Engineering through academic training. Acquired hands-on experience in C and
-                                        Java programming, with a particular focus on object-oriented programming
-                                        (OOP)
-                                        using Java. Developed both web and mobile-based applications as part of
-                                        project
-                                        work. Additionally, built practical knowledge in artificial intelligence by
-                                        working on related coursework and projects.
+                                        <span data-key="resume.edu1.summaryPart1"></span>
                                         <br><br>
-                                        As part of my graduation project, I developed a machine learning-based
-                                        mobile
-                                        application that enables individuals with posture disorders to analyze their
-                                        own
-                                        posture and detect abnormalities.
+                                        <span data-key="resume.edu1.summaryPart2"></span>
                                         <br><br>
-                                        I developed the application using Java. For database management, I utilized
-                                        the
-                                        Authentication and Firestore Database services on the Google Firebase
-                                        platform.
-                                        To
-                                        detect posture, I integrated and used the Google ML Kit Pose Detection API,
-                                        providing users with manual adjustment options. I also developed the
-                                        necessary
-                                        numerical calculation algorithms for detecting posture disorders, enabling
-                                        users
-                                        to
-                                        perform posture analysis. Additionally, I created a page that offers
-                                        personalized
-                                        exercise recommendations based on the user's posture analysis results.
+                                        <span data-key="resume.edu1.summaryPart3"></span>
                                     </div>
                                 </div>
                             </li>
@@ -317,7 +271,7 @@
             </section>
             <section class="sub-content" id="portfolio">
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">Portfolio</span>
+                    <span class="sub-content-header-name" data-key="portfolio.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-briefcase"></i></span>
                 </div>
                 <div class="sub-content-portfolio">
@@ -327,7 +281,7 @@
             </section>
             <section class="sub-content" id="blog">
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">Blog</span>
+                    <span class="sub-content-header-name" data-key="blog.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-book"></i></span>
                 </div>
                 <div class="sub-content-blog">
@@ -337,32 +291,32 @@
             </section>
             <section class="sub-content" id="contact">
                 <div class="sub-content-header">
-                    <span class="sub-content-header-name">Contact</span>
+                    <span class="sub-content-header-name" data-key="contact.header"></span>
                     <span class="sub-content-header-icon"><i class="lnr lnr-envelope"></i></span>
                 </div>
                 <div class="sub-content-contact">
-                    <div class="contact-form-header"><span>Let's Talk</span></div>
+                    <div class="contact-form-header"><span data-key="contact.form.title"></span></div>
                     <div class="contact-form-content">
                         <form id="contactForm" method="post" action="#" novalidate>
                             <div class="personal-info">
                                 <div class="form-part">
                                     <input class="input-field" type="text" id="nameInput" name="name" required
                                         autocomplete="name">
-                                    <label class="input-label" for="nameInput">Name</label>
+                                    <label class="input-label" for="nameInput"><span data-key="contact.form.name"></span></label>
                                 </div>
                                 <div class="form-part">
                                     <input class="input-field" type="email" id="emailInput" name="email" required
                                         autocomplete="email">
-                                    <label class="input-label" for="emailInput">Email</label>
+                                    <label class="input-label" for="emailInput"><span data-key="contact.form.email"></span></label>
                                 </div>
                             </div>
                             <div class="form-part">
                                 <textarea class="input-field" rows="5" id="messageInput" name="message"
                                     autocomplete="off"></textarea>
-                                <label class="input-label" for="messageInput">How can I help you?</label>
+                                <label class="input-label" for="messageInput"><span data-key="contact.form.message"></span></label>
                             </div>
                             <div class="form-submit">
-                                <button type="submit" class="submit-form-button" disabled>Coming Soon...</button>
+                                <button type="submit" class="submit-form-button" disabled><span data-key="contact.form.submit"></span></button>
                             </div>
                         </form>
                     </div>
@@ -372,7 +326,7 @@
                                 <i class="fas fa-paper-plane"></i>
                             </span>
                             <span class="info">
-                                <a href="mailto:ebasaran999@gmail.com">ebasaran999@gmail.com</a>
+                                <a href="mailto:ebasaran999@gmail.com"><span data-key="contact.info.email"></span></a>
                             </span>
                         </div>
                         <div class="additional-item">
@@ -380,8 +334,7 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </span>
                             <span class="info">
-                                <a href="https://maps.app.goo.gl/UCuj3vQZ2ocknVjp9" target="_blank">Istanbul,
-                                    Turkey</a>
+                                <a href="https://maps.app.goo.gl/UCuj3vQZ2ocknVjp9" target="_blank"><span data-key="contact.info.location"></span></a>
                             </span>
                         </div>
                         <div class="additional-item">
@@ -389,12 +342,11 @@
                                 <i class="fas fa-phone"></i>
                             </span>
                             <span class="info">
-                                <a href="#" id="phoneNum">Not available</a>
+                                <a href="#" id="phoneNum"><span data-key="contact.info.phone"></span></a>
                             </span>
                         </div>
                     </div>
                 </div>
-
             </section>
         </main>
     </div>

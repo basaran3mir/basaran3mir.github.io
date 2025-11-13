@@ -1,3 +1,8 @@
+function toggleSettingsTab() {
+    const settings = document.querySelector('.settings');
+    settings.classList.toggle("open");
+}
+
 function toggleTheme(element) {
 
     toggleSettingsTab()
@@ -17,21 +22,46 @@ function toggleTheme(element) {
     }
 }
 
-function toggleLanguage(element) {}
+function toggleLanguage(element) {
+    const currentLang = localStorage.getItem('lang') || 'en';
+    const newLang = currentLang === 'en' ? 'tr' : 'en';
+    localStorage.setItem('lang', newLang);
+    applyStrings();
+}
 
-function toggleSettingsTab() {
-    const settings = document.querySelector('.settings');
-    settings.classList.toggle("open");
+async function loadStrings() {
+    const lang = localStorage.getItem('lang') || 'en';
+    const response = await fetch('../static/assets/strings.json');
+    const strings = await response.json();
+
+    return strings[lang];
+}
+
+async function applyStrings() {
+    const strings = await loadStrings();
+    const elements = document.querySelectorAll('[data-key]');
+
+    elements.forEach(el => {
+        const keyPath = el.getAttribute('data-key').split('.');
+        let value = strings;
+
+        for (const key of keyPath) {
+            value = value?.[key];
+        }
+
+        if (value) el.textContent = value;
+    });
 }
 
 document.addEventListener('DOMContentLoaded', function () {
 
     function init() {
+        applyStrings()
         setActiveMenuLink()
-        setMobileSidebarToggleButtonAction()
-        turnOffMobilSidebarOnPartClick()
+        setMobileNavbarToggleButtonAction()
+        turnOffMobilNavbarOnPartClick()
         jobnametypewriterEffect()
-        calculateAge()
+        calculateYear()
         showGithubRepos()
         showMediumBlogs()
         checkInputFields()
@@ -91,9 +121,9 @@ document.addEventListener('DOMContentLoaded', function () {
         sections.forEach((section) => observer.observe(section));
     }
 
-    function setMobileSidebarToggleButtonAction() {
-        const toggleBtn = document.querySelector('.sidebar-togglebutton');
-        const menu = document.querySelector('.sidebar');
+    function setMobileNavbarToggleButtonAction() {
+        const toggleBtn = document.querySelector('.navbar-togglebutton');
+        const menu = document.querySelector('.navbar');
 
         toggleBtn.addEventListener('click', function () {
             menu.classList.toggle('open');
@@ -109,10 +139,10 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    function turnOffMobilSidebarOnPartClick() {
-        const menu = document.querySelector('.sidebar');
-        const mobileMenuLinks = document.querySelectorAll(".sidebar .menu-link");
-        const toggleBtn = document.querySelector('.sidebar-togglebutton');
+    function turnOffMobilNavbarOnPartClick() {
+        const menu = document.querySelector('.navbar');
+        const mobileMenuLinks = document.querySelectorAll(".navbar .menu-link");
+        const toggleBtn = document.querySelector('.navbar-togglebutton');
         const icon = toggleBtn.querySelector('i');
 
         mobileMenuLinks.forEach(link => {
@@ -149,9 +179,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    function calculateAge() {
+    function calculateYear() {
+        currentYear = new Date().getFullYear();
+        document.getElementById("year").textContent = currentYear
+
         const birthYear = 2001;
-        const currentYear = new Date().getFullYear();
         const age = currentYear - birthYear;
         document.getElementById("ageValue").textContent = age;
     }
