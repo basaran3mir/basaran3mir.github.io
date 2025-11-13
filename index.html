@@ -94,10 +94,19 @@
             </div>
         </aside>
         <main class="content">
-            <div class="theme-settings">
-                <div class="theme-icons" onclick="toggleTheme(this)">
-                    <i class="lnr lnr-moon"></i>
-                    <i class="lnr lnr-sun"></i>
+            <div class="settings">
+                <div class="settings-content">
+                    <button class="setting theme-setting" onclick="toggleTheme(this)">
+                        <i class="lnr lnr-sun"></i>
+                    </button>
+                    <button class="setting language-setting" onclick="toggleLanguage(this)" disabled>
+                        <p>ENG</p>
+                    </button>
+                </div>
+                <div class="settings-toggler">
+                    <button class="toggle-setting" onclick="openSettingsTab(this)">
+                        <i class="lnr lnr-cog"></i>
+                    </button>
                 </div>
             </div>
             <section class="sub-content" id="home">

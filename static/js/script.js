@@ -1,16 +1,25 @@
-function toggleTheme(element) {
-    const root = document.documentElement;
-    const currentTheme = root.getAttribute('data-theme');
+function openSettingsTab(element) {
 
-    if (currentTheme === 'light') {
-        root.removeAttribute('data-theme');
-    } else {
-        root.setAttribute('data-theme', 'light');
-    }
-
-    element.classList.toggle("rotate-180")
+    const settingsContainer = element.closest('.settings');
+    const settingsContent = settingsContainer.querySelector('.settings-content');
+    settingsContent.classList.toggle("open");
 }
 
+function toggleTheme(element) {
+    const root = document.documentElement;
+    const icon = element.querySelector("i");
+    const currentTheme = root.getAttribute("data-theme");
+
+    if (currentTheme === "light") {
+        root.removeAttribute("data-theme");
+        icon.classList.remove("lnr-moon");
+        icon.classList.add("lnr-sun");
+    } else {
+        root.setAttribute("data-theme", "light");
+        icon.classList.remove("lnr-sun");
+        icon.classList.add("lnr-moon");
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function () {
 
