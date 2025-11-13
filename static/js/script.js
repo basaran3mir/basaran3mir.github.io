@@ -1,11 +1,7 @@
-function openSettingsTab(element) {
-
-    const settingsContainer = element.closest('.settings');
-    const settingsContent = settingsContainer.querySelector('.settings-content');
-    settingsContent.classList.toggle("open");
-}
-
 function toggleTheme(element) {
+
+    toggleSettingsTab()
+
     const root = document.documentElement;
     const icon = element.querySelector("i");
     const currentTheme = root.getAttribute("data-theme");
@@ -19,6 +15,13 @@ function toggleTheme(element) {
         icon.classList.remove("lnr-sun");
         icon.classList.add("lnr-moon");
     }
+}
+
+function toggleLanguage(element) {}
+
+function toggleSettingsTab() {
+    const settings = document.querySelector('.settings');
+    settings.classList.toggle("open");
 }
 
 document.addEventListener('DOMContentLoaded', function () {
