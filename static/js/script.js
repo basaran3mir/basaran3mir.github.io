@@ -112,10 +112,13 @@ document.addEventListener('DOMContentLoaded', function () {
     function turnOffMobilSidebarOnPartClick() {
         const menu = document.querySelector('.sidebar');
         const mobileMenuLinks = document.querySelectorAll(".sidebar .menu-link");
+        const toggleBtn = document.querySelector('.sidebar-togglebutton');
+        const icon = toggleBtn.querySelector('i');
 
         mobileMenuLinks.forEach(link => {
             link.addEventListener('click', function () {
-                menu.classList.toggle('open');
+                menu.classList.remove('open');
+                icon.className = 'lnr lnr-menu icon-menu';
             });
         });
     }
