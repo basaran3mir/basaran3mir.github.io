@@ -142,6 +142,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function getGithubRepos() {
+        const cacheKey = "github_repos_cache";
+        const cacheTimeKey = "github_repos_cache_time";
+        const twoDays = 2 * 24 * 60 * 60 * 1000;
+
+        const cachedData = localStorage.getItem(cacheKey);
+        const cachedTime = localStorage.getItem(cacheTimeKey);
+        const now = Date.now();
+
+        if (cachedData && cachedTime && (now - cachedTime < twoDays)) {
+            console.log("Github repos coming from cache.")
+            return JSON.parse(cachedData);
+        }
+
         const fallbackRepo = [{
             html_url: "https://github.com/basaran3mir?tab=repositories",
             has_pages: false,
@@ -152,9 +165,15 @@ document.addEventListener('DOMContentLoaded', function () {
         try {
             const response = await fetch(`https://api.github.com/users/basaran3mir/repos`);
             const data = await response.json();
+
             if (!data || data.length === 0) {
                 return fallbackRepo;
             }
+
+            localStorage.setItem(cacheKey, JSON.stringify(data));
+            localStorage.setItem(cacheTimeKey, now);
+
+            console.log("Github repos coming from API.")
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
@@ -231,18 +250,38 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function getMediumBlogs() {
+        const cacheKey = "medium_blogs_cache";
+        const cacheTimeKey = "medium_blogs_cache_time";
+        const twoDays = 2 * 24 * 60 * 60 * 1000;
+
+        const cachedData = localStorage.getItem(cacheKey);
+        const cachedTime = localStorage.getItem(cacheTimeKey);
+        const now = Date.now();
+
+        if (cachedData && cachedTime && (now - cachedTime < twoDays)) {
+            console.log("Medium blogs coming from cache.")
+            return JSON.parse(cachedData);
+        }
+
         const fallbackBlog = [{
             link: "https://medium.com/@basaran3mir",
             title: "Medium Blogs",
             description: "An issue occurred while fetching Medium posts. You can still view them on my Medium profile.",
         }];
+
         try {
             const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://basaran3mir.medium.com/feed`);
             const data = await response.json();
+
             if (!data.items || data.items.length === 0) {
                 return fallbackBlog;
             }
-            return data.items
+
+            localStorage.setItem(cacheKey, JSON.stringify(data.items));
+            localStorage.setItem(cacheTimeKey, now);
+
+            console.log("Medium coming from API.")
+            return data.items;
         } catch (error) {
             console.error("Failed to retrieve Medium data:", error);
             return fallbackBlog;
