@@ -151,7 +151,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = Date.now();
 
         if (cachedData && cachedTime && (now - cachedTime < twoDays)) {
-            console.log("Github repos coming from cache.")
             return JSON.parse(cachedData);
         }
 
@@ -173,7 +172,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem(cacheKey, JSON.stringify(data));
             localStorage.setItem(cacheTimeKey, now);
 
-            console.log("Github repos coming from API.")
             return data;
         } catch (error) {
             console.error("Failed to retrieve GitHub data:", error);
@@ -259,7 +257,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const now = Date.now();
 
         if (cachedData && cachedTime && (now - cachedTime < twoDays)) {
-            console.log("Medium blogs coming from cache.")
             return JSON.parse(cachedData);
         }
 
@@ -280,7 +277,6 @@ document.addEventListener('DOMContentLoaded', function () {
             localStorage.setItem(cacheKey, JSON.stringify(data.items));
             localStorage.setItem(cacheTimeKey, now);
 
-            console.log("Medium coming from API.")
             return data.items;
         } catch (error) {
             console.error("Failed to retrieve Medium data:", error);
