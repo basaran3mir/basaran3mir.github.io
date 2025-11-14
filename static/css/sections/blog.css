@@ -1,0 +1,67 @@
+
+.content .sub-content .sub-content-blog .blog-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    width: 100%;
+    border-radius: 20px;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog {
+    height: 220px;
+    width: 100%;
+    margin: auto;
+    border-radius: 20px;
+    border: 2px solid var(--text-accent);
+    background-color: var(--background-tertiary);
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog:hover {
+    border: 2px solid var(--text-primary);
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-links {
+    display: flex;
+    gap: 10px;
+    justify-content: end;
+    position: relative;
+    top: 0;
+    right: 0;
+    margin-top: auto;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-links .blog-link {
+    text-decoration: none;
+    color: inherit;
+    background-color: var(--text-accent);
+    border-radius: 50%;
+    cursor: pointer;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-links .blog-link:hover {
+    color: var(--hover-primary);
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-name {
+    font-size: 18px;
+    margin: 10px 0px;
+}
+
+.content .sub-content .sub-content-blog .blog-list .blog .blog-content .blog-info {
+    font-size: 14px;
+    color: var(--text-secondary);
+}

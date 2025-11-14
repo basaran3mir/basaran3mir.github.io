@@ -1,0 +1,139 @@
+
+.content .sub-content .sub-content-contact .contact-form-header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.content .sub-content .sub-content-contact .contact-form-header span {
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--text-accent);
+}
+
+.content .sub-content .sub-content-contact .contact-form-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    color: var(--text-primary);
+    padding-top: 20px;
+    margin-bottom: 80px;
+    border-radius: 20px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .personal-info {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field {
+    font-size: 16px;
+    width: 100%;
+    color: var(--text-primary);
+    background-color: transparent;
+    border: 2px solid var(--border-secondary);
+    outline: none;
+    transition: border-color 0.3s ease;
+    padding: 10px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus {
+    border-color: #0af;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-label {
+    font-size: 16px;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--text-secondary);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label {
+    top: -30px;
+    left: -10px;
+    font-size: 14px;
+    color: var(--text-accent);
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label,
+.content .sub-content .sub-content-contact .contact-form-content .form-part.input-filled .input-label {
+    top: -30px;
+    left: -10px;
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-part .input-field:focus+.input-label {
+    color: var(--text-accent);
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-submit .submit-form-button {
+    color: var(--text-primary);
+    border: 2px solid var(--text-accent);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: not-allowed;
+    letter-spacing: 1px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    padding: 0px 40px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 2px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .icon {
+    color: var(--text-accent);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info {
+    text-align: center;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info a:hover {
+    text-decoration: underline;
+}
+
+.content .sub-content .sub-content-contact .contact-form-additional .additional-item .info #phoneNum {
+    pointer-events: none;
+    cursor: not-allowed;
+}

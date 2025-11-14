@@ -1,0 +1,206 @@
+.content {
+    grid-column: 2;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    z-index: 1;
+    transition: none;
+    padding: 40px;
+}
+
+.content .sub-content {
+    background-color: var(--background-secondary);
+    padding: 40px;
+    margin-bottom: 40px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    scroll-margin-top: 40px;
+}
+
+.content .sub-content:last-child {
+    margin-bottom: 0;
+}
+
+.content .sub-content-header {
+    display: flex;
+    flex-direction: row;
+    font-size: 18px;
+    color: var(--text-primary);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 2px dashed var(--text-primary);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.content .sub-content .sub-content-header .sub-content-header-name,
+.sub-content-header-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content .sub-content .sub-content-header .sub-content-header-icon {
+    font-size: 32px;
+    margin-left: auto;
+}
+
+.content .settings {
+    position: fixed;
+    bottom: 6px;
+    right: 3px;
+    max-height: 34px;
+    width: 34px;
+    background-color: var(--background-tertiary);
+    color: var(--text-primary);
+    z-index: 10;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    transition: max-height 0.3s ease, width 0.3s ease;
+    background-color: transparent;
+}
+
+.content .settings.open {
+    max-height: 150px;
+}
+
+.content .settings i {
+    font-size: 20px;
+}
+
+.content .settings .settings-toggler {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    z-index: 12;
+}
+
+.content .settings .settings-toggler .toggle-setting {
+    border: none;
+    height: 34px;
+    width: 34px;
+    color: var(--text-primary);
+    background-color: var(--text-accent);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    transition: transform 0.6s ease;
+}
+
+.content .settings .settings-toggler .toggle-setting:hover {
+    border: 1px solid white;
+    transform: rotate(180deg);
+}
+
+.content .settings .settings-content {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    z-index: 11;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: -20px;
+}
+
+.content .settings .settings-content.open {
+    max-height: 500px;
+}
+
+.content .settings .settings-content .test {
+    position: relative;
+}
+
+.content .settings .settings-content .test::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 2px;
+    background-color: white;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.content .settings .settings-content .setting {
+    border: none;
+    height: 34px;
+    width: 34px;
+    color: var(--text-primary);
+    background-color: var(--text-accent);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
+    z-index: 0;
+}
+
+.content .settings .settings-content .setting:hover {
+    border: 1px solid white;
+}
+
+.content .settings .settings-content .setting:last-child {
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 992px) {
+
+    .content {
+        padding: 20px;
+        grid-row: 2;
+    }
+
+    .content .sub-content {
+        padding: 20px;
+        margin-bottom: 20px;
+        scroll-margin-top: 100px;
+    }
+
+    .content .sub-content .sub-content-aboutme {
+        flex-direction: column;
+    }
+
+    .content .sub-content .sub-content-aboutme .info-summary {
+        width: 100%;
+    }
+
+    .content .sub-content .sub-content-aboutme .info-table {
+        width: 100%;
+    }
+
+    .content .sub-content .sub-content-resume {
+        flex-direction: column;
+    }
+
+    .content .sub-content .sub-content-resume .resume-part {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .content .sub-content .sub-content-resume .resume-part.educations {
+        margin-top: 20px;
+    }
+
+    .content .sub-content .sub-content-contact .contact-form-content .personal-info {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .content .sub-content .sub-content-contact .contact-form-additional {
+        flex-direction: column;
+    }
+
+}

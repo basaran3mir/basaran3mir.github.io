@@ -1,0 +1,93 @@
+#home {
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    z-index: 0
+}
+
+.home-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    z-index: -2;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(var(--background-gradient), var(--background-gradient));
+    z-index: -1;
+}
+
+.content .sub-content .sub-content-home {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-name {
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 48px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-name .surname {
+    color: var(--text-accent);
+}
+
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job {
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job .jobname {
+    position: relative;
+    border-bottom: 2px solid var(--text-accent);
+}
+
+.content .sub-content .sub-content-home .home-personal-info .sub-content-home-job .jobname::after {
+    position: absolute;
+    top: 0;
+    right: -6px;
+    content: '|';
+    animation: blink 0.7s steps(1) infinite;
+}
+
+.content .sub-content .sub-content-home .home-website-info {
+    width: 100%;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    font-size: 14px;
+}
+
+.content .sub-content .sub-content-home .home-website-info a {
+    color: var(--text-primary);
+    transition: color 0.3s ease;
+}
+
+.content .sub-content .sub-content-home .home-website-info a:hover {
+    color: var(--text-accent);
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}

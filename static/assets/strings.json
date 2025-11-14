@@ -35,14 +35,14 @@
                     "name": "Name:",
                     "age": "Age:",
                     "address": "Address:",
-                    "mail": "Mail:",
+                    "email": "EMail:",
                     "freelance": "Freelance:",
                     "resume": "Resume:"
                 },
                 "value": {
                     "name": "Emir Can Başaran",
                     "address": "Istanbul, Turkey",
-                    "mail": "ebasaran999@gmail.com",
+                    "email": "ebasaran999@gmail.com",
                     "freelance": "Available",
                     "resume": "Download"
                 }
@@ -100,33 +100,53 @@
             }
         }
     },
-
     "tr": {
+        "head": {
+            "title": "Emir Can Başaran | Kişisel Web Sitesi"
+        },
         "navbar": {
+            "fullname": "Emir Can Başaran",
             "home": "Ana Sayfa",
             "aboutMe": "Hakkımda",
             "resume": "Özgeçmiş",
-            "portfolio": "Portföy",
+            "portfolio": "Portfolyo",
             "blog": "Blog",
-            "contact": "İletişim"
+            "contact": "İletişim",
+            "footer": {
+                "top": " © Emir Can Başaran",
+                "bottom": "Tüm Hakları Saklıdır."
+            }
+        },
+        "settings": {
+            "otherLang": "EN"
         },
         "home": {
             "header": "Ana Sayfa",
+            "name": "Emir Can",
+            "surname": "Başaran",
             "jobIntro": "Ben bir",
             "websiteInfo": "Bu Web Sitesi Hakkında"
         },
         "about": {
             "header": "Hakkımda",
-            "summary": "Hızla gelişen teknoloji dünyasında sürekli öğrenmeye ve kendini geliştirmeye önem veren bir yazılım geliştiricisiyim. Temiz kod ilkelerine ve sürdürülebilir çözümlere öncelik veririm. Disiplinli çalışma anlayışım ve detaylara verdiğim önem sayesinde karmaşık problemleri verimli ve ölçeklenebilir çözümlere dönüştürmeyi hedeflerim. Takım çalışmasına yatkın, iletişimi güçlü ve sorumluluk bilinci yüksek biriyim.\n\nWeb ve mobil uygulama geliştirme alanında deneyim sahibiyim. Yapay zeka teknolojilerinin kullanıldığı projelerde yer aldım. Ayrıca bulut platformlarına hâkimim ve çeşitli işletim sistemlerinde uygulamalı deneyime sahibim.",
-            "info": {
-                "name": "İsim:",
-                "age": "Yaş:",
-                "address": "Adres:",
-                "mail": "E-posta:",
-                "freelance": "Serbest Çalışma:",
-                "resume": "Özgeçmiş:",
-                "download": "İndir",
-                "available": "Müsait"
+            "summaryPart1": "Hızla gelişen teknoloji dünyasında sürekli öğrenmeye ve kendimi geliştirmeye odaklanan bir yazılım geliştiricisiyim. Temiz kod ilkelerini ve sürdürülebilir çözümleri ön planda tutarım. Disiplinli çalışma prensibim ve detaylara olan güçlü ilgimle, karmaşık problemleri verimli ve ölçeklenebilir çözümlere dönüştürmeyi hedeflerim. Takım çalışmasına yatkın, iletişimi güçlü ve sorumluluk bilinci yüksek biriyim.",
+            "summaryPart2": "Web ve mobil uygulamalar geliştirme konusunda deneyim sahibiyim ve yapay zeka teknolojilerini içeren projelerde çalıştım. Ayrıca bulut platformlarına hâkimim ve farklı işletim sistemlerinde pratik deneyimim bulunuyor.",
+            "table": {
+                "label": {
+                    "name": "İsim:",
+                    "age": "Yaş:",
+                    "address": "Adres:",
+                    "email": "Email:",
+                    "freelance": "Freelance:",
+                    "resume": "Özgeçmiş:"
+                },
+                "value": {
+                    "name": "Emir Can Başaran",
+                    "address": "İstanbul, Türkiye",
+                    "email": "ebasaran999@gmail.com",
+                    "freelance": "Uygun",
+                    "resume": "İndir"
+                }
             }
         },
         "resume": {
@@ -134,23 +154,33 @@
             "experienceHeader": "Deneyim",
             "educationHeader": "Eğitim",
             "exp1": {
+                "startYear": "06/2024",
+                "endYear": "Günümüz",
                 "title": "Bilgisayar Mühendisi",
                 "company": "Hometech, Beşyol/İstanbul, Türkiye",
-                "summary": "Ar-Ge merkezinde yürütülen projelerde yazılım geliştirici ve ekip lideri olarak çalışıyorum. Daha önce kurumsal web sitelerinin geliştirme, bakım ve teknik destek süreçlerini yönettim. Ayrıca yeni bilgisayar modellerinin yazılım ve donanım test süreçlerine aktif olarak katıldım.\n\nYer aldığım projelerde Python kullanarak yapay zeka tabanlı sistemler geliştirdim. Bu sistemleri farklı platformlarla entegre etmek için Flask ile RESTful API’ler oluşturdum. Java kullanarak mobil uygulamalar geliştirdim. Google Cloud Platform üzerinde deneyim kazandım ve Linux tabanlı sistemlerle çalıştım. Ayrıca kurumsal ve OpenCart tabanlı web siteleri için yapay zekâ destekli sohbet botları ve tanıtım sayfaları geliştirip sitelere entegre ettim."
+                "summaryPart1": "Ar-Ge merkezinde yürütülen projelerde yazılım geliştirici ve takım lideri olarak görev almaktayım. Öncesinde kurumsal web sitelerinin geliştirme, bakım ve teknik destek süreçlerini yönettim. Ayrıca yeni bilgisayar modellerinin yazılım ve donanım testlerinde aktif rol aldım.",
+                "summaryPart2": "Yer aldığım projelerde Python kullanarak yapay zeka tabanlı sistemler geliştirdim. Bu sistemlerin farklı platformlarla entegrasyonu için Flask ile RESTful API’ler oluşturdum. Java ile mobil uygulamalar geliştirdim. Google Cloud Platform üzerinde çalışma deneyimi kazandım ve Linux tabanlı sistemlerle çalışma fırsatı buldum. Ek olarak, kurumsal ve OpenCart tabanlı siteler için yapay zeka destekli sohbet botları ve tanıtım sayfaları geliştirdim ve bunları sitelere responsive olarak entegre ettim."
             },
             "exp2": {
+                "startYear": "07/2023",
+                "endYear": "08/2023",
                 "title": "Bilgisayar Mühendisliği Stajyeri",
                 "company": "VakıfBank, Ümraniye/İstanbul, Türkiye",
-                "summary": "Staj sürecimde kullanıcıların kredi tutarı ve vadesine göre aylık ödeme miktarını ve ödeme planını hesaplamasına olanak sağlayan bir web uygulaması geliştirdim.\n\nUygulamanın arka ucunu ASP.NET Core Web API, ön yüzünü ise Angular kullanarak geliştirdim. Veritabanı yönetimi için Microsoft SQL Server ve Entity Framework ile Code First yaklaşımını uyguladım. API içinde veri erişim, iş mantığı ve sunum katmanlarını çok katmanlı mimari prensiplerine uygun şekilde yapılandırdım. Ek olarak, Redis entegrasyonu ile önbellekleme stratejileri uygulayarak API performansını optimize ettim."
+                "summaryPart1": "Staj sürecimde kullanıcıların kredi tutarı ve vade bilgisine göre aylık ödeme tutarlarını ve ödeme planlarını hesaplayabildiği bir web uygulaması geliştirdim.",
+                "summaryPart2": "Uygulamanın back-end kısmını ASP.NET Core Web API ile, front-end kısmını ise Angular ile geliştirdim. Veritabanı yönetimi için Microsoft SQL Server ve Entity Framework kullanarak Code First yaklaşımını uyguladım. API içerisinde veri erişim, iş mantığı ve sunum katmanlarını çok katmanlı mimari prensiplerine göre yapılandırdım. Ayrıca API performansını artırmak için Redis üzerinden caching stratejileri uyguladım."
             },
             "edu1": {
+                "startYear": "09/2019",
+                "endYear": "11/2023",
                 "title": "Bilgisayar Mühendisliği",
                 "company": "Kocaeli Üniversitesi, Kocaeli, Türkiye",
-                "summary": "Bilgisayar Mühendisliği’nin temel alanlarında sağlam bir altyapı kazandım. C ve Java programlama dillerinde uygulamalı deneyim edindim ve özellikle Java ile nesne yönelimli programlama (OOP) üzerine yoğunlaştım. Proje çalışmaları kapsamında hem web hem de mobil tabanlı uygulamalar geliştirdim. Ayrıca, yapay zeka alanında dersler ve projeler aracılığıyla pratik bilgi birikimi elde ettim.\n\nBitirme projem kapsamında, duruş bozuklukları yaşayan bireylerin kendi duruşlarını analiz edip anormallikleri tespit edebileceği makine öğrenmesi tabanlı bir mobil uygulama geliştirdim.\n\nUygulamayı Java kullanarak geliştirdim. Veritabanı yönetimi için Google Firebase platformundaki Authentication ve Firestore Database servislerini kullandım. Duruş tespiti için Google ML Kit Pose Detection API’yi entegre ettim ve kullanıcıya manuel ayar yapma seçenekleri sundum. Ayrıca duruş bozukluklarını tespit etmek için gerekli sayısal hesaplama algoritmalarını geliştirip kullanıcıların analiz yapmasını sağladım. Kullanıcıların analiz sonuçlarına göre kişisel egzersiz önerileri sunan bir sayfa da oluşturdum."
+                "summaryPart1": "Bilgisayar Mühendisliği'nin temel alanlarında güçlü bir akademik altyapı edindim. C ve Java programlamada deneyim kazanarak, özellikle Java ile nesne yönelimli programlama (OOP) üzerine yoğunlaştım. Proje çalışmaları kapsamında web ve mobil tabanlı uygulamalar geliştirdim. Ayrıca yapay zeka alanında dersler ve projeler aracılığıyla pratik bilgi sahibi oldum.",
+                "summaryPart2": "Bitirme projem kapsamında, duruş bozukluğu olan bireylerin kendi duruşlarını analiz edip anormallikleri tespit edebildiği makine öğrenmesi tabanlı bir mobil uygulama geliştirdim.",
+                "summaryPart3": "Uygulamayı Java ile geliştirdim. Veritabanı yönetimi için Google Firebase platformunda Authentication ve Firestore Database hizmetlerini kullandım. Duruş tespiti için Google ML Kit Pose Detection API’ını entegre ederek manuel düzeltme seçenekleri sundum. Duruş bozukluklarının tespiti için gerekli sayısal hesaplama algoritmalarını oluşturarak kullanıcıların duruş analizi yapabilmesini sağladım. Ek olarak, kullanıcıların duruş analizi sonuçlarına göre kişiselleştirilmiş egzersiz önerileri sunan bir sayfa geliştirdim."
             }
         },
         "portfolio": {
-            "header": "Portföy"
+            "header": "Portfolyo"
         },
         "blog": {
             "header": "Blog"
@@ -158,20 +188,17 @@
         "contact": {
             "header": "İletişim",
             "form": {
-                "title": "Hadi Konuşalım",
+                "title": "Konuşalım",
                 "name": "İsim",
-                "email": "E-posta",
+                "email": "Email",
                 "message": "Size nasıl yardımcı olabilirim?",
-                "submit": "Yakında..."
+                "submit": "Çok Yakında..."
             },
             "info": {
-                "email": "E-posta",
+                "email": "Email",
                 "location": "İstanbul, Türkiye",
                 "phone": "Mevcut değil"
             }
-        },
-        "footer": {
-            "rights": "Tüm hakları saklıdır."
         }
     }
 }

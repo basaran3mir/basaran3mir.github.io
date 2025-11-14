@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css">
         <link rel="stylesheet" href="static/fonts/google/google-fonts.css">
     </noscript>
-    <script src="static/js/script.js" defer></script>
+    <script type="module" src="static/js/main.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
                     <h4 data-key="navbar.fullname"></h4>
                 </div>
                 <div class="navbar-togglebutton">
-                    <i class="lnr lnr-menu icon-menu"></i>
+                    <i class="lnr lnr-menu icon-menu" id="toggleIcon"></i>
                 </div>
             </header>
             <div class="navbar-content">
@@ -67,7 +67,7 @@
                 <footer class="footer">
                     <ul class="social">
                         <li>
-                            <a href="mailto:ebasaran999@gmail.com" aria-label="Mail address">
+                            <a href="mailto:ebasaran999@gmail.com" aria-label="Email address">
                                 <i class="fa-solid fa-square-envelope"></i>
                             </a>
                         </li>
@@ -101,16 +101,16 @@
         <main class="content">
             <div class="settings">
                 <div class="settings-toggler">
-                    <button class="toggle-setting" onclick="toggleSettingsTab(this)" aria-label="Toggle Settings Tab">
+                    <button class="toggle-setting" aria-label="Toggle Settings Tab">
                         <i class="lnr lnr-cog"></i>
                     </button>
                 </div>
                 <div class="settings-content">
                     <div class="test">
-                        <button class="setting theme-setting" onclick="toggleTheme(this)" aria-label="Change Theme">
-                            <i class="lnr lnr-sun"></i>
+                        <button class="setting theme-setting" onclick="toggleTheme()" aria-label="Change Theme">
+                            <i class="lnr lnr-sun" id="themeIcon"></i>
                         </button>
-                        <button class="setting language-setting" onclick="toggleLanguage(this)" disabled
+                        <button class="setting language-setting" onclick="toggleLanguage()"
                             aria-label="Change Language">
                             <p data-key="settings.otherLang"></p>
                         </button>
@@ -135,7 +135,7 @@
                             <span class="surname" data-key="home.surname"></span>
                         </p>
                         <p class="sub-content-home-job">
-                            <span data-key="home.jobIntro"></span> 
+                            <span data-key="home.jobIntro"></span>
                             <span class="jobname"></span>
                         </p>
                     </div>
@@ -172,8 +172,8 @@
                                 <span class="info-table-value" data-key="about.table.value.address"></span>
                             </li>
                             <li>
-                                <span class="info-table-label" data-key="about.table.label.mail"></span>
-                                <span class="info-table-value" data-key="about.table.value.mail"></span>
+                                <span class="info-table-label" data-key="about.table.label.email"></span>
+                                <span class="info-table-value" data-key="about.table.value.email"></span>
                             </li>
                             </li>
                             <li>
@@ -201,7 +201,7 @@
                             <li class="experience">
                                 <div class="experience-years">
                                     <div class="start-year"><span data-key="resume.exp1.startYear"></span></div>
-                                    <div class="end-year"><span  data-key="resume.exp1.endYear"></span></div>
+                                    <div class="end-year"><span data-key="resume.exp1.endYear"></span></div>
                                 </div>
                                 <div class="experience-line">
                                     <div class="line-circle"></div>
@@ -276,6 +276,7 @@
                 </div>
                 <div class="sub-content-portfolio">
                     <ul class="portfolio-list" id="githubRepoList">
+                        <li class="placeholder"></li>
                     </ul>
                 </div>
             </section>
@@ -286,6 +287,7 @@
                 </div>
                 <div class="sub-content-blog">
                     <ul class="blog-list" id="mediumBlogList">
+                        <li class="placeholder"></li>
                     </ul>
                 </div>
             </section>
@@ -302,21 +304,25 @@
                                 <div class="form-part">
                                     <input class="input-field" type="text" id="nameInput" name="name" required
                                         autocomplete="name">
-                                    <label class="input-label" for="nameInput"><span data-key="contact.form.name"></span></label>
+                                    <label class="input-label" for="nameInput"><span
+                                            data-key="contact.form.name"></span></label>
                                 </div>
                                 <div class="form-part">
                                     <input class="input-field" type="email" id="emailInput" name="email" required
                                         autocomplete="email">
-                                    <label class="input-label" for="emailInput"><span data-key="contact.form.email"></span></label>
+                                    <label class="input-label" for="emailInput"><span
+                                            data-key="contact.form.email"></span></label>
                                 </div>
                             </div>
                             <div class="form-part">
                                 <textarea class="input-field" rows="5" id="messageInput" name="message"
                                     autocomplete="off"></textarea>
-                                <label class="input-label" for="messageInput"><span data-key="contact.form.message"></span></label>
+                                <label class="input-label" for="messageInput"><span
+                                        data-key="contact.form.message"></span></label>
                             </div>
                             <div class="form-submit">
-                                <button type="submit" class="submit-form-button" disabled><span data-key="contact.form.submit"></span></button>
+                                <button type="submit" class="submit-form-button" disabled><span
+                                        data-key="contact.form.submit"></span></button>
                             </div>
                         </form>
                     </div>
@@ -334,7 +340,8 @@
                                 <i class="fas fa-map-marker-alt"></i>
                             </span>
                             <span class="info">
-                                <a href="https://maps.app.goo.gl/UCuj3vQZ2ocknVjp9" target="_blank"><span data-key="contact.info.location"></span></a>
+                                <a href="https://maps.app.goo.gl/UCuj3vQZ2ocknVjp9" target="_blank"><span
+                                        data-key="contact.info.location"></span></a>
                             </span>
                         </div>
                         <div class="additional-item">
