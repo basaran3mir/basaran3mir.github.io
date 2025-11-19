@@ -1,6 +1,7 @@
-import { toggleLanguage } from './language.js';
 import { getGithubRepos } from './services/githubService.js';
 import { getMediumBlogs } from './services/mediumService.js';
+import { toggleLanguage } from './language.js';
+import { toggleTheme } from './theme.js';
 
 const toggleBtn = document.querySelector(".navbar-togglebutton");
 const menu = document.querySelector(".navbar");
@@ -10,18 +11,6 @@ export async function initUI() {
     setActiveMenuLink();
     setNavbarToggleButtonAction_mobile();
     setTurnOffNavbarOnPartClick_mobile();
-    setTypewriterEffect(
-        document.querySelector(".jobname"),
-        "Software developer",
-        150,
-        2000
-    );
-    setTypewriterEffect(
-        document.querySelector(".placeholder"),
-        "Loading...",
-        150,
-        2000
-    );
     setYearRelationalElements();
     await showGithubRepos();
     await showMediumBlogs();
@@ -74,19 +63,6 @@ function setTurnOffNavbarOnPartClick_mobile() {
     });
 }
 
-function setTypewriterEffect(element, text, speed, timeout) {
-    if (!element) return;
-    let index = 0;
-
-    function type() {
-        element.textContent = text.slice(0, index++);
-        if (index <= text.length) setTimeout(type, speed);
-        else setTimeout(() => { index = 0; type(); }, timeout);
-    }
-
-    type();
-}
-
 function setYearRelationalElements() {
     const currentYear = new Date().getFullYear();
     document.getElementById("year").textContent = currentYear;
@@ -99,7 +75,7 @@ async function showGithubRepos() {
     const list = document.getElementById("githubRepoList");
     const repos = await getGithubRepos();
     list.innerHTML = "";
-    
+
     const filtered = repos.filter(r => !r.name.toLowerCase().includes("basaran3mir"));
 
     filtered.forEach(repo => {
@@ -186,16 +162,3 @@ function toggleSettingsTab() {
     document.querySelector('.settings')?.classList.toggle("open");
 }
 
-function toggleTheme() {
-    const root = document.documentElement;
-    const current = root.getAttribute("data-theme");
-    const icon = document.querySelector("#themeIcon");
-
-    if (current === "light") {
-        root.removeAttribute("data-theme");
-        icon.classList.replace("lnr-moon", "lnr-sun");
-    } else {
-        root.setAttribute("data-theme", "light");
-        icon.classList.replace("lnr-sun", "lnr-moon");
-    }
-}

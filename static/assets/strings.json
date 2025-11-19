@@ -24,6 +24,7 @@
             "name": "Emir Can",
             "surname": "Başaran",
             "jobIntro": "I am a",
+            "jobName": "Software developer",
             "websiteInfo": "About This Website"
         },
         "about": {
@@ -79,10 +80,12 @@
             }
         },
         "portfolio": {
-            "header": "Portfolio"
+            "header": "Portfolio",
+            "placeholder": "Loading..."
         },
         "blog": {
-            "header": "Blog"
+            "header": "Blog",
+            "placeholder": "Loading..."
         },
         "contact": {
             "header": "Contact",
@@ -125,6 +128,7 @@
             "name": "Emir Can",
             "surname": "Başaran",
             "jobIntro": "Ben bir",
+            "jobName": "Yazılım Geliştiricisiyim",
             "websiteInfo": "Bu Web Sitesi Hakkında"
         },
         "about": {
@@ -180,10 +184,12 @@
             }
         },
         "portfolio": {
-            "header": "Portfolyo"
+            "header": "Portfolyo",
+            "placeholder": "Yükleniyor..."
         },
         "blog": {
-            "header": "Blog"
+            "header": "Blog",
+            "placeholder": "Yükleniyor..."
         },
         "contact": {
             "header": "İletişim",

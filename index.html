@@ -107,10 +107,10 @@
                 </div>
                 <div class="settings-content">
                     <div class="test">
-                        <button class="setting theme-setting" onclick="toggleTheme()" aria-label="Change Theme">
+                        <button class="setting theme-setting" aria-label="Change Theme">
                             <i class="lnr lnr-sun" id="themeIcon"></i>
                         </button>
-                        <button class="setting language-setting" onclick="toggleLanguage()"
+                        <button class="setting language-setting"
                             aria-label="Change Language">
                             <p data-key="settings.otherLang"></p>
                         </button>
@@ -136,7 +136,7 @@
                         </p>
                         <p class="sub-content-home-job">
                             <span data-key="home.jobIntro"></span>
-                            <span class="jobname"></span>
+                            <span class="jobname typewriter" data-key="home.jobName"></span>
                         </p>
                     </div>
                     <div class="home-website-info">
@@ -276,7 +276,7 @@
                 </div>
                 <div class="sub-content-portfolio">
                     <ul class="portfolio-list" id="githubRepoList">
-                        <li class="placeholder"></li>
+                        <li class="placeholder typewriter" data-key="portfolio.placeholder"></li>
                     </ul>
                 </div>
             </section>
@@ -287,7 +287,7 @@
                 </div>
                 <div class="sub-content-blog">
                     <ul class="blog-list" id="mediumBlogList">
-                        <li class="placeholder"></li>
+                        <li class="placeholder typewriter" data-key="blog.placeholder"></li>
                     </ul>
                 </div>
             </section>

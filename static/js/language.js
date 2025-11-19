@@ -1,3 +1,5 @@
+import { setTypewriterEffect } from "./typewriter.js";
+
 let currentLang = "en";
 let cachedStrings = null;
 
@@ -25,19 +27,36 @@ function resolveValue(obj, path) {
 
 export async function applyStrings() {
     const strings = await loadStrings();
+
     document.querySelectorAll("[data-key]").forEach(el => {
         const key = el.dataset.key;
         const value = resolveValue(strings, key);
-        if (value != null) el.textContent = value;
+
+        if (value == null) return;
+
+        if (el.classList.contains("typewriter")) {
+            setTypewriterEffect(el, value, 150, 2000);
+        }
+        else {
+            el.textContent = value;
+        }
     });
 }
 
+export function getCurrentLang() {
+    return currentLang;
+}
+
+export function setCurrentLang(lang) {
+    currentLang = lang;
+}
+
 export async function toggleLanguage() {
-    if (currentLang === "en") {
-        currentLang = "tr";
+    if (getCurrentLang() === "en") {
+        setCurrentLang("tr");
     } else {
-        currentLang = "en";
+        setCurrentLang("en");
     }
-    document.documentElement.lang = currentLang;
+    document.documentElement.lang = getCurrentLang();
     await applyStrings();
 }
