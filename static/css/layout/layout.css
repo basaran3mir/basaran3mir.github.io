@@ -8,4 +8,8 @@
         grid-template-columns: unset;
         grid-template-rows: 80px 1fr;
     }
+
+    .layout > * {
+        min-width: 0;
+    }
 }
