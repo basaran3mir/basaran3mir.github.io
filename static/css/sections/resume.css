@@ -42,11 +42,11 @@
     flex-direction: column;
 }
 
-.content .sub-content .sub-content-resume .start-year {
+.content .sub-content .sub-content-resume .end-year {
     font-weight: bold;
 }
 
-.content .sub-content .sub-content-resume .end-year {
+.content .sub-content .sub-content-resume .start-year {
     font-weight: bold;
     margin-top: auto;
 }
