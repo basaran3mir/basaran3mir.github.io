@@ -2,9 +2,9 @@ import { getCachedData, setCachedData } from './cacheService.js';
 
 export async function getMediumBlogs() {
     const cacheKey = "medium_blogs_cache";
-    const cached = getCachedData(cacheKey);
+    const cacheValue = getCachedData(cacheKey);
 
-    if (cached) return cached;
+    if (cacheValue) return cacheValue;
 
     const fallback = [{
         link: "https://medium.com/@basaran3mir",

@@ -2,9 +2,9 @@ import { getCachedData, setCachedData } from './cacheService.js';
 
 export async function getGithubRepos() {
     const cacheKey = "github_repos_cache";
-    const cached = getCachedData(cacheKey);
+    const cacheValue = getCachedData(cacheKey);
 
-    if (cached) return cached;
+    if (cacheValue) return cacheValue;
 
     const fallback = [{
         html_url: "https://github.com/basaran3mir?tab=repositories",

@@ -1,14 +1,25 @@
 import { setTypewriterEffect } from "./typewriter.js";
+import { getCachedData, setCachedData } from '/static/js/services/cacheService.js';
 
-let currentLang = "en";
-let cachedStrings = null;
+const cacheKey_currentLang = "current_lang";
+const cacheKey_langStrings = "lang_strings";
+const defaultLang = "en";
 
-export async function loadStrings() {
-    if (!cachedStrings) {
-        const response = await fetch("../static/assets/strings.json");
-        cachedStrings = await response.json();
-    }
-    return cachedStrings[currentLang];
+let currentLang = getCachedData(cacheKey_currentLang) || defaultLang;
+if (!getCachedData(cacheKey_currentLang)) {
+    setCachedData(cacheKey_currentLang, currentLang);
+}
+
+export async function loadStrings() { 
+    const cached = getCachedData(cacheKey_langStrings); 
+    if (cached && cached[currentLang]) { 
+        return cached[currentLang]; 
+    } 
+
+    const response = await fetch("../static/assets/strings.json"); 
+    const strings = await response.json(); 
+    setCachedData(cacheKey_langStrings, strings); 
+    return strings[currentLang]; 
 }
 
 function resolveValue(obj, path) {
@@ -49,14 +60,13 @@ export function getCurrentLang() {
 
 export function setCurrentLang(lang) {
     currentLang = lang;
+    setCachedData(cacheKey_currentLang, lang)
 }
 
 export async function toggleLanguage() {
-    if (getCurrentLang() === "en") {
-        setCurrentLang("tr");
-    } else {
-        setCurrentLang("en");
-    }
+    const nextLang = getCurrentLang() === "en" ? "tr" : "en";
+    setCurrentLang(nextLang);
+    
     document.documentElement.lang = getCurrentLang();
     await applyStrings();
 }

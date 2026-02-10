@@ -1,10 +1,12 @@
-import { applyStrings } from './language.js';
 import { initUI } from './ui.js';
+import { applyStrings } from './language.js';
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     try {
-        await applyStrings();
         await initUI();
+        await applyStrings();
+        console.log(localStorage);
     }
     catch(err) {
         console.error('Initialization failed:', err);
