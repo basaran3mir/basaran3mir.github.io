@@ -88,7 +88,7 @@ async function showGithubRepos() {
                 <p class="portfolio-info">${formatRepoDescription(repo.description)}</p>
                 ${repo.has_pages ? `
                     <div class="portfolio-links">
-                        <a class="portfolio-link" href="https://basaran3mir.github.io/${repo.name}" target="_blank">
+                        <a class="portfolio-link" href="https://basaran3mir.github.io/${repo.name}" target="_blank" aria-label="Live demo of ${formatRepoName(repo.name)}">
                             <i class="fa-solid fa-globe"></i>
                         </a>
                     </div>` : ""}
