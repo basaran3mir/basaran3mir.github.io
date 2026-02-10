@@ -12,8 +12,8 @@ if (!getCachedData(cacheKey_currentLang)) {
 
 export async function loadStrings() { 
     const cached = getCachedData(cacheKey_langStrings); 
-    if (cached && cached[currentLang]) { 
-        return cached[currentLang]; 
+    if (cached && cached[currentLang]) {
+        return cached[currentLang];
     } 
 
     const response = await fetch("../static/assets/strings.json"); 
@@ -37,6 +37,8 @@ function resolveValue(obj, path) {
 }
 
 export async function applyStrings() {
+    document.documentElement.lang = getCurrentLang();
+
     const strings = await loadStrings();
 
     document.querySelectorAll("[data-key]").forEach(el => {
@@ -66,7 +68,6 @@ export function setCurrentLang(lang) {
 export async function toggleLanguage() {
     const nextLang = getCurrentLang() === "en" ? "tr" : "en";
     setCurrentLang(nextLang);
-    
-    document.documentElement.lang = getCurrentLang();
+
     await applyStrings();
 }
