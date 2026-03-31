@@ -57,7 +57,7 @@
                 "startYear": "06/2024",
                 "endYear": "Present",
                 "title": "Computer Engineer",
-                "company": "Hometech, Beşyol/Istanbul, Turkey",
+                "company": "Hometech, Besyol/Istanbul, Turkey",
                 "summaryPart1": "I work as a software developer and team leader on projects conducted within the R&D center. Prior to this, I managed the development, maintenance, and technical support processes of corporate websites. Additionally, I actively participated in software and hardware testing of new computer models.",
                 "summaryPart2": "In the projects I have been involved in, I developed AI-based systems using Python. I created RESTful APIs with Flask to integrate these systems with various platforms. I also developed mobile applications using Java. I gained experience working on the Google Cloud Platform and had opportunities to work with Linux-based systems. Furthermore, I developed AI-supported chatbots and promotional pages for corporate and OpenCart-based websites, integrating them responsively into the sites."
             },
@@ -65,7 +65,7 @@
                 "startYear": "07/2023",
                 "endYear": "08/2023",
                 "title": "Computer Engineering Intern",
-                "company": "VakıfBank, Ümraniye/Istanbul, Turkey",
+                "company": "VakifBank, Umraniye/Istanbul, Turkey",
                 "summaryPart1": "During my internship, I developed a web application that allows users to calculate their monthly payment amount and payment schedule based on loan amount and term.",
                 "summaryPart2": "I developed the back-end of the application using ASP.NET Core Web API and the front-end using Angular. For database management, I applied the Code First approach using Microsoft SQL Server and Entity Framework. Within the API, I structured the data access, business logic, and presentation layers according to the principles of a multi-layered architecture. Additionally, I implemented caching strategies through Redis integration to optimize API performance."
             },
@@ -94,7 +94,7 @@
                 "name": "Name",
                 "email": "E-mail",
                 "message": "How can I help you?",
-                "submit": "Coming Soon..."
+                "submit": "Not available"
             },
             "info": {
                 "email": "E-mail",
@@ -198,12 +198,12 @@
                 "name": "İsim",
                 "email": "E-posta",
                 "message": "Size nasıl yardımcı olabilirim?",
-                "submit": "Çok Yakında..."
+                "submit": "Kullanılamıyor"
             },
             "info": {
                 "email": "E-posta",
                 "location": "İstanbul, Türkiye",
-                "phone": "Mevcut değil"
+                "phone": "Kullanılamıyor"
             }
         }
     }
