@@ -36,7 +36,7 @@
                     "name": "Name:",
                     "age": "Age:",
                     "address": "Address:",
-                    "email": "EMail:",
+                    "email": "E-mail:",
                     "freelance": "Freelance:",
                     "resume": "Resume:"
                 },
@@ -92,12 +92,12 @@
             "form": {
                 "title": "Let's Talk",
                 "name": "Name",
-                "email": "Email",
+                "email": "E-mail",
                 "message": "How can I help you?",
                 "submit": "Coming Soon..."
             },
             "info": {
-                "email": "Email",
+                "email": "E-mail",
                 "location": "Istanbul, Turkey",
                 "phone": "Not available"
             }
@@ -140,7 +140,7 @@
                     "name": "İsim:",
                     "age": "Yaş:",
                     "address": "Adres:",
-                    "email": "Email:",
+                    "email": "E-posta:",
                     "freelance": "Freelance:",
                     "resume": "Özgeçmiş:"
                 },
@@ -196,12 +196,12 @@
             "form": {
                 "title": "Konuşalım",
                 "name": "İsim",
-                "email": "Email",
+                "email": "E-posta",
                 "message": "Size nasıl yardımcı olabilirim?",
                 "submit": "Çok Yakında..."
             },
             "info": {
-                "email": "Email",
+                "email": "E-posta",
                 "location": "İstanbul, Türkiye",
                 "phone": "Mevcut değil"
             }
