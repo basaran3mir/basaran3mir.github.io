@@ -3,7 +3,7 @@ import { getCachedData, setCachedData } from '/static/js/services/cacheService.j
 
 const cacheKey_currentLang = "current_lang";
 const cacheKey_langStrings = "lang_strings";
-const defaultLang = "en";
+const defaultLang = "tr";
 
 let currentLang = getCachedData(cacheKey_currentLang) || defaultLang;
 if (!getCachedData(cacheKey_currentLang)) {
