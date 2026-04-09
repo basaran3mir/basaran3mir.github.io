@@ -1,4 +1,5 @@
 import { getGithubRepos } from './services/githubService.js';
+import { loadMailToFields } from './services/mailService.js';
 import { getMediumBlogs } from './services/mediumService.js';
 import { toggleLanguage } from './language.js';
 import { toggleTheme } from './theme.js';
@@ -13,6 +14,7 @@ export async function initUI() {
     setTurnOffNavbarOnPartClick_mobile();
     setYearRelationalElements();
     await showGithubRepos();
+    loadMailToFields();
     await showMediumBlogs();
     checkInputFields();
     setOnClickFunctions();
