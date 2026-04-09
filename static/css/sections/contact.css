@@ -94,8 +94,12 @@
     padding: 10px 20px;
     text-transform: uppercase;
     background-color: transparent;
-    cursor: not-allowed;
+    cursor: pointer;
     letter-spacing: 1px;
+}
+
+.content .sub-content .sub-content-contact .contact-form-content .form-submit .submit-form-button:hover {
+    border: 2px solid var(--text-primary);
 }
 
 .content .sub-content .sub-content-contact .contact-form-additional {

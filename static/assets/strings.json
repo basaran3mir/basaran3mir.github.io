@@ -94,7 +94,7 @@
                 "name": "Name",
                 "email": "E-mail",
                 "message": "How can I help you?",
-                "submit": "Not available"
+                "submit": "Send"
             },
             "info": {
                 "email": "E-mail",
@@ -198,7 +198,7 @@
                 "name": "İsim",
                 "email": "E-posta",
                 "message": "Size nasıl yardımcı olabilirim?",
-                "submit": "Kullanılamıyor"
+                "submit": "Gönder"
             },
             "info": {
                 "email": "E-posta",

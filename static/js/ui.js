@@ -1,5 +1,5 @@
+import { populateEmailLinks, initContactForm } from './services/mailService.js';
 import { getGithubRepos } from './services/githubService.js';
-import { loadMailToFields } from './services/mailService.js';
 import { getMediumBlogs } from './services/mediumService.js';
 import { toggleLanguage } from './language.js';
 import { toggleTheme } from './theme.js';
@@ -13,8 +13,9 @@ export async function initUI() {
     setNavbarToggleButtonAction_mobile();
     setTurnOffNavbarOnPartClick_mobile();
     setYearRelationalElements();
+    populateEmailLinks();
+    initContactForm();
     await showGithubRepos();
-    loadMailToFields();
     await showMediumBlogs();
     checkInputFields();
     setOnClickFunctions();
