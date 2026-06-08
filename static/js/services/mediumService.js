@@ -14,7 +14,7 @@ export async function getMediumBlogs() {
     }];
 
     try {
-        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https:// ${username}.medium.com/feed`);
+        const response = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=https://${username}.medium.com/feed`);
         const tempData = await response.json();
         let data = tempData.items;
 
