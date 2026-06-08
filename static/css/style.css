@@ -1,0 +1,13 @@
+@import "base/variables.css";
+@import "base/global.css";
+
+@import "layout/layout.css";
+@import "layout/navbar.css";
+@import "layout/content.css";
+
+@import "sections/home.css";
+@import "sections/aboutme.css";
+@import "sections/resume.css";
+@import "sections/portfolio.css";
+@import "sections/blog.css";
+@import "sections/contact.css";

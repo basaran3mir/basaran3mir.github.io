@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="This website is Emir Can Başaran's personal website.">
+    <meta name="robots" content="noai, noimageai">
+    <title data-key="head.title"></title>
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/vendor/linear-icons/icon-font.min.css" media="print"
+        onload="this.media='all'">
+    <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css" media="print" onload="this.media='all'">
+    <link rel="stylesheet" href="static/fonts/google/google-fonts.css" media="print" onload="this.media='all'">
+    <noscript>
+        <link rel="stylesheet" href="static/css/style.css">
+        <link rel="stylesheet" href="static/css/vendor/linear-icons/icon-font.min.css">
+        <link rel="stylesheet" href="static/css/vendor/font-awesome/all.min.css">
+        <link rel="stylesheet" href="static/fonts/google/google-fonts.css">
+    </noscript>
+    <script type="module" src="static/js/main.js" defer></script>
+</head>
+
+<body>
+    <div class="layout">
+        <aside class="navbar">
+            <header class="navbar-header">
+                <picture class="navbar-photo">
+                    <img src="static/images/pp-250.webp" loading="lazy" alt="Profile photo of Emir Can Başaran">
+                </picture>
+                <div class="navbar-fullname">
+                    <h4 data-key="navbar.fullname"></h4>
+                </div>
+                <div class="navbar-togglebutton">
+                    <i class="lnr lnr-menu icon-menu" id="toggleIcon"></i>
+                </div>
+            </header>
+            <div class="navbar-content">
+                <nav class="menu">
+                    <ul class="menu-links">
+                        <li><a href="#home" class="menu-link active"><span class="menu-icon"><i
+                                        class="lnr lnr-home"></i></span>
+                                <p data-key="navbar.home"></p>
+                            </a> </li>
+                        <li><a href="#aboutMe" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-user"></i></span>
+                                <p data-key="navbar.aboutMe"></p>
+                            </a></li>
+                        <li><a href="#resume" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-license"></i></span>
+                                <p data-key="navbar.resume"></p>
+                            </a></li>
+                        <li><a href="#portfolio" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-briefcase"></i></span>
+                                <p data-key="navbar.portfolio"></p>
+                            </a></li>
+                        <li><a href="#blog" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-book"></i></span>
+                                <p data-key="navbar.blog"></p>
+                            </a></li>
+                        <li><a href="#contact" class="menu-link"><span class="menu-icon"><i
+                                        class="lnr lnr-envelope"></i></span>
+                                <p data-key="navbar.contact"></p>
+                            </a></li>
+                    </ul>
+                </nav>
+                <footer class="footer">
+                    <ul class="social">
+                        <li>
+                            <a href="#" class="email-link" aria-label="Email address">
+                                <i class="fa-solid fa-square-envelope"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://tr.linkedin.com/in/basaran3mir" aria-label="Linkedin profile">
+                                <i class="fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/basaran3mir" aria-label="Github profile">
+                                <i class="fa-brands fa-square-github"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://basaran3mir.medium.com" aria-label="Medium profile">
+                                <i class="fa-solid fa-square-pen"></i>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="copy">
+                        <p>
+                            <span id="year"></span>
+                            <span data-key="navbar.footer.top"></span>
+                            <br>
+                            <span data-key="navbar.footer.bottom"></span>
+                        </p>
+                    </div>
+                </footer>
+            </div>
+        </aside>
+        <main class="content">
+            <div class="settings">
+                <div class="settings-toggler">
+                    <button class="toggle-setting" aria-label="Toggle Settings Tab">
+                        <i class="lnr lnr-cog"></i>
+                    </button>
+                </div>
+                <div class="settings-content">
+                    <div class="test">
+                        <button class="setting theme-setting" aria-label="Change Theme">
+                            <i class="lnr lnr-sun" id="themeIcon"></i>
+                        </button>
+                        <button class="setting language-setting" aria-label="Change Language">
+                            <p data-key="settings.otherLang"></p>
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+            <section class="sub-content" id="home">
+                <div class="sub-content-background">
+                    <img src="static/images/welcome.webp" alt="Welcome image" class="home-background-image"
+                        fetchpriority="high">
+                    <div class="overlay"></div>
+                </div>
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="home.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-home"></i></span>
+                </div>
+                <div class="sub-content-home">
+                    <div class="home-personal-info">
+                        <p class="sub-content-home-name">
+                            <span class="name" data-key="home.name"></span>
+                            <span class="surname" data-key="home.surname"></span>
+                        </p>
+                        <p class="sub-content-home-job">
+                            <span data-key="home.jobIntro"></span>
+                            <span class="jobname typewriter" data-key="home.jobName"></span>
+                        </p>
+                    </div>
+                    <div class="home-website-info">
+                        <a href="https://pagespeed.web.dev/report?url=https://basaran3mir.github.io" target="_blank"
+                            data-key="home.websiteInfo"></a>
+                    </div>
+                </div>
+            </section>
+            <section class="sub-content" id="aboutMe">
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="about.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-user"></i></span>
+                </div>
+                <div class="sub-content-aboutme">
+                    <div class="info-summary">
+                        <span data-key="about.summaryPart1"></span>
+                        <br><br>
+                        <span data-key="about.summaryPart2"></span>
+                        <br><br>
+                    </div>
+                    <div class="info-table">
+                        <ul>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.name"></span>
+                                <span class="info-table-value" data-key="about.table.value.name"></span>
+                            </li>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.age"></span>
+                                <span class="info-table-value" id="ageValue" data-key="about.table.value.age"></span>
+                            </li>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.address"></span>
+                                <span class="info-table-value" data-key="about.table.value.address"></span>
+                            </li>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.email"></span>
+                                <span class="info-table-value email-text"></span>
+                            </li>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.freelance"></span>
+                                <span class="info-table-value" data-key="about.table.value.freelance"></span>
+                            </li>
+                            <li>
+                                <span class="info-table-label" data-key="about.table.label.resume"></span>
+                                <a href="static/docs/emir-can-basaran-cv-eng-alt.pdf" class="download-link"
+                                    target="_blank" rel="noopener noreferrer" data-key="about.table.value.resume"></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sub-content" id="resume">
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="resume.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-license"></i></span>
+                </div>
+                <div class="sub-content-resume">
+                    <div class="resume-part experiences">
+                        <div class="resume-part-header"><span data-key="resume.experienceHeader"></span></div>
+                        <ul class="experience-list">
+                            <li class="experience">
+                                <div class="experience-years">
+                                    <div class="end-year"><span data-key="resume.exp1.endYear"></span></div>
+                                    <div class="start-year"><span data-key="resume.exp1.startYear"></span></div>
+                                </div>
+                                <div class="experience-line">
+                                    <div class="line-circle"></div>
+                                    <div class="line-bar"></div>
+                                    <div class="line-circle"></div>
+                                </div>
+                                <div class="experience-explanation">
+                                    <div class="explanation-title"><span data-key="resume.exp1.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.exp1.company"></span></div>
+                                    <div class="explanation-summary">
+                                        <span data-key="resume.exp1.summaryPart1"></span>
+                                        <br><br>
+                                        <span data-key="resume.exp1.summaryPart2"></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="experience">
+                                <div class="experience-years">
+                                    <div class="end-year"><span data-key="resume.exp2.endYear"></span></div>
+                                    <div class="start-year"><span data-key="resume.exp2.startYear"></span></div>
+                                </div>
+                                <div class="experience-line">
+                                    <div class="line-circle"></div>
+                                    <div class="line-bar"></div>
+                                    <div class="line-circle"></div>
+                                </div>
+                                <div class="experience-explanation">
+                                    <div class="explanation-title"><span data-key="resume.exp2.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.exp2.company"></span></div>
+                                    <div class="explanation-summary">
+                                        <span data-key="resume.exp2.summaryPart1"></span>
+                                        <br><br>
+                                        <span data-key="resume.exp2.summaryPart2"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="resume-part educations">
+                        <div class="resume-part-header"><span data-key="resume.educationHeader"></span></div>
+                        <ul class="education-list">
+                            <li class="education">
+                                <div class="education-years">
+                                    <div class="end-year"><span data-key="resume.edu1.endYear"></span></div>
+                                    <div class="start-year"><span data-key="resume.edu1.startYear"></span></div>
+                                </div>
+                                <div class="education-line">
+                                    <div class="line-circle"></div>
+                                    <div class="line-bar"></div>
+                                    <div class="line-circle"></div>
+                                </div>
+                                <div class="education-explanation">
+                                    <div class="explanation-title"><span data-key="resume.edu1.title"></span></div>
+                                    <div class="explanation-company"><span data-key="resume.edu1.company"></span></div>
+                                    <div class="explanation-summary">
+                                        <span data-key="resume.edu1.summaryPart1"></span>
+                                        <br><br>
+                                        <span data-key="resume.edu1.summaryPart2"></span>
+                                        <br><br>
+                                        <span data-key="resume.edu1.summaryPart3"></span>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="sub-content" id="portfolio">
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="portfolio.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-briefcase"></i></span>
+                </div>
+                <div class="sub-content-portfolio">
+                    <ul class="portfolio-list" id="githubRepoList">
+                        <li class="placeholder typewriter" data-key="portfolio.placeholder"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sub-content" id="blog">
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="blog.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-book"></i></span>
+                </div>
+                <div class="sub-content-blog">
+                    <ul class="blog-list" id="mediumBlogList">
+                        <li class="placeholder typewriter" data-key="blog.placeholder"></li>
+                    </ul>
+                </div>
+            </section>
+            <section class="sub-content" id="contact">
+                <div class="sub-content-header">
+                    <span class="sub-content-header-name" data-key="contact.header"></span>
+                    <span class="sub-content-header-icon"><i class="lnr lnr-envelope"></i></span>
+                </div>
+                <div class="sub-content-contact">
+                    <div class="contact-form-header"><span data-key="contact.form.title"></span></div>
+                    <div class="contact-form-content">
+                        <form id="contactForm" method="POST" action="https://formspree.io/f/mlgoknlo" novalidate>
+                            <div class="personal-info">
+                                <div class="form-part">
+                                    <input class="input-field" type="text" id="nameInput" name="name" required
+                                        autocomplete="name">
+                                    <label class="input-label" for="nameInput"><span
+                                            data-key="contact.form.name"></span></label>
+                                </div>
+                                <div class="form-part">
+                                    <input class="input-field" type="email" id="emailInput" name="email" required
+                                        autocomplete="email">
+                                    <label class="input-label" for="emailInput"><span
+                                            data-key="contact.form.email"></span></label>
+                                </div>
+                            </div>
+
+                            <div class="form-part">
+                                <textarea class="input-field" rows="5" id="messageInput" name="message"
+                                    autocomplete="off"></textarea>
+                                <label class="input-label" for="messageInput"><span
+                                        data-key="contact.form.message"></span></label>
+                            </div>
+
+                            <!-- Honeypot -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-submit">
+                                <button type="submit" class="submit-form-button"><span
+                                        data-key="contact.form.submit"></span></button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="contact-form-additional">
+                        <div class="additional-item">
+                            <span class="icon">
+                                <i class="fas fa-paper-plane"></i>
+                            </span>
+                            <span class="info">
+                                <a href="#" class="email-link"><span data-key="contact.info.email"></span></a>
+                            </span>
+                        </div>
+                        <div class="additional-item">
+                            <span class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span class="info">
+                                <a href="https://maps.app.goo.gl/Fz2N9UJ2SzUsEocv6" target="_blank"><span
+                                        data-key="contact.info.location"></span></a>
+                            </span>
+                        </div>
+                        <div class="additional-item">
+                            <span class="icon">
+                                <i class="fas fa-phone"></i>
+                            </span>
+                            <span class="info">
+                                <a href="#" id="phoneNum"><span data-key="contact.info.phone"></span></a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
