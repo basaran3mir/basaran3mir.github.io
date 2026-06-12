@@ -10,16 +10,16 @@ if (!getCachedData(cacheKey_currentLang)) {
     setCachedData(cacheKey_currentLang, currentLang);
 }
 
-export async function loadStrings() { 
-    const cached = getCachedData(cacheKey_langStrings); 
+export async function loadStrings() {
+    const cached = getCachedData(cacheKey_langStrings);
     if (cached && cached[currentLang]) {
         return cached[currentLang];
-    } 
+    }
 
-    const response = await fetch("../static/assets/strings.json"); 
-    const strings = await response.json(); 
-    setCachedData(cacheKey_langStrings, strings); 
-    return strings[currentLang]; 
+    const response = await fetch("../static/assets/strings.json");
+    const strings = await response.json();
+    setCachedData(cacheKey_langStrings, strings);
+    return strings[currentLang];
 }
 
 function resolveValue(obj, path) {
@@ -51,8 +51,14 @@ export async function applyStrings() {
             setTypewriterEffect(el, value, 150, 2000);
         }
         else {
-            el.textContent = value;
+            if (Array.isArray(value)) {
+                el.innerHTML = `${value.map(p => `<p>${p}</p>`).join('<br>')}`;
+            }
+            else {
+                el.textContent = value;
+            }
         }
+
     });
 }
 
