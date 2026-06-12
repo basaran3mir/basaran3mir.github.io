@@ -36,6 +36,36 @@ function resolveValue(obj, path) {
     return acc;
 }
 
+function renderSummaryParts(el, summaryParts) {
+    el.innerHTML = summaryParts.map(p => `<p>${p}</p>`).join('<br>');
+}
+
+function renderTimeline(el, items, type) {
+    el.innerHTML = items.map(item => `
+        <li class="${type}" data-type="${type}">
+            <div class="${type}-years">
+                <div class="end-year">${item.endYear}</div>
+                <div class="start-year">${item.startYear}</div>
+            </div>
+
+            <div class="${type}-line">
+                <div class="line-circle"></div>
+                <div class="line-bar"></div>
+                <div class="line-circle"></div>
+            </div>
+
+            <div class="${type}-explanation">
+                <div class="explanation-title">${item.title}</div>
+                <div class="explanation-company">${item.company}</div>
+
+                <div class="explanation-summary">
+                    ${item.summaryParts.map(p => `<p>${p}</p>`).join('<br>')}
+                </div>
+            </div>
+        </li>
+    `).join('');
+}
+
 export async function applyStrings() {
     document.documentElement.lang = getCurrentLang();
 
@@ -49,15 +79,25 @@ export async function applyStrings() {
 
         if (el.classList.contains("typewriter")) {
             setTypewriterEffect(el, value, 150, 2000);
+            return;
         }
-        else {
-            if (Array.isArray(value)) {
-                el.innerHTML = `${value.map(p => `<p>${p}</p>`).join('<br>')}`;
-            }
-            else {
-                el.textContent = value;
-            }
+
+        if (key === "about.summaryParts" && Array.isArray(value)) {
+            renderSummaryParts(el, value);
+            return;
         }
+
+        if (key === "resume.experiences" && Array.isArray(value)) {
+            renderTimeline(el, value, "experience");
+            return;
+        }
+
+        if (key === "resume.educations" && Array.isArray(value)) {
+            renderTimeline(el, value, "education");
+            return;
+        }
+
+        el.textContent = value;
 
     });
 }

@@ -54,29 +54,31 @@
             "header": "Resume",
             "experienceHeader": "Experience",
             "educationHeader": "Education",
-            "exp1": {
-                "startYear": "06/2024",
-                "endYear": "Present",
-                "title": "Computer Engineer",
-                "company": "Hometech, Besyol/Istanbul, Turkey",
-                "summaryParts": [
-                    "I work as both a Team Lead and Software Developer in projects conducted within an R&D center. In addition to software development, support, and maintenance processes for the company's and its affiliated brands' web platforms, I also manage the development of custom software solutions focused on campaigns, promotions, and customer engagement.",
-                    "Within the scope of these projects, I develop AI-based systems and manage their deployment processes by integrating them into different platforms via RESTful API architecture. I also play an active role in the migration of web platforms from OpenCart to WordPress (WooCommerce), ensuring the transfer, adaptation, and continuity of existing integrations.",
-                    "Previously, I developed and integrated AI-powered chatbots, product development recommendation systems, and campaign/promotion modules into existing web platforms. Additionally, I built cloud-based architectures on Google Cloud Platform and actively participated in software development processes on the Pardus operating system."
-                ]
-            },
-            "exp2": {
-                "startYear": "07/2023",
-                "endYear": "08/2023",
-                "title": "Computer Engineering Intern",
-                "company": "VakifBank, Umraniye/Istanbul, Turkey",
-                "summaryParts": [
-                    "During my internship, I developed a web application that allows users to calculate monthly payment plans based on different banks’ interest rates, depending on loan amount and term options.",
-                    "On the back-end side, I developed a RESTful API using ASP.NET Core Web API. In the data layer, I implemented data modeling with Microsoft SQL Server and Entity Framework (Code First) approach, and structured the system architecture according to N-tier architecture principles. I also optimized API performance by designing a caching mechanism with Redis integration.",
-                    "On the front-end side, I built a responsive interface using Angular, enabling users to view repayment plans calculated from different banks’ interest rates based on loan amount and term options. I integrated it with back-end services to deliver a fully functional end-to-end full-stack web application."
-                ]
-            },
-            "edu1": {
+            "experiences": [
+                {
+                    "startYear": "06/2024",
+                    "endYear": "Present",
+                    "title": "Computer Engineer",
+                    "company": "Hometech, Besyol/Istanbul, Turkey",
+                    "summaryParts": [
+                        "I work as both a Team Lead and Software Developer in projects conducted within an R&D center. In addition to software development, support, and maintenance processes for the company's and its affiliated brands' web platforms, I also manage the development of custom software solutions focused on campaigns, promotions, and customer engagement.",
+                        "Within the scope of these projects, I develop AI-based systems and manage their deployment processes by integrating them into different platforms via RESTful API architecture. I also play an active role in the migration of web platforms from OpenCart to WordPress (WooCommerce), ensuring the transfer, adaptation, and continuity of existing integrations.",
+                        "Previously, I developed and integrated AI-powered chatbots, product development recommendation systems, and campaign/promotion modules into existing web platforms. Additionally, I built cloud-based architectures on Google Cloud Platform and actively participated in software development processes on the Pardus operating system."
+                    ]
+                },
+                {
+                    "startYear": "07/2023",
+                    "endYear": "08/2023",
+                    "title": "Computer Engineering Intern",
+                    "company": "VakifBank, Umraniye/Istanbul, Turkey",
+                    "summaryParts": [
+                        "During my internship, I developed a web application that allows users to calculate monthly payment plans based on different banks’ interest rates, depending on loan amount and term options.",
+                        "On the back-end side, I developed a RESTful API using ASP.NET Core Web API. In the data layer, I implemented data modeling with Microsoft SQL Server and Entity Framework (Code First) approach, and structured the system architecture according to N-tier architecture principles. I also optimized API performance by designing a caching mechanism with Redis integration.",
+                        "On the front-end side, I built a responsive interface using Angular, enabling users to view repayment plans calculated from different banks’ interest rates based on loan amount and term options. I integrated it with back-end services to deliver a fully functional end-to-end full-stack web application."
+                    ]
+                }
+            ],
+            "educations": {
                 "startYear": "09/2019",
                 "endYear": "11/2023",
                 "title": "Computer Engineering",
@@ -167,39 +169,43 @@
             "header": "Özgeçmiş",
             "experienceHeader": "Deneyim",
             "educationHeader": "Eğitim",
-            "exp1": {
-                "startYear": "06/2024",
-                "endYear": "Günümüz",
-                "title": "Bilgisayar Mühendisi",
-                "company": "Hometech, Beşyol/İstanbul, Türkiye",
-                "summaryParts": [
-                    "AR-GE merkezinde yürütülen projelerde Takım Lideri ve Yazılım Geliştirici rollerinde görev alıyorum. Ayrıca şirket ve bağlı markalara ait web platformlarında yazılım geliştirme, destek ve bakım süreçlerinin yanı sıra kampanya, promosyon ve müşteri etkileşimine yönelik özel yazılım çözümlerinin geliştirme süreçlerini yönetiyorum.",
-                    "Bu kapsamda yürütülen projelerde yapay zeka tabanlı sistemler geliştiriyor, bu çözümleri RESTful API altyapısı üzerinden farklı platformlara entegre ederek dağıtım süreçlerini yönetiyorum. Bunun yanında web platformlarının OpenCart altyapısından WordPress (WooCommerce) altyapısına geçiş sürecinde mevcut entegrasyonların taşınması, uyarlanması ve sürekliliğinin sağlanmasında aktif rol alıyorum.",
-                    "Daha önce web platformları için yapay zeka destekli sohbet botu, ürün geliştirme öneri sistemi ve kampanya/promosyon modülleri geliştirerek mevcut sistemlere entegre ettim. Bunun yanında Google Cloud Platform üzerinde bulut tabanlı mimariler geliştirdim ve Pardus işletim sistemi üzerinde aktif yazılım geliştirme süreçlerinde yer aldım."
-                ]
-            },
-            "exp2": {
-                "startYear": "07/2023",
-                "endYear": "08/2023",
-                "title": "Bilgisayar Mühendisliği Stajyeri",
-                "company": "VakıfBank, Ümraniye/İstanbul, Türkiye",
-                "summaryParts": [
-                    "Staj sürecinde, kullanıcıların kredi tutarı ve vade seçeneklerine göre farklı bankaların faiz oranları üzerinden aylık ödeme planlarını hesaplayabildiği bir web uygulaması geliştirdim.",
-                    "Uygulamanın back-end tarafında ASP.NET Core Web API kullanarak RESTful API geliştirdim. Veri katmanında Microsoft SQL Server ve Entity Framework (Code First) yaklaşımı ile veri modellemesini gerçekleştirdim ve N-katmanlı mimari prensipleri doğrultusunda sistem mimarisini yapılandırdım. Redis entegrasyonu ile önbellekleme mekanizması tasarlayarak API performansını optimize ettim",
-                    "Front-end tarafında Angular kullanarak kullanıcıların kredi tutarı ve vade seçeneklerine göre farklı bankaların faiz oranları üzerinden hesaplanan ödeme planlarını görüntüleyebildiği responsive bir arayüz geliştirdim ve back-end servisleri ile entegre ederek uçtan uca çalışan full-stack bir web uygulaması geliştirdim."
-                ]
-            },
-            "edu1": {
-                "startYear": "09/2019",
-                "endYear": "11/2023",
-                "title": "Bilgisayar Mühendisliği",
-                "company": "Kocaeli Üniversitesi, Kocaeli, Türkiye",
-                "summaryParts": [
-                    "Bitirme projesi kapsamında, duruş bozukluğu yaşayan bireylerin kendi postürlerini analiz edebilmelerini ve bozuklukları tespit edebilmelerini sağlayan makine öğrenmesi tabanlı bir mobil uygulama geliştirdim.",
-                    "Uygulamayı Java kullanarak geliştirdim ve kullanıcı kimlik doğrulama ile veri yönetimi için Google Firebase (Authentication, Firestore) servislerini entegre ettim. Duruş analizi için Google ML Kit Pose Detection API kullanarak vücut pozisyonunu tespit eden bir yapı oluşturdum ve analiz sürecini destekleyen sayısal hesaplama algoritmaları geliştirdim. ",
-                    "Ayrıca analiz sonuçlarına göre kullanıcıya özel egzersiz önerileri sunan bir öneri sistemi tasarlayarak uygulamaya entegre ettim."
-                ]
-            }
+            "experiences": [
+                {
+                    "startYear": "06/2024",
+                    "endYear": "Günümüz",
+                    "title": "Bilgisayar Mühendisi",
+                    "company": "Hometech, Beşyol/İstanbul, Türkiye",
+                    "summaryParts": [
+                        "AR-GE merkezinde yürütülen projelerde Takım Lideri ve Yazılım Geliştirici rollerinde görev alıyorum. Ayrıca şirket ve bağlı markalara ait web platformlarında yazılım geliştirme, destek ve bakım süreçlerinin yanı sıra kampanya, promosyon ve müşteri etkileşimine yönelik özel yazılım çözümlerinin geliştirme süreçlerini yönetiyorum.",
+                        "Bu kapsamda yürütülen projelerde yapay zeka tabanlı sistemler geliştiriyor, bu çözümleri RESTful API altyapısı üzerinden farklı platformlara entegre ederek dağıtım süreçlerini yönetiyorum. Bunun yanında web platformlarının OpenCart altyapısından WordPress (WooCommerce) altyapısına geçiş sürecinde mevcut entegrasyonların taşınması, uyarlanması ve sürekliliğinin sağlanmasında aktif rol alıyorum.",
+                        "Daha önce web platformları için yapay zeka destekli sohbet botu, ürün geliştirme öneri sistemi ve kampanya/promosyon modülleri geliştirerek mevcut sistemlere entegre ettim. Bunun yanında Google Cloud Platform üzerinde bulut tabanlı mimariler geliştirdim ve Pardus işletim sistemi üzerinde aktif yazılım geliştirme süreçlerinde yer aldım."
+                    ]
+                },
+                {
+                    "startYear": "07/2023",
+                    "endYear": "08/2023",
+                    "title": "Bilgisayar Mühendisliği Stajyeri",
+                    "company": "VakıfBank, Ümraniye/İstanbul, Türkiye",
+                    "summaryParts": [
+                        "Staj sürecinde, kullanıcıların kredi tutarı ve vade seçeneklerine göre farklı bankaların faiz oranları üzerinden aylık ödeme planlarını hesaplayabildiği bir web uygulaması geliştirdim.",
+                        "Uygulamanın back-end tarafında ASP.NET Core Web API kullanarak RESTful API geliştirdim. Veri katmanında Microsoft SQL Server ve Entity Framework (Code First) yaklaşımı ile veri modellemesini gerçekleştirdim ve N-katmanlı mimari prensipleri doğrultusunda sistem mimarisini yapılandırdım. Redis entegrasyonu ile önbellekleme mekanizması tasarlayarak API performansını optimize ettim",
+                        "Front-end tarafında Angular kullanarak kullanıcıların kredi tutarı ve vade seçeneklerine göre farklı bankaların faiz oranları üzerinden hesaplanan ödeme planlarını görüntüleyebildiği responsive bir arayüz geliştirdim ve back-end servisleri ile entegre ederek uçtan uca çalışan full-stack bir web uygulaması geliştirdim."
+                    ]
+                }
+            ],
+            "educations": [
+                {
+                    "startYear": "09/2019",
+                    "endYear": "11/2023",
+                    "title": "Bilgisayar Mühendisliği",
+                    "company": "Kocaeli Üniversitesi, Kocaeli, Türkiye",
+                    "summaryParts": [
+                        "Bitirme projesi kapsamında, duruş bozukluğu yaşayan bireylerin kendi postürlerini analiz edebilmelerini ve bozuklukları tespit edebilmelerini sağlayan makine öğrenmesi tabanlı bir mobil uygulama geliştirdim.",
+                        "Uygulamayı Java kullanarak geliştirdim ve kullanıcı kimlik doğrulama ile veri yönetimi için Google Firebase (Authentication, Firestore) servislerini entegre ettim. Duruş analizi için Google ML Kit Pose Detection API kullanarak vücut pozisyonunu tespit eden bir yapı oluşturdum ve analiz sürecini destekleyen sayısal hesaplama algoritmaları geliştirdim. ",
+                        "Ayrıca analiz sonuçlarına göre kullanıcıya özel egzersiz önerileri sunan bir öneri sistemi tasarlayarak uygulamaya entegre ettim."
+                    ]
+                }
+            ]
         },
         "portfolio": {
             "header": "Portfolyo",
