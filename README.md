@@ -96,6 +96,4 @@ See `LICENSE` for full details.
 
 ## Contact
 
-- GitHub: https://github.com/basaran3mir
-- LinkedIn: https://tr.linkedin.com/in/basaran3mir
-- Medium: https://basaran3mir.medium.com
+For questions, feature requests, or bug reports, please open an issue in this repository.
