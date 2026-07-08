@@ -78,17 +78,19 @@
                     ]
                 }
             ],
-            "educations": {
-                "startYear": "09/2019",
-                "endYear": "11/2023",
-                "title": "Computer Engineering",
-                "company": "Kocaeli University, Kocaeli, Turkey",
-                "summaryParts": [
-                    "As part of my graduation project, I developed a machine learning-based mobile application that enables individuals with posture disorders to analyze their own posture and detect abnormalities.",
-                    "I developed the application using Java and integrated Google Firebase services (Authentication, Firestore) for user authentication and data management. For posture analysis, I built a system using the Google ML Kit Pose Detection API to detect body positions and developed numerical computation algorithms to support the analysis process.",
-                    "I also designed and integrated a recommendation system that provides users with personalized exercise suggestions based on the analysis results."
-                ]
-            }
+            "educations": [
+                {
+                    "startYear": "09/2019",
+                    "endYear": "11/2023",
+                    "title": "Computer Engineering",
+                    "company": "Kocaeli University, Kocaeli, Turkey",
+                    "summaryParts": [
+                        "As part of my graduation project, I developed a machine learning-based mobile application that enables individuals with posture disorders to analyze their own posture and detect abnormalities.",
+                        "I developed the application using Java and integrated Google Firebase services (Authentication, Firestore) for user authentication and data management. For posture analysis, I built a system using the Google ML Kit Pose Detection API to detect body positions and developed numerical computation algorithms to support the analysis process.",
+                        "I also designed and integrated a recommendation system that provides users with personalized exercise suggestions based on the analysis results."
+                    ]
+                }
+            ]
         },
         "portfolio": {
             "header": "Portfolio",
